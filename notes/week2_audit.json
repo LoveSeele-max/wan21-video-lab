@@ -1,0 +1,1307 @@
+{
+  "sessions": {
+    "R1-cold-20261015-155339-81958c93": {
+      "bench_sha256": "ffc9af27120d7fd0f903b1482122a393c39a372aa0be0f4eed67873851ea775c",
+      "config_sha256": "79c752f5a17c8cb523aa0b314a3ade1aad7158f8bad9618f1a8a66aedcf8ee61",
+      "mode": "cold",
+      "runs": [
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 132.01988840987906,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1319,
+          "forward_calls": null,
+          "timing_gap_percent": null
+        }
+      ],
+      "summary": {
+        "measured_runs": 1,
+        "elapsed_seconds": {
+          "n": 1,
+          "mean": 132.01988840987906,
+          "min": 132.01988840987906,
+          "max": 132.01988840987906
+        },
+        "peak_allocated_bytes": {
+          "n": 1,
+          "mean": 15412340736,
+          "min": 15412340736,
+          "max": 15412340736
+        },
+        "peak_reserved_bytes": {
+          "n": 1,
+          "mean": 19572719616,
+          "min": 19572719616,
+          "max": 19572719616
+        },
+        "stage_seconds": {},
+        "stage_peak_allocated_bytes": {},
+        "stage_peak_reserved_bytes": {},
+        "excluding_load_intervals_seconds": null,
+        "launch_to_video_saved_seconds": {
+          "n": 1,
+          "mean": 136.69256233796477,
+          "min": 136.69256233796477,
+          "max": 136.69256233796477
+        },
+        "forward_seconds": null,
+        "paired_forward_seconds": null,
+        "paired_forward_note": "Two forwards only; excludes scheduler/loop overhead"
+      }
+    },
+    "R2-stages-20261015-160317-d581c4df": {
+      "bench_sha256": "ffc9af27120d7fd0f903b1482122a393c39a372aa0be0f4eed67873851ea775c",
+      "config_sha256": "79c752f5a17c8cb523aa0b314a3ade1aad7158f8bad9618f1a8a66aedcf8ee61",
+      "mode": "stages",
+      "runs": [
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 136.07500673178583,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1358,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.0002792051213713177
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 136.82772462628782,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1366,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.00024901330675453786
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 135.59587449301034,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1353,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.0002743254269221111
+        },
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 131.828079611063,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1317,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.00041167487704350347
+        }
+      ],
+      "summary": {
+        "measured_runs": 3,
+        "elapsed_seconds": {
+          "n": 3,
+          "mean": 136.16620195036134,
+          "min": 135.59587449301034,
+          "max": 136.82772462628782
+        },
+        "peak_allocated_bytes": {
+          "n": 3,
+          "mean": 15412340736,
+          "min": 15412340736,
+          "max": 15412340736
+        },
+        "peak_reserved_bytes": {
+          "n": 3,
+          "mean": 19572719616,
+          "min": 19572719616,
+          "max": 19572719616
+        },
+        "stage_seconds": {
+          "decode_latent": {
+            "n": 3,
+            "mean": 10.331806557097783,
+            "min": 10.318714716937393,
+            "max": 10.3551602717489
+          },
+          "load_dit_models": {
+            "n": 3,
+            "mean": 0.4990657300998767,
+            "min": 0.4867455498315394,
+            "max": 0.5148043497465551
+          },
+          "load_text_encoder": {
+            "n": 3,
+            "mean": 10.06552688560138,
+            "min": 9.334575986023992,
+            "max": 10.496680296957493
+          },
+          "load_vae": {
+            "n": 3,
+            "mean": 0.06484822354589899,
+            "min": 0.06455647014081478,
+            "max": 0.06532614724710584
+          },
+          "other": {
+            "n": 3,
+            "mean": 0.34065525823583204,
+            "min": 0.33817091630771756,
+            "max": 0.34330965066328645
+          },
+          "prepare_t2v_inputs": {
+            "n": 3,
+            "mean": 0.4233720302581787,
+            "min": 0.42128283996134996,
+            "max": 0.42753647081553936
+          },
+          "run_sampling": {
+            "n": 3,
+            "mean": 113.43479535294075,
+            "min": 113.01516840606928,
+            "max": 113.67932582693174
+          },
+          "save_latent": {
+            "n": 3,
+            "mean": 0.0033503233765562377,
+            "min": 0.0032881712540984154,
+            "max": 0.003382585011422634
+          },
+          "save_video": {
+            "n": 3,
+            "mean": 1.0024173820080857,
+            "min": 0.9300194359384477,
+            "max": 1.0829448299482465
+          }
+        },
+        "stage_peak_allocated_bytes": {
+          "decode_latent": {
+            "n": 3,
+            "mean": 15412340736,
+            "min": 15412340736,
+            "max": 15412340736
+          },
+          "load_dit_models": {
+            "n": 3,
+            "mean": 2865388032,
+            "min": 2865388032,
+            "max": 2865388032
+          },
+          "load_text_encoder": {
+            "n": 3,
+            "mean": 11372437504,
+            "min": 11372437504,
+            "max": 11372437504
+          },
+          "load_vae": {
+            "n": 3,
+            "mean": 263565824,
+            "min": 263565824,
+            "max": 263565824
+          },
+          "other": {
+            "n": 3,
+            "mean": 2899991552,
+            "min": 2899991552,
+            "max": 2899991552
+          },
+          "prepare_t2v_inputs": {
+            "n": 3,
+            "mean": 11632493056,
+            "min": 11632493056,
+            "max": 11632493056
+          },
+          "run_sampling": {
+            "n": 3,
+            "mean": 4386688512,
+            "min": 4386688512,
+            "max": 4386688512
+          },
+          "save_latent": {
+            "n": 3,
+            "mean": 9568256,
+            "min": 9568256,
+            "max": 9568256
+          },
+          "save_video": {
+            "n": 3,
+            "mean": 9568256,
+            "min": 9568256,
+            "max": 9568256
+          }
+        },
+        "stage_peak_reserved_bytes": {
+          "decode_latent": {
+            "n": 3,
+            "mean": 19572719616,
+            "min": 19572719616,
+            "max": 19572719616
+          },
+          "load_dit_models": {
+            "n": 3,
+            "mean": 3122659328,
+            "min": 3122659328,
+            "max": 3122659328
+          },
+          "load_text_encoder": {
+            "n": 3,
+            "mean": 11398021120,
+            "min": 11398021120,
+            "max": 11398021120
+          },
+          "load_vae": {
+            "n": 3,
+            "mean": 320864256,
+            "min": 320864256,
+            "max": 320864256
+          },
+          "other": {
+            "n": 3,
+            "mean": 19572719616,
+            "min": 19572719616,
+            "max": 19572719616
+          },
+          "prepare_t2v_inputs": {
+            "n": 3,
+            "mean": 11735662592,
+            "min": 11735662592,
+            "max": 11735662592
+          },
+          "run_sampling": {
+            "n": 3,
+            "mean": 6264193024,
+            "min": 6264193024,
+            "max": 6264193024
+          },
+          "save_latent": {
+            "n": 3,
+            "mean": 35651584,
+            "min": 35651584,
+            "max": 35651584
+          },
+          "save_video": {
+            "n": 3,
+            "mean": 19572719616,
+            "min": 19572719616,
+            "max": 19572719616
+          }
+        },
+        "excluding_load_intervals_seconds": {
+          "n": 3,
+          "mean": 125.53676111111417,
+          "min": 125.02702441485599,
+          "max": 125.88293384946883
+        },
+        "launch_to_video_saved_seconds": null,
+        "forward_seconds": {
+          "n": 120,
+          "mean": 2.8256913683881675,
+          "min": 2.692529405001551,
+          "max": 2.8719274569302797
+        },
+        "paired_forward_seconds": {
+          "n": 60,
+          "mean": 5.651382736776335,
+          "min": 5.427879852242768,
+          "max": 5.7226776159368455
+        },
+        "paired_forward_note": "Two forwards only; excludes scheduler/loop overhead"
+      }
+    },
+    "R3-stages-20261015-163353-6833f29b": {
+      "bench_sha256": "ffc9af27120d7fd0f903b1482122a393c39a372aa0be0f4eed67873851ea775c",
+      "config_sha256": "79c752f5a17c8cb523aa0b314a3ade1aad7158f8bad9618f1a8a66aedcf8ee61",
+      "mode": "stages",
+      "runs": [
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 136.04755807714537,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1358,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.0002852437935424197
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 135.27509329468012,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1350,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.0003059658467514538
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 135.944010571111,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1357,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.00028526958222893753
+        },
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 130.00352232903242,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1299,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.0003247111456831761
+        }
+      ],
+      "summary": {
+        "measured_runs": 3,
+        "elapsed_seconds": {
+          "n": 3,
+          "mean": 135.75555398097882,
+          "min": 135.27509329468012,
+          "max": 136.04755807714537
+        },
+        "peak_allocated_bytes": {
+          "n": 3,
+          "mean": 15412340736,
+          "min": 15412340736,
+          "max": 15412340736
+        },
+        "peak_reserved_bytes": {
+          "n": 3,
+          "mean": 19572719616,
+          "min": 19572719616,
+          "max": 19572719616
+        },
+        "stage_seconds": {
+          "decode_latent": {
+            "n": 3,
+            "mean": 10.351028360115984,
+            "min": 10.317359892185777,
+            "max": 10.371049768757075
+          },
+          "load_dit_models": {
+            "n": 3,
+            "mean": 0.490592697635293,
+            "min": 0.4842271087691188,
+            "max": 0.5013568201102316
+          },
+          "load_text_encoder": {
+            "n": 3,
+            "mean": 9.457785022134582,
+            "min": 8.742352125234902,
+            "max": 10.423232040833682
+          },
+          "load_vae": {
+            "n": 3,
+            "mean": 0.061249262963732086,
+            "min": 0.05802607396617532,
+            "max": 0.06388611998409033
+          },
+          "other": {
+            "n": 3,
+            "mean": 0.34406797122210264,
+            "min": 0.33899590419605374,
+            "max": 0.35398772452026606
+          },
+          "prepare_t2v_inputs": {
+            "n": 3,
+            "mean": 0.42429220241804916,
+            "min": 0.4235398559831083,
+            "max": 0.4257231755182147
+          },
+          "run_sampling": {
+            "n": 3,
+            "mean": 113.56918389940013,
+            "min": 112.81942607928067,
+            "max": 114.08071289071813
+          },
+          "save_latent": {
+            "n": 3,
+            "mean": 0.0033642039634287357,
+            "min": 0.0032973638735711575,
+            "max": 0.003461803775280714
+          },
+          "save_video": {
+            "n": 3,
+            "mean": 1.0535937712217371,
+            "min": 1.0253180186264217,
+            "max": 1.1043595080263913
+          }
+        },
+        "stage_peak_allocated_bytes": {
+          "decode_latent": {
+            "n": 3,
+            "mean": 15412340736,
+            "min": 15412340736,
+            "max": 15412340736
+          },
+          "load_dit_models": {
+            "n": 3,
+            "mean": 2865388032,
+            "min": 2865388032,
+            "max": 2865388032
+          },
+          "load_text_encoder": {
+            "n": 3,
+            "mean": 11372437504,
+            "min": 11372437504,
+            "max": 11372437504
+          },
+          "load_vae": {
+            "n": 3,
+            "mean": 263565824,
+            "min": 263565824,
+            "max": 263565824
+          },
+          "other": {
+            "n": 3,
+            "mean": 2899991552,
+            "min": 2899991552,
+            "max": 2899991552
+          },
+          "prepare_t2v_inputs": {
+            "n": 3,
+            "mean": 11632493056,
+            "min": 11632493056,
+            "max": 11632493056
+          },
+          "run_sampling": {
+            "n": 3,
+            "mean": 4386688512,
+            "min": 4386688512,
+            "max": 4386688512
+          },
+          "save_latent": {
+            "n": 3,
+            "mean": 9568256,
+            "min": 9568256,
+            "max": 9568256
+          },
+          "save_video": {
+            "n": 3,
+            "mean": 9568256,
+            "min": 9568256,
+            "max": 9568256
+          }
+        },
+        "stage_peak_reserved_bytes": {
+          "decode_latent": {
+            "n": 3,
+            "mean": 19572719616,
+            "min": 19572719616,
+            "max": 19572719616
+          },
+          "load_dit_models": {
+            "n": 3,
+            "mean": 3122659328,
+            "min": 3122659328,
+            "max": 3122659328
+          },
+          "load_text_encoder": {
+            "n": 3,
+            "mean": 11398021120,
+            "min": 11398021120,
+            "max": 11398021120
+          },
+          "load_vae": {
+            "n": 3,
+            "mean": 320864256,
+            "min": 320864256,
+            "max": 320864256
+          },
+          "other": {
+            "n": 3,
+            "mean": 19572719616,
+            "min": 19572719616,
+            "max": 19572719616
+          },
+          "prepare_t2v_inputs": {
+            "n": 3,
+            "mean": 11735662592,
+            "min": 11735662592,
+            "max": 11735662592
+          },
+          "run_sampling": {
+            "n": 3,
+            "mean": 6264193024,
+            "min": 6264193024,
+            "max": 6264193024
+          },
+          "save_latent": {
+            "n": 3,
+            "mean": 35651584,
+            "min": 35651584,
+            "max": 35651584
+          },
+          "save_video": {
+            "n": 3,
+            "mean": 19572719616,
+            "min": 19572719616,
+            "max": 19572719616
+          }
+        },
+        "excluding_load_intervals_seconds": {
+          "n": 3,
+          "mean": 125.74592699824522,
+          "min": 125.07621280755848,
+          "max": 126.19201943278313
+        },
+        "launch_to_video_saved_seconds": null,
+        "forward_seconds": {
+          "n": 120,
+          "mean": 2.8297904397399787,
+          "min": 2.7026708316989243,
+          "max": 2.909024110995233
+        },
+        "paired_forward_seconds": {
+          "n": 60,
+          "mean": 5.659580879479957,
+          "min": 5.427017797715962,
+          "max": 5.7672899551689625
+        },
+        "paired_forward_note": "Two forwards only; excludes scheduler/loop overhead"
+      }
+    },
+    "R4-total-20261015-164943-11cd808d": {
+      "bench_sha256": "ffc9af27120d7fd0f903b1482122a393c39a372aa0be0f4eed67873851ea775c",
+      "config_sha256": "79c752f5a17c8cb523aa0b314a3ade1aad7158f8bad9618f1a8a66aedcf8ee61",
+      "mode": "total",
+      "runs": [
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 135.02460036799312,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1348,
+          "forward_calls": null,
+          "timing_gap_percent": null
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 135.25116714695469,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1350,
+          "forward_calls": null,
+          "timing_gap_percent": null
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 136.9282948472537,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1367,
+          "forward_calls": null,
+          "timing_gap_percent": null
+        },
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 131.24110340094194,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 1311,
+          "forward_calls": null,
+          "timing_gap_percent": null
+        }
+      ],
+      "summary": {
+        "measured_runs": 3,
+        "elapsed_seconds": {
+          "n": 3,
+          "mean": 135.73468745406717,
+          "min": 135.02460036799312,
+          "max": 136.9282948472537
+        },
+        "peak_allocated_bytes": {
+          "n": 3,
+          "mean": 15412340736,
+          "min": 15412340736,
+          "max": 15412340736
+        },
+        "peak_reserved_bytes": {
+          "n": 3,
+          "mean": 19572719616,
+          "min": 19572719616,
+          "max": 19572719616
+        },
+        "stage_seconds": {},
+        "stage_peak_allocated_bytes": {},
+        "stage_peak_reserved_bytes": {},
+        "excluding_load_intervals_seconds": null,
+        "launch_to_video_saved_seconds": null,
+        "forward_seconds": null,
+        "paired_forward_seconds": null,
+        "paired_forward_note": "Two forwards only; excludes scheduler/loop overhead"
+      }
+    },
+    "R5-profile-20261015-221034-3813a433": {
+      "bench_sha256": "ffc9af27120d7fd0f903b1482122a393c39a372aa0be0f4eed67873851ea775c",
+      "config_sha256": "79c752f5a17c8cb523aa0b314a3ade1aad7158f8bad9618f1a8a66aedcf8ee61",
+      "mode": "profile",
+      "runs": [
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 142.50177125632763,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19909.0,
+          "sample_count": 1423,
+          "forward_calls": 40,
+          "timing_gap_percent": null
+        }
+      ],
+      "summary": {
+        "measured_runs": 1,
+        "elapsed_seconds": {
+          "n": 1,
+          "mean": 142.50177125632763,
+          "min": 142.50177125632763,
+          "max": 142.50177125632763
+        },
+        "peak_allocated_bytes": {
+          "n": 1,
+          "mean": 15412340736,
+          "min": 15412340736,
+          "max": 15412340736
+        },
+        "peak_reserved_bytes": {
+          "n": 1,
+          "mean": 19572719616,
+          "min": 19572719616,
+          "max": 19572719616
+        },
+        "stage_seconds": {},
+        "stage_peak_allocated_bytes": {},
+        "stage_peak_reserved_bytes": {},
+        "excluding_load_intervals_seconds": null,
+        "launch_to_video_saved_seconds": null,
+        "forward_seconds": null,
+        "paired_forward_seconds": null,
+        "paired_forward_note": "Two forwards only; excludes scheduler/loop overhead"
+      }
+    },
+    "verify-stages-20261015-154836-9c9bf1ac": {
+      "bench_sha256": "ffc9af27120d7fd0f903b1482122a393c39a372aa0be0f4eed67873851ea775c",
+      "config_sha256": "79c752f5a17c8cb523aa0b314a3ade1aad7158f8bad9618f1a8a66aedcf8ee61",
+      "mode": "stages",
+      "runs": [
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 31.875849991105497,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 318,
+          "forward_calls": 4,
+          "timing_gap_percent": 0.0011571363466397623
+        },
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 33.409923975821584,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "smi_peak_mib": 19897.0,
+          "sample_count": 335,
+          "forward_calls": 4,
+          "timing_gap_percent": 0.001721552720910956
+        }
+      ],
+      "summary": {
+        "measured_runs": 1,
+        "elapsed_seconds": {
+          "n": 1,
+          "mean": 31.875849991105497,
+          "min": 31.875849991105497,
+          "max": 31.875849991105497
+        },
+        "peak_allocated_bytes": {
+          "n": 1,
+          "mean": 15412340736,
+          "min": 15412340736,
+          "max": 15412340736
+        },
+        "peak_reserved_bytes": {
+          "n": 1,
+          "mean": 19572719616,
+          "min": 19572719616,
+          "max": 19572719616
+        },
+        "stage_seconds": {
+          "decode_latent": {
+            "n": 1,
+            "mean": 9.821606272365898,
+            "min": 9.821606272365898,
+            "max": 9.821606272365898
+          },
+          "load_dit_models": {
+            "n": 1,
+            "mean": 0.4812829801812768,
+            "min": 0.4812829801812768,
+            "max": 0.4812829801812768
+          },
+          "load_text_encoder": {
+            "n": 1,
+            "mean": 9.546133597847074,
+            "min": 9.546133597847074,
+            "max": 9.546133597847074
+          },
+          "load_vae": {
+            "n": 1,
+            "mean": 0.06461454927921295,
+            "min": 0.06461454927921295,
+            "max": 0.06461454927921295
+          },
+          "other": {
+            "n": 1,
+            "mean": 0.3230228782631457,
+            "min": 0.3230228782631457,
+            "max": 0.3230228782631457
+          },
+          "prepare_t2v_inputs": {
+            "n": 1,
+            "mean": 0.4142131572589278,
+            "min": 0.4142131572589278,
+            "max": 0.4142131572589278
+          },
+          "run_sampling": {
+            "n": 1,
+            "mean": 10.283927716780454,
+            "min": 10.283927716780454,
+            "max": 10.283927716780454
+          },
+          "save_latent": {
+            "n": 1,
+            "mean": 0.0032519521191716194,
+            "min": 0.0032519521191716194,
+            "max": 0.0032519521191716194
+          },
+          "save_video": {
+            "n": 1,
+            "mean": 0.9374280399642885,
+            "min": 0.9374280399642885,
+            "max": 0.9374280399642885
+          }
+        },
+        "stage_peak_allocated_bytes": {
+          "decode_latent": {
+            "n": 1,
+            "mean": 15412340736,
+            "min": 15412340736,
+            "max": 15412340736
+          },
+          "load_dit_models": {
+            "n": 1,
+            "mean": 2865388032,
+            "min": 2865388032,
+            "max": 2865388032
+          },
+          "load_text_encoder": {
+            "n": 1,
+            "mean": 11372437504,
+            "min": 11372437504,
+            "max": 11372437504
+          },
+          "load_vae": {
+            "n": 1,
+            "mean": 263565824,
+            "min": 263565824,
+            "max": 263565824
+          },
+          "other": {
+            "n": 1,
+            "mean": 2899991552,
+            "min": 2899991552,
+            "max": 2899991552
+          },
+          "prepare_t2v_inputs": {
+            "n": 1,
+            "mean": 11632493056,
+            "min": 11632493056,
+            "max": 11632493056
+          },
+          "run_sampling": {
+            "n": 1,
+            "mean": 4386688512,
+            "min": 4386688512,
+            "max": 4386688512
+          },
+          "save_latent": {
+            "n": 1,
+            "mean": 9568256,
+            "min": 9568256,
+            "max": 9568256
+          },
+          "save_video": {
+            "n": 1,
+            "mean": 9568256,
+            "min": 9568256,
+            "max": 9568256
+          }
+        },
+        "stage_peak_reserved_bytes": {
+          "decode_latent": {
+            "n": 1,
+            "mean": 19572719616,
+            "min": 19572719616,
+            "max": 19572719616
+          },
+          "load_dit_models": {
+            "n": 1,
+            "mean": 3122659328,
+            "min": 3122659328,
+            "max": 3122659328
+          },
+          "load_text_encoder": {
+            "n": 1,
+            "mean": 11398021120,
+            "min": 11398021120,
+            "max": 11398021120
+          },
+          "load_vae": {
+            "n": 1,
+            "mean": 320864256,
+            "min": 320864256,
+            "max": 320864256
+          },
+          "other": {
+            "n": 1,
+            "mean": 19572719616,
+            "min": 19572719616,
+            "max": 19572719616
+          },
+          "prepare_t2v_inputs": {
+            "n": 1,
+            "mean": 11735662592,
+            "min": 11735662592,
+            "max": 11735662592
+          },
+          "run_sampling": {
+            "n": 1,
+            "mean": 6264193024,
+            "min": 6264193024,
+            "max": 6264193024
+          },
+          "save_latent": {
+            "n": 1,
+            "mean": 35651584,
+            "min": 35651584,
+            "max": 35651584
+          },
+          "save_video": {
+            "n": 1,
+            "mean": 19572719616,
+            "min": 19572719616,
+            "max": 19572719616
+          }
+        },
+        "excluding_load_intervals_seconds": {
+          "n": 1,
+          "mean": 21.783818863797933,
+          "min": 21.783818863797933,
+          "max": 21.783818863797933
+        },
+        "launch_to_video_saved_seconds": null,
+        "forward_seconds": {
+          "n": 4,
+          "mean": 2.5634893435053527,
+          "min": 2.531361703760922,
+          "max": 2.58592102304101
+        },
+        "paired_forward_seconds": {
+          "n": 2,
+          "mean": 5.1269786870107055,
+          "min": 5.088582501746714,
+          "max": 5.165374872274697
+        },
+        "paired_forward_note": "Two forwards only; excludes scheduler/loop overhead"
+      }
+    }
+  },
+  "profiler": {
+    "trace_path": "E:\\cstudy\\AIGC\\V\\notes\\week2\\R5-profile-20261015-221034-3813a433\\run-01\\trace.json",
+    "categories": {
+      "user_annotation": 4,
+      "cpu_op": 90200,
+      "kernel": 17036,
+      "ac2g": 35580,
+      "gpu_memcpy": 284,
+      "gpu_memset": 9,
+      "cuda_runtime": 18243,
+      "cuda_driver": 8,
+      "overhead": 4288,
+      "gpu_user_annotation": 4,
+      "": 60,
+      "Trace": 1
+    },
+    "steps": [
+      {
+        "ph": "X",
+        "cat": "user_annotation",
+        "name": "ProfilerStep#18",
+        "pid": 3052474,
+        "tid": 3052474,
+        "ts": 1216467287748.799,
+        "dur": 2678543.526,
+        "args": {
+          "External id": 1,
+          "Record function id": 0,
+          "Ev Idx": 0
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "user_annotation",
+        "name": "ProfilerStep#19",
+        "pid": 3052474,
+        "tid": 3052474,
+        "ts": 1216469966335.736,
+        "dur": 2680998.699,
+        "args": {
+          "External id": 22733,
+          "Record function id": 0,
+          "Ev Idx": 22732
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "user_annotation",
+        "name": "ProfilerStep#20",
+        "pid": 3052474,
+        "tid": 3052474,
+        "ts": 1216472647417.357,
+        "dur": 2683365.191,
+        "args": {
+          "External id": 45103,
+          "Record function id": 0,
+          "Ev Idx": 45102
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "user_annotation",
+        "name": "ProfilerStep#21",
+        "pid": 3052474,
+        "tid": 3052474,
+        "ts": 1216475330870.839,
+        "dur": 2690848.433,
+        "args": {
+          "External id": 67835,
+          "Record function id": 0,
+          "Ev Idx": 67834
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "gpu_user_annotation",
+        "name": "ProfilerStep#20",
+        "pid": 0,
+        "tid": 7,
+        "ts": 1216473729682.697,
+        "dur": 2693577.514,
+        "args": {
+          "External id": 45103
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "gpu_user_annotation",
+        "name": "ProfilerStep#19",
+        "pid": 0,
+        "tid": 7,
+        "ts": 1216471048199.998,
+        "dur": 2681476.557,
+        "args": {
+          "External id": 22733
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "gpu_user_annotation",
+        "name": "ProfilerStep#21",
+        "pid": 0,
+        "tid": 7,
+        "ts": 1216476423262.769,
+        "dur": 2693222.6,
+        "args": {
+          "External id": 67835
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "gpu_user_annotation",
+        "name": "ProfilerStep#18",
+        "pid": 0,
+        "tid": 7,
+        "ts": 1216468366749.193,
+        "dur": 2681444.663,
+        "args": {
+          "External id": 1
+        }
+      }
+    ],
+    "kernel_count": 17036,
+    "kernel_duration_sum_us": 11655632.769,
+    "kernel_union_us": 11655632.65600586,
+    "linked_kernel_count": 16040,
+    "linked_kernel_duration_sum_us": 10582380.532,
+    "linked_kernel_groups": {
+      "other_kernels": {
+        "count": 14572,
+        "duration_us": 2773595.3390000323,
+        "percent_of_linked_kernel_sum": 26.20955966016317
+      },
+      "gemm_gemv": {
+        "count": 1228,
+        "duration_us": 2105034.094000003,
+        "percent_of_linked_kernel_sum": 19.891876762838024
+      },
+      "flash_attention": {
+        "count": 240,
+        "duration_us": 5703751.099,
+        "percent_of_linked_kernel_sum": 53.898563576999145
+      }
+    },
+    "unlinked_kernel_count": 996,
+    "unlinked_kernel_duration_sum_us": 1073252.237,
+    "unlinked_all_before_first_gpu_step": true,
+    "cpu_steps": [
+      {
+        "ph": "X",
+        "cat": "user_annotation",
+        "name": "ProfilerStep#18",
+        "pid": 3052474,
+        "tid": 3052474,
+        "ts": 1216467287748.799,
+        "dur": 2678543.526,
+        "args": {
+          "External id": 1,
+          "Record function id": 0,
+          "Ev Idx": 0
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "user_annotation",
+        "name": "ProfilerStep#19",
+        "pid": 3052474,
+        "tid": 3052474,
+        "ts": 1216469966335.736,
+        "dur": 2680998.699,
+        "args": {
+          "External id": 22733,
+          "Record function id": 0,
+          "Ev Idx": 22732
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "user_annotation",
+        "name": "ProfilerStep#20",
+        "pid": 3052474,
+        "tid": 3052474,
+        "ts": 1216472647417.357,
+        "dur": 2683365.191,
+        "args": {
+          "External id": 45103,
+          "Record function id": 0,
+          "Ev Idx": 45102
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "user_annotation",
+        "name": "ProfilerStep#21",
+        "pid": 3052474,
+        "tid": 3052474,
+        "ts": 1216475330870.839,
+        "dur": 2690848.433,
+        "args": {
+          "External id": 67835,
+          "Record function id": 0,
+          "Ev Idx": 67834
+        }
+      }
+    ],
+    "gpu_steps": [
+      {
+        "ph": "X",
+        "cat": "gpu_user_annotation",
+        "name": "ProfilerStep#20",
+        "pid": 0,
+        "tid": 7,
+        "ts": 1216473729682.697,
+        "dur": 2693577.514,
+        "args": {
+          "External id": 45103
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "gpu_user_annotation",
+        "name": "ProfilerStep#19",
+        "pid": 0,
+        "tid": 7,
+        "ts": 1216471048199.998,
+        "dur": 2681476.557,
+        "args": {
+          "External id": 22733
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "gpu_user_annotation",
+        "name": "ProfilerStep#21",
+        "pid": 0,
+        "tid": 7,
+        "ts": 1216476423262.769,
+        "dur": 2693222.6,
+        "args": {
+          "External id": 67835
+        }
+      },
+      {
+        "ph": "X",
+        "cat": "gpu_user_annotation",
+        "name": "ProfilerStep#18",
+        "pid": 0,
+        "tid": 7,
+        "ts": 1216468366749.193,
+        "dur": 2681444.663,
+        "args": {
+          "External id": 1
+        }
+      }
+    ],
+    "kernel_groups": {
+      "other_kernels": {
+        "duration_us": 3055957.741000034,
+        "count": 15421,
+        "percent_of_kernel_sum": 26.21872018075104
+      },
+      "gemm_gemv": {
+        "duration_us": 2324903.588000001,
+        "count": 1351,
+        "percent_of_kernel_sum": 19.946609798684204
+      },
+      "flash_attention": {
+        "duration_us": 6274771.44,
+        "count": 264,
+        "percent_of_kernel_sum": 53.83467002056507
+      }
+    },
+    "top_kernels": [
+      {
+        "name": "void pytorch_flash::flash_fwd_kernel<Flash_fwd_kernel_traits<128, 128, 32, 4, false, false, cutlass::bfloat16_t, Flash_kernel_traits<128, 128, 32, 4, cutlass::bfloat16_t> >, false, false, false, false, false, true, false, false>(pytorch_flash::Flash_fwd_params)",
+        "count": 264,
+        "duration_us": 6274771.44
+      },
+      {
+        "name": "ampere_bf16_s16816gemm_bf16_128x64_ldg8_relu_f2f_tn",
+        "count": 925,
+        "duration_us": 1545457.9840000002
+      },
+      {
+        "name": "ampere_bf16_s1688gemm_bf16_64x128_sliced1x2_ldg8_relu_f2f_tn",
+        "count": 133,
+        "duration_us": 772202.7560000004
+      },
+      {
+        "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#7}::operator()() const::{lambda(float)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+        "count": 2163,
+        "duration_us": 557848.9260000008
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::bfloat16_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda(float)#1}, std::array<char*, 2ul>)",
+        "count": 1469,
+        "duration_us": 504107.1570000003
+      },
+      {
+        "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::addcmul_cuda_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float, float, float)#1}>(at::TensorIteratorBase&, at::native::addcmul_cuda_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float, float, float)#1} const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::addcmul_cuda_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float, float, float)#1}>(at::TensorIteratorBase&, at::native::addcmul_cuda_kernel(at::TensorIteratorBase&, c10::Scalar const&)::{lambda()#2}::operator()() const::{lambda()#7}::operator()() const::{lambda(float, float, float)#1} const&)::{lambda(int)#1})",
+        "count": 535,
+        "duration_us": 337432.3870000003
+      },
+      {
+        "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > > >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > > >(at::TensorIteratorBase&, at::native::BinaryFunctor<c10::complex<double>, c10::complex<double>, c10::complex<double>, at::native::binary_internal::MulFunctor<c10::complex<double> > > const&)::{lambda(int)#1})",
+        "count": 264,
+        "duration_us": 277252.9459999999
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::vectorized_layer_norm_kernel<float, float, false>(int, float, float const*, float const*, float const*, float*, float*, float*)",
+        "count": 401,
+        "duration_us": 201633.88900000023
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul> >(int, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#1}, std::array<char*, 2ul>)",
+        "count": 528,
+        "duration_us": 198159.93700000033
+      },
+      {
+        "name": "void at::native::vectorized_elementwise_kernel<4, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#1}::operator()() const::{lambda()#4}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul> >(int, at::native::GeluCUDAKernelImpl(at::TensorIteratorBase&, at::native::GeluType)::{lambda()#1}::operator()() const::{lambda()#4}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul>)",
+        "count": 137,
+        "duration_us": 193505.18400000004
+      },
+      {
+        "name": "void at::native::unrolled_elementwise_kernel<at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul>, 4, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1> >(int, at::native::direct_copy_kernel_cuda(at::TensorIteratorBase&)::{lambda()#3}::operator()() const::{lambda()#12}::operator()() const::{lambda(c10::BFloat16)#1}, std::array<char*, 2ul>, TrivialOffsetCalculator<1, unsigned int>, TrivialOffsetCalculator<1, unsigned int>, at::native::memory::LoadWithCast<1>, at::native::memory::StoreWithCast<1>)",
+        "count": 264,
+        "duration_us": 171409.272
+      },
+      {
+        "name": "void at::native::elementwise_kernel<128, 2, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1}>(int, at::native::gpu_kernel_impl_nocast<at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > >(at::TensorIteratorBase&, at::native::BinaryFunctor<float, float, float, at::native::binary_internal::MulFunctor<float> > const&)::{lambda(int)#1})",
+        "count": 528,
+        "duration_us": 163118.99500000014
+      }
+    ],
+    "diagnostic_counts": {
+      "Command Buffer Full": 4283,
+      "Activity Buffer Request": 2,
+      "Buffer Flush": 3
+    },
+    "diagnostic_examples": [
+      {
+        "name": "Command Buffer Full",
+        "cat": "overhead",
+        "ph": "X",
+        "ts": 1216468438249.118,
+        "dur": 14653.828,
+        "args": null
+      },
+      {
+        "name": "Command Buffer Full",
+        "cat": "overhead",
+        "ph": "X",
+        "ts": 1216468452923.656,
+        "dur": 871.905,
+        "args": null
+      },
+      {
+        "name": "Command Buffer Full",
+        "cat": "overhead",
+        "ph": "X",
+        "ts": 1216468453817.522,
+        "dur": 315.875,
+        "args": null
+      }
+    ]
+  }
+}

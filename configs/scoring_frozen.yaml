@@ -1,0 +1,47 @@
+# Freeze: 2026-10-22. Changes require a new version; preserve this file.
+version: 1
+frozen_date: "2026-10-22"
+status: frozen
+generation_manifest: configs/prompts_frozen.yaml
+rubric: notes/week3_rubric.md
+rubric_version: "1.0"
+generated_per_config: 36
+automatic_metrics_per_config: 36
+paired_review_per_config: 36
+absolute_review_per_config: 12
+dimensions: [structure, temporal_motion, prompt_alignment]
+human_timing_required: false
+reviewer_id: R01
+reviewer_change_policy: record_change_and_report_separately
+subset_selection: reuse_original_trial_baseline_selection_without_resampling
+subset_source: week3-R01-20261021
+absolute_subset:
+  - {prompt_id: P01, seed: 2002, key: P01_s2002, trial_id: V006}
+  - {prompt_id: P02, seed: 1001, key: P02_s1001, trial_id: V003}
+  - {prompt_id: P03, seed: 2002, key: P03_s2002, trial_id: V005}
+  - {prompt_id: P04, seed: 42, key: P04_s42, trial_id: V010}
+  - {prompt_id: P05, seed: 1001, key: P05_s1001, trial_id: V014}
+  - {prompt_id: P06, seed: 42, key: P06_s42, trial_id: V009}
+  - {prompt_id: P07, seed: 1001, key: P07_s1001, trial_id: V008}
+  - {prompt_id: P08, seed: 1001, key: P08_s1001, trial_id: V007}
+  - {prompt_id: P09, seed: 2002, key: P09_s2002, trial_id: V004}
+  - {prompt_id: P10, seed: 42, key: P10_s42, trial_id: V012}
+  - {prompt_id: P11, seed: 42, key: P11_s42, trial_id: V001}
+  - {prompt_id: P12, seed: 1001, key: P12_s1001, trial_id: V016}
+pairing: same_prompt_and_seed_against_baseline
+presentation:
+  anonymous: true
+  randomized_order: true
+  randomized_pair_sides: true
+  mapping_stored_separately: true
+  show_automatic_scores_to_reviewer: false
+failure_policy:
+  preserve_all_planned_rows: true
+  replace_failed_prompt_or_seed: false
+  retry_limit: 1
+  unjudgeable_per_dimension: true
+reporting:
+  sum_quality_dimensions: false
+  per_dimension_denominators: [planned, scorable]
+  report_pair_eligible_count: true
+  reuse_trial_baseline_scores_as: exploratory_with_documented_limitations

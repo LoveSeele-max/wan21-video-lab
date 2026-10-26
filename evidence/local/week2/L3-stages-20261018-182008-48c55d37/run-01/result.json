@@ -1,0 +1,308 @@
+{
+  "status": "ok",
+  "mode": "stages",
+  "warmup": false,
+  "effective_args": {
+    "ckpt_dir": null,
+    "task": "t2v-1.3B",
+    "sample_solver": "unipc",
+    "dit": "E:/cstudy/AIGC/V/local/models/wan21/split_files/diffusion_models/wan2.1_t2v_1.3B_bf16.safetensors",
+    "dit_high_noise": null,
+    "force_v2_1_time_embedding": false,
+    "offload_inactive_dit": false,
+    "lazy_loading": false,
+    "disable_numpy_memmap": false,
+    "vae": "E:/cstudy/AIGC/V/local/models/wan21/split_files/vae/wan_2.1_vae.safetensors",
+    "vae_dtype": null,
+    "vae_cache_cpu": false,
+    "t5": "E:/cstudy/AIGC/V/local/models/wan21/models_t5_umt5-xxl-enc-bf16.pth",
+    "clip": null,
+    "lora_weight": null,
+    "lora_multiplier": null,
+    "lora_weight_high_noise": null,
+    "lora_multiplier_high_noise": null,
+    "include_patterns": null,
+    "exclude_patterns": null,
+    "save_merged_model": null,
+    "prompt": "A person waving one hand, plain background, static camera.",
+    "negative_prompt": null,
+    "video_size": [
+      480,
+      832
+    ],
+    "video_length": 81,
+    "fps": 16,
+    "infer_steps": 20,
+    "save_path": "E:\\cstudy\\AIGC\\V\\local\\outputs\\week2\\L3-stages-20261018-182008-48c55d37\\run-01",
+    "seed": 42,
+    "cpu_noise": false,
+    "timestep_boundary": null,
+    "guidance_scale": 5.0,
+    "guidance_scale_high_noise": 5.0,
+    "video_path": null,
+    "image_path": null,
+    "end_image_path": null,
+    "control_path": null,
+    "one_frame_inference": null,
+    "control_image_path": null,
+    "control_image_mask_path": null,
+    "trim_tail_frames": 0,
+    "cfg_skip_mode": "none",
+    "cfg_apply_ratio": null,
+    "slg_layers": null,
+    "slg_scale": 3.0,
+    "slg_start": 0.0,
+    "slg_end": 0.3,
+    "slg_mode": null,
+    "flow_shift": 5.0,
+    "fp8": false,
+    "fp8_scaled": false,
+    "fp8_fast": false,
+    "fp8_t5": false,
+    "device": "cuda:0",
+    "attn_mode": "torch",
+    "blocks_to_swap": 0,
+    "use_pinned_memory_for_block_swap": false,
+    "output_type": "both",
+    "no_metadata": false,
+    "latent_path": null,
+    "lycoris": false,
+    "compile_args": null,
+    "compile": false,
+    "compile_backend": "inductor",
+    "compile_mode": "default",
+    "compile_dynamic": null,
+    "compile_fullgraph": false,
+    "compile_cache_size_limit": null,
+    "from_file": null,
+    "interactive": false
+  },
+  "output_directory": "E:\\cstudy\\AIGC\\V\\local\\outputs\\week2\\L3-stages-20261018-182008-48c55d37\\run-01",
+  "timing_includes": "generate + cleanup + latent/video save",
+  "timing_excludes": "imports, tokenizer precheck, argument/settings preparation, reporting",
+  "stages": [
+    {
+      "stage": "other",
+      "seconds": 0.039668299999902956,
+      "peak_allocated_bytes": 0,
+      "peak_reserved_bytes": 0
+    },
+    {
+      "stage": "prepare_t2v_inputs",
+      "seconds": 0.014084000002185348,
+      "peak_allocated_bytes": 0,
+      "peak_reserved_bytes": 0
+    },
+    {
+      "stage": "load_text_encoder",
+      "seconds": 12.391229400000157,
+      "peak_allocated_bytes": 11362869248,
+      "peak_reserved_bytes": 11364466688
+    },
+    {
+      "stage": "prepare_t2v_inputs",
+      "seconds": 0.9420265999979165,
+      "peak_allocated_bytes": 11631444480,
+      "peak_reserved_bytes": 11689525248
+    },
+    {
+      "stage": "other",
+      "seconds": 0.000167199999850709,
+      "peak_allocated_bytes": 25296896,
+      "peak_reserved_bytes": 54525952
+    },
+    {
+      "stage": "load_dit_models",
+      "seconds": 4.294182900001033,
+      "peak_allocated_bytes": 2864339456,
+      "peak_reserved_bytes": 3120562176
+    },
+    {
+      "stage": "other",
+      "seconds": 0.0045243999993545,
+      "peak_allocated_bytes": 2864339968,
+      "peak_reserved_bytes": 3120562176
+    },
+    {
+      "stage": "run_sampling",
+      "seconds": 535.6995748000008,
+      "peak_allocated_bytes": 4386688512,
+      "peak_reserved_bytes": 6243221504
+    },
+    {
+      "stage": "other",
+      "seconds": 0.16645290000087698,
+      "peak_allocated_bytes": 2899991552,
+      "peak_reserved_bytes": 6243221504
+    },
+    {
+      "stage": "save_latent",
+      "seconds": 0.05024869999760995,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 35651584
+    },
+    {
+      "stage": "other",
+      "seconds": 0.0002604000001156237,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 35651584
+    },
+    {
+      "stage": "decode_latent",
+      "seconds": 0.00014820000069448724,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 35651584
+    },
+    {
+      "stage": "load_vae",
+      "seconds": 0.3391489999994519,
+      "peak_allocated_bytes": 263565824,
+      "peak_reserved_bytes": 320864256
+    },
+    {
+      "stage": "decode_latent",
+      "seconds": 72.00850660000287,
+      "peak_allocated_bytes": 15413192704,
+      "peak_reserved_bytes": 19572719616
+    },
+    {
+      "stage": "other",
+      "seconds": 0.00018730000010691583,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 19572719616
+    },
+    {
+      "stage": "save_video",
+      "seconds": 0.7012892999991891,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 19572719616
+    },
+    {
+      "stage": "other",
+      "seconds": 0.04755749999822001,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 19572719616
+    }
+  ],
+  "calls": {
+    "prepare_t2v_inputs": 1,
+    "load_text_encoder": 1,
+    "load_dit_models": 1,
+    "run_sampling": 1,
+    "save_latent": 1,
+    "decode_latent": 1,
+    "load_vae": 1,
+    "save_video": 1
+  },
+  "forward_seconds": [
+    13.55305220000082,
+    13.393327499998122,
+    13.363493400000152,
+    13.359934899999644,
+    13.406798399999388,
+    13.393790300000546,
+    13.375957400003244,
+    13.360796799999662,
+    13.406436999997823,
+    13.391723799999454,
+    13.371479599998565,
+    13.35802590000094,
+    13.393392300000414,
+    13.397252099999605,
+    13.375778400000854,
+    13.423800700002175,
+    13.393731000000116,
+    13.370193000002473,
+    13.354589300000953,
+    13.341505200001848,
+    13.378510200000164,
+    13.39562239999941,
+    13.3735216999994,
+    13.363249000001815,
+    13.40678570000091,
+    13.387843799999246,
+    13.37871610000002,
+    13.35749080000096,
+    13.403452700000344,
+    13.392900299997564,
+    13.371054200000799,
+    13.357630300000892,
+    13.39307589999953,
+    13.388092900000629,
+    13.371263699998963,
+    13.36192850000225,
+    13.389815599999565,
+    13.393900700000813,
+    13.369407399997726,
+    13.353886600001715
+  ],
+  "elapsed_seconds": 626.6995424000015,
+  "stage_summary": {
+    "other": {
+      "seconds": 0.2588179999984277,
+      "peak_allocated_bytes": 2899991552,
+      "peak_reserved_bytes": 19572719616
+    },
+    "prepare_t2v_inputs": {
+      "seconds": 0.9561106000001018,
+      "peak_allocated_bytes": 11631444480,
+      "peak_reserved_bytes": 11689525248
+    },
+    "load_text_encoder": {
+      "seconds": 12.391229400000157,
+      "peak_allocated_bytes": 11362869248,
+      "peak_reserved_bytes": 11364466688
+    },
+    "load_dit_models": {
+      "seconds": 4.294182900001033,
+      "peak_allocated_bytes": 2864339456,
+      "peak_reserved_bytes": 3120562176
+    },
+    "run_sampling": {
+      "seconds": 535.6995748000008,
+      "peak_allocated_bytes": 4386688512,
+      "peak_reserved_bytes": 6243221504
+    },
+    "save_latent": {
+      "seconds": 0.05024869999760995,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 35651584
+    },
+    "decode_latent": {
+      "seconds": 72.00865480000357,
+      "peak_allocated_bytes": 15413192704,
+      "peak_reserved_bytes": 19572719616
+    },
+    "load_vae": {
+      "seconds": 0.3391489999994519,
+      "peak_allocated_bytes": 263565824,
+      "peak_reserved_bytes": 320864256
+    },
+    "save_video": {
+      "seconds": 0.7012892999991891,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 19572719616
+    }
+  },
+  "stage_sum_seconds": 626.6992575000004,
+  "timing_gap_percent": 4.5460381228737186e-05,
+  "peak_allocated_bytes": 15413192704,
+  "peak_reserved_bytes": 19572719616,
+  "excluding_load_intervals_seconds": 609.6749811000009,
+  "load_exclusion_note": "Subtract loader function intervals only; transfer/cleanup may remain",
+  "checks": {
+    "each_stage_called_once": true,
+    "forward_count_matches": true,
+    "expected_forward_calls": 40,
+    "timing_gap_below_2_percent": true
+  },
+  "forward_calls": 40,
+  "external_gpu_sampling": {
+    "path": "E:\\cstudy\\AIGC\\V\\local\\notes\\week2\\L3-stages-20261018-182008-48c55d37\\run-01\\gpu.csv",
+    "interval_ms": 100,
+    "scope": "whole card; includes brief setup/reporting outside timed interval",
+    "samples": 5764,
+    "sampled_peak_used_mib": 15718.0,
+    "warning": null
+  }
+}

@@ -1,0 +1,70 @@
+# Explicit settings and effective defaults recorded from the teaching session.
+# This is a record, not a runnable configuration accepted by Musubi Tuner.
+record_date: "2026-10-13"
+updated_date: "2026-10-14"
+timezone: "Asia/Shanghai"
+commit: "f8a1b03794a49239a3539015075f5123d6c07d66"
+entrypoint: "src/musubi_tuner/wan_generate_video.py"
+environment_prefix: "/home/user/projects/wan21-video/env"
+task: "t2v-1.3B"
+video_size_height_width: [480, 832]
+video_length: 81
+fps: 16
+infer_steps: 20
+prompt: "A person waving one hand, plain background, static camera."
+negative_prompt: "色调艳丽，过曝，静态，细节模糊不清，字幕，风格，作品，画作，画面，静止，整体发灰，最差质量，低质量，JPEG压缩残留，丑陋的，残缺的，多余的手指，画得不好的手部，画得不好的脸部，畸形的，毁容的，形态畸形的肢体，手指融合，静止不动的画面，杂乱的背景，三条腿，背景人很多，倒着走"
+negative_prompt_source: "Inherited shared_config.py sample_neg_prompt; not explicitly passed on command line."
+seed: 42
+attn_mode: "torch"
+sample_solver: "unipc"
+flow_shift: 5.0
+guidance_scale: 5.0
+dit_precision: "torch.bfloat16"
+weight_precision: "torch.bfloat16"
+vae_precision: "torch.bfloat16"
+t5_cast_dtype: "torch.bfloat16"
+output_type: "both"
+dit: "/home/user/projects/wan21-video/models/wan21/split_files/diffusion_models/wan2.1_t2v_1.3B_bf16.safetensors"
+vae: "/home/user/projects/wan21-video/models/wan21/split_files/vae/wan_2.1_vae.safetensors"
+t5: "/home/user/projects/wan21-video/models/wan21/models_t5_umt5-xxl-enc-bf16.pth"
+hf_home: "/home/user/projects/wan21-video/models/.hf-home"
+http_proxy: "http://127.0.0.1:7897"
+https_proxy: "http://127.0.0.1:7897"
+fp8: false
+fp8_scaled: false
+fp8_fast: false
+fp8_t5: false
+compile: false
+unspecified_options: "Other unspecified options use pinned commit defaults; full source audit incomplete."
+network_observation:
+  mirror_endpoint_in_logs: "https://hf-mirror.com"
+  redirects_to: "https://huggingface.co"
+  current_shell_hf_endpoint: "https://hf-mirror.com"
+  endpoint_configuration_source: "Current shell HF_ENDPOINT confirmed by printenv on 2026-10-13; original setting location not traced."
+  tokenizer_repo: "Wan-AI/Wan2.1-T2V-14B"
+  tokenizer_subfolder: "google/umt5-xxl"
+  tokenizer_revision_in_requests: "a064a6c71f5be440641209c07bf2a5ce7a2ff5e4"
+  tokenizer_revision_explicitly_pinned: false
+runs:
+  - physical_gpu: 0
+    cuda_visible_devices: "0"
+    save_path: "/home/user/projects/wan21-video/outputs/week1"
+    log: "/home/user/projects/wan21-video/logs/week1_first_run.log"
+    wall_clock_seconds: 157.61
+    denoising_progress_elapsed_seconds_approx: 108
+    denoising_progress_average_seconds_per_step: 5.42
+    exit_status: 0
+  - physical_gpu: 1
+    cuda_visible_devices: "1"
+    save_path: "/home/user/projects/wan21-video/outputs/week1/gpu1"
+    log: "/home/user/projects/wan21-video/logs/week1_gpu1_run.log"
+    wall_clock_seconds: 139.70
+    denoising_progress_elapsed_seconds_approx: 107
+    denoising_progress_average_seconds_per_step: 5.38
+    exit_status: 0
+measurement:
+  runs_per_gpu: 1
+  warmup: false
+  includes_loading_and_saving: true
+  steady_state_latency_measured: false
+  gpu_peak_memory_measured: false

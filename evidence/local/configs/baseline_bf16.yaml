@@ -1,0 +1,17 @@
+config_name: local_baseline_bf16
+task: t2v-1.3B
+video_size: [480, 832]
+video_length: 81
+fps: 16
+infer_steps: 20
+seed: 42
+prompt: "A person waving one hand, plain background, static camera."
+attn_mode: torch
+sample_solver: unipc
+guidance_scale: 5.0
+flow_shift: 5.0
+output_type: both
+dit: E:/cstudy/AIGC/V/local/models/wan21/split_files/diffusion_models/wan2.1_t2v_1.3B_bf16.safetensors
+vae: E:/cstudy/AIGC/V/local/models/wan21/split_files/vae/wan_2.1_vae.safetensors
+t5: E:/cstudy/AIGC/V/local/models/wan21/models_t5_umt5-xxl-enc-bf16.pth
+save_path: E:/cstudy/AIGC/V/local/outputs/week2/baseline_bf16

@@ -1,0 +1,3 @@
+# Preserve archived script/config/result bytes and their recorded SHA256 values.
+# Do not normalize CRLF/LF when adding or checking out experiment evidence.
+* -text

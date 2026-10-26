@@ -1,0 +1,67 @@
+# Prompt and seed freeze: 2026-10-18, version 1.
+# Changes require a new versioned file. Do not replace failed samples.
+# Generation settings frozen: GPU noise, cpu_noise=false.
+version: 1
+frozen_date: "2026-10-18"
+status: frozen
+source: plan/WEEK3_PLAN.md
+seeds: [42, 1001, 2002]
+expected_video_count_per_config: 36
+generation_settings_status: frozen
+generation_settings:
+  task: t2v-1.3B
+  video_size: [480, 832]
+  video_length: 81
+  fps: 16
+  infer_steps: 20
+  sample_solver: unipc
+  guidance_scale: 5.0
+  flow_shift: 5.0
+  attn_mode: torch
+  precision: bf16
+  negative_prompt: null  # Use the pinned upstream default.
+  cpu_noise: false
+  fp8: false
+  fp8_scaled: false
+  fp8_fast: false
+  fp8_t5: false
+  blocks_to_swap: 0
+  vae_cache_cpu: false
+  compile: false
+prompts:
+  - id: P01
+    category: human_low
+    prompt: "A person waving one hand, plain background, static camera."
+  - id: P02
+    category: human_low
+    prompt: "A woman nodding her head slowly, plain gray background, static camera."
+  - id: P03
+    category: human_low
+    prompt: "A man turning around to face the camera, plain background, static camera."
+  - id: P04
+    category: human_medium
+    prompt: "A person walking from left to right, full body, plain studio background, static camera."
+  - id: P05
+    category: human_medium
+    prompt: "A person jogging in place, full body, plain background, static camera."
+  - id: P06
+    category: human_low
+    prompt: "A person clapping hands in front of the chest, upper body, plain background, static camera."
+  - id: P07
+    category: nature
+    prompt: "Ocean waves crashing on dark rocks, overcast sky, static camera."
+  - id: P08
+    category: detail
+    prompt: "Close-up of a candle flame flickering in a dark room, static camera."
+  - id: P09
+    category: camera
+    prompt: "Slow aerial camera pan over snowy mountains at sunrise."
+  - id: P10
+    category: animal
+    prompt: "A golden retriever running across a green lawn, side view, tracking shot."
+  - id: P11
+    category: city
+    prompt: "A busy city street at night with cars passing, neon lights, static camera."
+  - id: P12
+    category: object
+    prompt: "Steam rising from a cup of coffee on a wooden table, soft morning light, static camera."

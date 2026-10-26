@@ -1,0 +1,308 @@
+{
+  "status": "ok",
+  "mode": "stages",
+  "warmup": false,
+  "effective_args": {
+    "ckpt_dir": null,
+    "task": "t2v-1.3B",
+    "sample_solver": "unipc",
+    "dit": "/home/user/projects/wan21-video/models/wan21/split_files/diffusion_models/wan2.1_t2v_1.3B_bf16.safetensors",
+    "dit_high_noise": null,
+    "force_v2_1_time_embedding": false,
+    "offload_inactive_dit": false,
+    "lazy_loading": false,
+    "disable_numpy_memmap": false,
+    "vae": "/home/user/projects/wan21-video/models/wan21/split_files/vae/wan_2.1_vae.safetensors",
+    "vae_dtype": null,
+    "vae_cache_cpu": false,
+    "t5": "/home/user/projects/wan21-video/models/wan21/models_t5_umt5-xxl-enc-bf16.pth",
+    "clip": null,
+    "lora_weight": null,
+    "lora_multiplier": null,
+    "lora_weight_high_noise": null,
+    "lora_multiplier_high_noise": null,
+    "include_patterns": null,
+    "exclude_patterns": null,
+    "save_merged_model": null,
+    "prompt": "A person waving one hand, plain background, static camera.",
+    "negative_prompt": null,
+    "video_size": [
+      480,
+      832
+    ],
+    "video_length": 81,
+    "fps": 16,
+    "infer_steps": 20,
+    "save_path": "/home/user/projects/wan21-video/outputs/week2/R2-stages-20261015-160317-d581c4df/run-03",
+    "seed": 42,
+    "cpu_noise": false,
+    "timestep_boundary": null,
+    "guidance_scale": 5.0,
+    "guidance_scale_high_noise": 5.0,
+    "video_path": null,
+    "image_path": null,
+    "end_image_path": null,
+    "control_path": null,
+    "one_frame_inference": null,
+    "control_image_path": null,
+    "control_image_mask_path": null,
+    "trim_tail_frames": 0,
+    "cfg_skip_mode": "none",
+    "cfg_apply_ratio": null,
+    "slg_layers": null,
+    "slg_scale": 3.0,
+    "slg_start": 0.0,
+    "slg_end": 0.3,
+    "slg_mode": null,
+    "flow_shift": 5.0,
+    "fp8": false,
+    "fp8_scaled": false,
+    "fp8_fast": false,
+    "fp8_t5": false,
+    "device": "cuda:0",
+    "attn_mode": "torch",
+    "blocks_to_swap": 0,
+    "use_pinned_memory_for_block_swap": false,
+    "output_type": "both",
+    "no_metadata": false,
+    "latent_path": null,
+    "lycoris": false,
+    "compile_args": null,
+    "compile": false,
+    "compile_backend": "inductor",
+    "compile_mode": "default",
+    "compile_dynamic": null,
+    "compile_fullgraph": false,
+    "compile_cache_size_limit": null,
+    "from_file": null,
+    "interactive": false
+  },
+  "output_directory": "/home/user/projects/wan21-video/outputs/week2/R2-stages-20261015-160317-d581c4df/run-03",
+  "timing_includes": "generate + cleanup + latent/video save",
+  "timing_excludes": "imports, tokenizer precheck, argument/settings preparation, reporting",
+  "stages": [
+    {
+      "stage": "other",
+      "seconds": 0.0005319230258464813,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 35651584
+    },
+    {
+      "stage": "prepare_t2v_inputs",
+      "seconds": 0.00021442491561174393,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 35651584
+    },
+    {
+      "stage": "load_text_encoder",
+      "seconds": 9.334575986023992,
+      "peak_allocated_bytes": 11372437504,
+      "peak_reserved_bytes": 11398021120
+    },
+    {
+      "stage": "prepare_t2v_inputs",
+      "seconds": 0.4273220458999276,
+      "peak_allocated_bytes": 11632493056,
+      "peak_reserved_bytes": 11735662592
+    },
+    {
+      "stage": "other",
+      "seconds": 0.000300518237054348,
+      "peak_allocated_bytes": 26345472,
+      "peak_reserved_bytes": 35651584
+    },
+    {
+      "stage": "load_dit_models",
+      "seconds": 0.4956472907215357,
+      "peak_allocated_bytes": 2865388032,
+      "peak_reserved_bytes": 3122659328
+    },
+    {
+      "stage": "other",
+      "seconds": 0.0006327861919999123,
+      "peak_allocated_bytes": 2865388544,
+      "peak_reserved_bytes": 3122659328
+    },
+    {
+      "stage": "run_sampling",
+      "seconds": 113.60989182582125,
+      "peak_allocated_bytes": 4386688512,
+      "peak_reserved_bytes": 6264193024
+    },
+    {
+      "stage": "other",
+      "seconds": 0.3087208392098546,
+      "peak_allocated_bytes": 2899991552,
+      "peak_reserved_bytes": 6264193024
+    },
+    {
+      "stage": "save_latent",
+      "seconds": 0.003382585011422634,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 35651584
+    },
+    {
+      "stage": "other",
+      "seconds": 0.00028255395591259,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 35651584
+    },
+    {
+      "stage": "decode_latent",
+      "seconds": 0.00022272486239671707,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 35651584
+    },
+    {
+      "stage": "load_vae",
+      "seconds": 0.06532614724710584,
+      "peak_allocated_bytes": 263565824,
+      "peak_reserved_bytes": 320864256
+    },
+    {
+      "stage": "decode_latent",
+      "seconds": 10.321321957744658,
+      "peak_allocated_bytes": 15412340736,
+      "peak_reserved_bytes": 19572719616
+    },
+    {
+      "stage": "other",
+      "seconds": 0.0002517751418054104,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 19572719616
+    },
+    {
+      "stage": "save_video",
+      "seconds": 0.9942878801375628,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 19572719616
+    },
+    {
+      "stage": "other",
+      "seconds": 0.0325892549008131,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 19572719616
+    }
+  ],
+  "calls": {
+    "prepare_t2v_inputs": 1,
+    "load_text_encoder": 1,
+    "load_dit_models": 1,
+    "run_sampling": 1,
+    "save_latent": 1,
+    "decode_latent": 1,
+    "load_vae": 1,
+    "save_video": 1
+  },
+  "forward_seconds": [
+    2.7412088559940457,
+    2.7732603549957275,
+    2.770861443132162,
+    2.7881702571175992,
+    2.7841136162169278,
+    2.797263548243791,
+    2.7934346408583224,
+    2.8040992221795022,
+    2.802178723271936,
+    2.8151416908949614,
+    2.814701828174293,
+    2.823552283924073,
+    2.818240961059928,
+    2.8406836721114814,
+    2.823768372181803,
+    2.8549494789913297,
+    2.8378742458298802,
+    2.839284689165652,
+    2.8305657911114395,
+    2.8417684147134423,
+    2.8409040616825223,
+    2.8496248251758516,
+    2.844907965976745,
+    2.851078246254474,
+    2.84752163477242,
+    2.8456488656811416,
+    2.8438853598199785,
+    2.8500270289368927,
+    2.84760919585824,
+    2.8504901048727334,
+    2.8651164141483605,
+    2.856104437727481,
+    2.8719274569302797,
+    2.850750159006566,
+    2.8543905848637223,
+    2.8582835951820016,
+    2.8433612952940166,
+    2.842154778074473,
+    2.839965598192066,
+    2.8455041400156915
+  ],
+  "elapsed_seconds": 135.59587449301034,
+  "stage_summary": {
+    "other": {
+      "seconds": 0.34330965066328645,
+      "peak_allocated_bytes": 2899991552,
+      "peak_reserved_bytes": 19572719616
+    },
+    "prepare_t2v_inputs": {
+      "seconds": 0.42753647081553936,
+      "peak_allocated_bytes": 11632493056,
+      "peak_reserved_bytes": 11735662592
+    },
+    "load_text_encoder": {
+      "seconds": 9.334575986023992,
+      "peak_allocated_bytes": 11372437504,
+      "peak_reserved_bytes": 11398021120
+    },
+    "load_dit_models": {
+      "seconds": 0.4956472907215357,
+      "peak_allocated_bytes": 2865388032,
+      "peak_reserved_bytes": 3122659328
+    },
+    "run_sampling": {
+      "seconds": 113.60989182582125,
+      "peak_allocated_bytes": 4386688512,
+      "peak_reserved_bytes": 6264193024
+    },
+    "save_latent": {
+      "seconds": 0.003382585011422634,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 35651584
+    },
+    "decode_latent": {
+      "seconds": 10.321544682607055,
+      "peak_allocated_bytes": 15412340736,
+      "peak_reserved_bytes": 19572719616
+    },
+    "load_vae": {
+      "seconds": 0.06532614724710584,
+      "peak_allocated_bytes": 263565824,
+      "peak_reserved_bytes": 320864256
+    },
+    "save_video": {
+      "seconds": 0.9942878801375628,
+      "peak_allocated_bytes": 9568256,
+      "peak_reserved_bytes": 19572719616
+    }
+  },
+  "stage_sum_seconds": 135.59550251904875,
+  "timing_gap_percent": 0.0002743254269221111,
+  "peak_allocated_bytes": 15412340736,
+  "peak_reserved_bytes": 19572719616,
+  "excluding_load_intervals_seconds": 125.70032506901771,
+  "load_exclusion_note": "Subtract loader function intervals only; transfer/cleanup may remain",
+  "checks": {
+    "each_stage_called_once": true,
+    "forward_count_matches": true,
+    "expected_forward_calls": 40,
+    "timing_gap_below_2_percent": true
+  },
+  "forward_calls": 40,
+  "external_gpu_sampling": {
+    "path": "/home/user/projects/wan21-video/notes/week2/R2-stages-20261015-160317-d581c4df/run-03/gpu.csv",
+    "interval_ms": 100,
+    "scope": "whole card; includes brief setup/reporting outside timed interval",
+    "samples": 1353,
+    "sampled_peak_used_mib": 19897.0,
+    "warning": null
+  }
+}

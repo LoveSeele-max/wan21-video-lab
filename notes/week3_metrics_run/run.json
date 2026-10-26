@@ -1,0 +1,47 @@
+{
+  "status": "ok",
+  "device": "cpu",
+  "versions": {
+    "torch": "2.9.1+cu128",
+    "transformers": "5.17.0",
+    "numpy": "2.4.6",
+    "av": "17.1.0",
+    "opencv-python": "4.10.0.84",
+    "scikit-image": "0.25.2",
+    "scipy": "1.17.1"
+  },
+  "clip_revision": "3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268",
+  "started_unix": 1792401943.8755836,
+  "protocol_sha256": "a3f0775e73eee29d2b5637122395a10845ab45e64fd109feccb95af5aad5bcb6",
+  "script_sha256": "b85f73f110e5b3b578e38ce3138d65fb8cd817f7317f85e30f512c15d882fd66",
+  "clip_frame_indices": [
+    0,
+    4,
+    8,
+    12,
+    16,
+    20,
+    24,
+    28,
+    32,
+    36,
+    40,
+    44,
+    48,
+    52,
+    56,
+    60,
+    64,
+    68,
+    72,
+    76,
+    80
+  ],
+  "input_manifest_sha256": {
+    "baseline": "0fd4d18cd750a4bb5f05ae0fc143e1998cbf54eb8288aa3c0aec0d02fae3c280",
+    "probes": "461a56a9835af71d6540f79f415339e53db1ee0ef1e86c8a9fa3c9e455275a1f"
+  },
+  "errors": 0,
+  "completed": 49,
+  "elapsed_seconds": 183.90915536880493
+}

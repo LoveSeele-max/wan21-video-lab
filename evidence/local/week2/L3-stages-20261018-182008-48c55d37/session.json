@@ -1,0 +1,57 @@
+{
+  "status": "ok",
+  "options": {
+    "mode": "stages",
+    "config": "E:\\cstudy\\AIGC\\V\\local\\configs\\baseline_bf16.yaml",
+    "steps": null,
+    "warmup": 0,
+    "repeat": 1,
+    "gpu_index": 0,
+    "tag": "L3",
+    "sample_smi": true,
+    "online": false,
+    "launch_start": null
+  },
+  "effective_config": {
+    "config_name": "local_baseline_bf16",
+    "task": "t2v-1.3B",
+    "video_size": [
+      480,
+      832
+    ],
+    "video_length": 81,
+    "fps": 16,
+    "infer_steps": 20,
+    "seed": 42,
+    "prompt": "A person waving one hand, plain background, static camera.",
+    "attn_mode": "torch",
+    "sample_solver": "unipc",
+    "guidance_scale": 5.0,
+    "flow_shift": 5.0,
+    "output_type": "both",
+    "dit": "E:/cstudy/AIGC/V/local/models/wan21/split_files/diffusion_models/wan2.1_t2v_1.3B_bf16.safetensors",
+    "vae": "E:/cstudy/AIGC/V/local/models/wan21/split_files/vae/wan_2.1_vae.safetensors",
+    "t5": "E:/cstudy/AIGC/V/local/models/wan21/models_t5_umt5-xxl-enc-bf16.pth",
+    "save_path": "E:/cstudy/AIGC/V/local/outputs/week2/baseline_bf16"
+  },
+  "config_sha256": "21ce045de1435f845744258b97f023dc473de4a421e0dba9f0d1d4f673eaa451",
+  "bench_sha256": "a10cfc7b1aca34adbe375043f3b6a9b82a19314fac29adb808e9bbfa9637d45a",
+  "commit": "f8a1b03794a49239a3539015075f5123d6c07d66",
+  "python": "3.11.17 | packaged by conda-forge | (main, Oct 13 2026, 16:36:10) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.9.1+cu128",
+  "cuda_build": "12.8",
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "0",
+    "HF_HOME": "E:\\cstudy\\AIGC\\V\\local\\models\\.hf-home",
+    "HF_HUB_CACHE": "E:\\cstudy\\AIGC\\V\\local\\models\\.hf-home\\hub",
+    "HF_ENDPOINT": null,
+    "HF_HUB_OFFLINE": "1",
+    "PYTORCH_CUDA_ALLOC_CONF": null,
+    "PYTORCH_ALLOC_CONF": null
+  },
+  "generation_module": "E:\\cstudy\\AIGC\\V\\local\\musubi-tuner\\src\\musubi_tuner\\wan_generate_video.py",
+  "allocator_backend": "native",
+  "tokenizer_directory": "E:\\cstudy\\AIGC\\V\\local\\models",
+  "tokenizer_revision": "a064a6c71f5be440641209c07bf2a5ce7a2ff5e4"
+}

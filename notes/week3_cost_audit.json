@@ -1,0 +1,62 @@
+{
+  "analysis_date": "2026-10-22",
+  "manifest_sha256": "0fd4d18cd750a4bb5f05ae0fc143e1998cbf54eb8288aa3c0aec0d02fae3c280",
+  "script_sha256": "5d4d08732aecc9fbaee39c92d608da2b2dea01fc2ca9371fd41423593892c09b",
+  "planned": 36,
+  "ok": 36,
+  "total_attempts": 36,
+  "generation_mean_seconds": 138.250974104287,
+  "generation_min_seconds": 127.57740759290755,
+  "generation_max_seconds": 141.56597626116127,
+  "generation_seconds_sum": 4977.035067754332,
+  "single_gpu_serial_estimate_seconds": 4977.035067754332,
+  "two_gpu_ideal_estimate_seconds": 2488.517533877166,
+  "overall_first_start": "2026-10-19T16:06:44.145610+08:00",
+  "overall_last_finish": "2026-10-19T16:49:03.220585+08:00",
+  "observed_span_seconds": 2539.074975,
+  "per_gpu": [
+    {
+      "gpu": 0,
+      "count": 18,
+      "first_start": "2026-10-19T16:06:44.145610+08:00",
+      "last_finish": "2026-10-19T16:47:53.481084+08:00",
+      "span_seconds": 2469.335474,
+      "generation_seconds_sum": 2464.842878941912,
+      "receipt_seconds_sum": 2467.9046009999997
+    },
+    {
+      "gpu": 1,
+      "count": 18,
+      "first_start": "2026-10-19T16:07:06.518985+08:00",
+      "last_finish": "2026-10-19T16:49:03.220585+08:00",
+      "span_seconds": 2516.7016,
+      "generation_seconds_sum": 2512.1921888124198,
+      "receipt_seconds_sum": 2515.287432
+    }
+  ],
+  "human_time": "not measured; user removed human timing requirement",
+  "note": "Wall time includes host loading, saving and receipt overhead; not active GPU time, energy, or benchmark latency.",
+  "scenarios": [
+    {
+      "new_configs": 1,
+      "videos": 36,
+      "generation_seconds_sum_estimate": 4977.035067754332,
+      "ideal_two_gpu_seconds_estimate": 2488.517533877166,
+      "observed_span_scaled_seconds_reference": 2539.074975
+    },
+    {
+      "new_configs": 2,
+      "videos": 72,
+      "generation_seconds_sum_estimate": 9954.070135508664,
+      "ideal_two_gpu_seconds_estimate": 4977.035067754332,
+      "observed_span_scaled_seconds_reference": 5078.14995
+    },
+    {
+      "new_configs": 3,
+      "videos": 108,
+      "generation_seconds_sum_estimate": 14931.105203262996,
+      "ideal_two_gpu_seconds_estimate": 7465.552601631498,
+      "observed_span_scaled_seconds_reference": 7617.224925
+    }
+  ]
+}

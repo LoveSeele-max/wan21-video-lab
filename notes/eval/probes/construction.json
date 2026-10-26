@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "script_sha256": "a7b968493e5ff84545fc4214298f5d7e92332b35ed9a7c589b44aa0d8f5314ff",
+  "protocol_sha256": "a3f0775e73eee29d2b5637122395a10845ab45e64fd109feccb95af5aad5bcb6",
+  "frame_start": 30,
+  "frame_end_inclusive": 40,
+  "frame_index_base": 0,
+  "flicker_gains": [
+    1.15,
+    0.85
+  ],
+  "blur_kernel": [
+    19,
+    19
+  ],
+  "blur_sigma": 3,
+  "regions_xyxy": {
+    "P01_s42": [
+      350,
+      60,
+      650,
+      380
+    ],
+    "P04_s42": [
+      370,
+      155,
+      455,
+      410
+    ],
+    "P07_s42": [
+      260,
+      220,
+      660,
+      430
+    ]
+  },
+  "warp_amplitude_pixels": 12,
+  "warp_period_pixels": 32,
+  "warp_phase_step": "pi/2",
+  "warp_edge_envelope": "sin(pi*x/(width-1))*sin(pi*y/(height-1))",
+  "codec": "ffv1",
+  "pixel_format": "bgr0",
+  "container": "matroska"
+}

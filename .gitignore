@@ -1,0 +1,46 @@
+# Runtime dependencies, models and caches
+/local/
+/env/
+/env-*/
+.venv/
+venv/
+models/
+musubi-tuner/
+third_party/
+node_modules/
+__pycache__/
+*.py[cod]
+.cache/
+.hf-home/
+pip-cache/
+
+# Generated media and large profiler captures
+outputs/
+video/
+*.mp4
+*.mkv
+*.mov
+*.safetensors
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.whl
+*.zip
+trace.json
+*.pt.trace.json
+
+# Reviewer identities and local-only work
+notes/blind_private/
+notes/NEW_CHAT_HANDOFF.md
+.claude/
+.codex/
+.publish/
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+.DS_Store
+Thumbs.db

@@ -1,0 +1,29 @@
+{
+  "verified_date": "2026-10-22",
+  "verification_scope": "locally_received_pip_freeze_and_build_log",
+  "before_record_count": 71,
+  "after_record_count": 72,
+  "added_records": [
+    "sageattention @ file:///home/user/projects/wan21-video/third_party/SageAttention-v2.2.0"
+  ],
+  "removed_records": [],
+  "existing_records_unchanged": true,
+  "files": [
+    {
+      "path": "build-20261022-150518/before.txt",
+      "sha256": "3168f4e1854f644f06468ecd23196dff116f407bfcb1446b3ff9211083470849"
+    },
+    {
+      "path": "after.txt",
+      "sha256": "52afb21c3110948049bd79d618701ddc212be08ce3dbd27124a1e4c4073c4556"
+    },
+    {
+      "path": "build-20261022-150518/install.log",
+      "sha256": "16b9b68d0b5871170131c8288063b788a9eb9d030cb412e28be05c52ea93eee4"
+    }
+  ],
+  "source_commit_user_reported": "eb615cf6cf4d221338033340ee2de1c37fbdba4a",
+  "source_tree_received": false,
+  "wheel_received": false,
+  "model_inference_validated": false
+}

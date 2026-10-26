@@ -1,0 +1,49 @@
+# Project-specific operational thresholds, not a statistical equivalence claim.
+version: 1
+registered_date: "2026-10-22"
+status: frozen_before_optimization_results
+max_new_configs: 3
+candidates:
+  attention:
+    preferred_config: configs/eval_sageattn.yaml
+    status: selected_install_import_and_small_tensor_passed
+    backend_version: "2.2.0"
+    source_commit: eb615cf6cf4d221338033340ee2de1c37fbdba4a
+    environment: /home/user/projects/wan21-video/env-sagecheck
+    full_dependency_diff: pip_freeze_verified_only_sageattention_added
+    installation_archive: notes/sagecheck/archive_audit.json
+    model_inference_validation: pending
+    fallback: xformers_only_if_preferred_cannot_be_installed_compatibly
+    max_selected: 1
+  precision:
+    configs: [configs/eval_fp8.yaml, configs/eval_fp8_scaled.yaml]
+    max_selected: 2
+excluded_first_round: [fp8_fast, compile, offload, combined_optimizations]
+benchmark:
+  mode: total
+  warmup: 1
+  measured: 3
+  same_physical_gpu: true
+  no_concurrent_generation: true
+  contemporary_baseline_in_same_environment: true
+  minimum_latency_reduction_fraction: 0.05
+  overlap_definition: closed_intervals_of_measured_min_max_intersect
+  confirmation_rounds_if_overlap: 1
+  confirmation_includes: [baseline, candidate]
+  aggregate_confirmation: all_six_measured_runs_per_side
+  speed_confirmed_after_repeat: reduction_at_least_threshold_and_pooled_ranges_disjoint
+quality:
+  scoring_manifest: configs/scoring_frozen.yaml
+  planned_pairs: 36
+  dimensions: [structure, temporal_motion, prompt_alignment]
+  min_scorable_pairs_each_dimension: 33
+  max_marked_worse_each_dimension: 0
+  max_mild_worse_each_dimension: 3
+  allow_cross_dimension_offset: false
+  allow_better_to_offset_worse: false
+  unresolved_direction_severity_conflict: insufficient_evidence
+reliability:
+  required_final_success_for_usable: 36
+  max_attempts_each_sample: 2
+  preserve_first_attempt_failures: true
+human_timing_required: false
