@@ -1,0 +1,189 @@
+{
+  "verified_date_asia_shanghai": "2026-10-27",
+  "status": "passed_A4_stage_records_diagnostic_only",
+  "session": "W4-A4-sage-stages-stages-20261027-150717-7519d3ee",
+  "summary_recomputed_exactly": true,
+  "recorded_environment_matches_A3": true,
+  "runs": [
+    {
+      "run": "warmup-01",
+      "warmup": true,
+      "seconds": 119.04093504277989,
+      "forward_calls": 40,
+      "forward_seconds_mean": 2.3661135111702607,
+      "timing_gap_percent": 0.00039569671726009796
+    },
+    {
+      "run": "run-01",
+      "warmup": false,
+      "seconds": 122.6158517957665,
+      "forward_calls": 40,
+      "forward_seconds_mean": 2.4947854763478974,
+      "timing_gap_percent": 0.00029069458245552205
+    }
+  ],
+  "formal_stage_table": {
+    "other": {
+      "seconds": 0.34197229193523526,
+      "allocated_mib": 2765.6474609375,
+      "reserved_mib": 18666.0
+    },
+    "prepare_t2v_inputs": {
+      "seconds": 0.4175220439210534,
+      "allocated_mib": 11093.60986328125,
+      "reserved_mib": 11192.0
+    },
+    "load_text_encoder": {
+      "seconds": 9.893144458066672,
+      "allocated_mib": 10845.6015625,
+      "reserved_mib": 10870.0
+    },
+    "load_dit_models": {
+      "seconds": 0.4728076681494713,
+      "allocated_mib": 2732.64697265625,
+      "reserved_mib": 2978.0
+    },
+    "run_sampling": {
+      "seconds": 100.19834579480812,
+      "allocated_mib": 4183.44873046875,
+      "reserved_mib": 5976.0
+    },
+    "save_latent": {
+      "seconds": 0.0035003223456442356,
+      "allocated_mib": 9.125,
+      "reserved_mib": 34.0
+    },
+    "decode_latent": {
+      "seconds": 10.307022055611014,
+      "allocated_mib": 14698.353515625,
+      "reserved_mib": 18666.0
+    },
+    "load_vae": {
+      "seconds": 0.0632804767228663,
+      "allocated_mib": 251.35595703125,
+      "reserved_mib": 306.0
+    },
+    "save_video": {
+      "seconds": 0.9179002465680242,
+      "allocated_mib": 9.125,
+      "reserved_mib": 18666.0
+    }
+  },
+  "formal_elapsed_seconds": 122.6158517957665,
+  "formal_stage_sum_seconds": 122.6154953581281,
+  "formal_forward_seconds": {
+    "n": 40,
+    "mean": 2.4947854763478974,
+    "min": 2.4116648882627487,
+    "max": 2.527208208106458
+  },
+  "formal_paired_forward_seconds": {
+    "n": 20,
+    "mean": 4.989570952695795,
+    "min": 4.849171144422144,
+    "max": 5.043700302485377
+  },
+  "formal_allocated_peak_stage": [
+    "decode_latent"
+  ],
+  "stage_comparison": {
+    "other": {
+      "torch_seconds": 0.3484940631315112,
+      "sage_seconds": 0.34197229193523526,
+      "saved_seconds": 0.0065217711962759495,
+      "sage_allocated_mib": 2765.6474609375,
+      "sage_reserved_mib": 18666.0
+    },
+    "prepare_t2v_inputs": {
+      "torch_seconds": 0.4280967372469604,
+      "sage_seconds": 0.4175220439210534,
+      "saved_seconds": 0.010574693325906992,
+      "sage_allocated_mib": 11093.60986328125,
+      "sage_reserved_mib": 11192.0
+    },
+    "load_text_encoder": {
+      "torch_seconds": 10.60615798085928,
+      "sage_seconds": 9.893144458066672,
+      "saved_seconds": 0.7130135227926075,
+      "sage_allocated_mib": 10845.6015625,
+      "sage_reserved_mib": 10870.0
+    },
+    "load_dit_models": {
+      "torch_seconds": 0.48192141903564334,
+      "sage_seconds": 0.4728076681494713,
+      "saved_seconds": 0.009113750886172056,
+      "sage_allocated_mib": 2732.64697265625,
+      "sage_reserved_mib": 2978.0
+    },
+    "run_sampling": {
+      "torch_seconds": 111.18730131816119,
+      "sage_seconds": 100.19834579480812,
+      "saved_seconds": 10.98895552335307,
+      "sage_allocated_mib": 4183.44873046875,
+      "sage_reserved_mib": 5976.0
+    },
+    "save_latent": {
+      "torch_seconds": 0.0039113606326282024,
+      "sage_seconds": 0.0035003223456442356,
+      "saved_seconds": 0.00041103828698396683,
+      "sage_allocated_mib": 9.125,
+      "sage_reserved_mib": 34.0
+    },
+    "decode_latent": {
+      "torch_seconds": 10.317400565836579,
+      "sage_seconds": 10.307022055611014,
+      "saved_seconds": 0.010378510225564241,
+      "sage_allocated_mib": 14698.353515625,
+      "sage_reserved_mib": 18666.0
+    },
+    "load_vae": {
+      "torch_seconds": 0.0575063549913466,
+      "sage_seconds": 0.0632804767228663,
+      "saved_seconds": -0.005774121731519699,
+      "sage_allocated_mib": 251.35595703125,
+      "sage_reserved_mib": 306.0
+    },
+    "save_video": {
+      "torch_seconds": 1.0813064370304346,
+      "sage_seconds": 0.9179002465680242,
+      "saved_seconds": 0.16340619046241045,
+      "sage_allocated_mib": 9.125,
+      "sage_reserved_mib": 18666.0
+    }
+  },
+  "comparison_diagnostic_only": {
+    "total_saved_seconds": 11.896624718327075,
+    "denoise_saved_seconds": 10.98895552335307,
+    "denoise_reduction_fraction": 0.09883282886692518,
+    "denoise_share_of_total_saved": 0.923703637253034,
+    "other_stage_net_saved_seconds": 0.9076691949740052
+  },
+  "coarse_operator_projection_hypothesis_only": {
+    "equal_self_cross_call_operator_sum_sdpa_ms": 41.20696857571602,
+    "equal_self_cross_call_operator_sum_sage_ms": 34.33892484754324,
+    "operator_sum_reduction_fraction": 0.16667189957332207,
+    "historical_attention_kernel_fraction": 0.5389856357699897,
+    "projected_denoise_reduction_fraction": 0.08983375975651887,
+    "projected_denoise_saved_seconds": 9.988373314591367,
+    "projected_total_reduction_fraction": 0.07425611046232453,
+    "assumptions": [
+      "One self and one cross attention per layer, representative random-input operator timings.",
+      "Historical R5 kernel-busy fraction is used as an approximate wall-time fraction, not a measured equality.",
+      "All other work held fixed; host, wrapper, frequency and profiler differences ignored."
+    ]
+  },
+  "files_sha256": {
+    "run-01\\result.json": "efded1a29cd5ea8e5e738c7fe8af04c17443ca8a2a841aff3b61fe4494a831fd",
+    "session.json": "230e9bf06d5a6b6b620fe35bd81c8df4d8cd8e55cb92e4fc3217af4073836b43",
+    "summary.json": "963fd0e8a56012c246d66fd8afab8f8486cee77d24cab5f234ed7a28282e9b1a",
+    "warmup-01\\result.json": "a9a06556c9a0bfa70335b91f481e47ec017942c8d08a2abda6f7ab54d3d979f2"
+  },
+  "limits": [
+    "One formal stage-mode generation per side, diagnostic only; speed verdict remains A1/A2 total.",
+    "CPU validation of user-generated server records only, no inference rerun.",
+    "No whole-card sampler in stages; A1/A2 sampled peaks reported separately.",
+    "Saved time attribution is arithmetic stage comparison, not causal isolation.",
+    "Projection is a rough hypothesis using non-equivalent operator and kernel/wall-time scopes.",
+    "Quality and final usability are not assessed."
+  ]
+}

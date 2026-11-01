@@ -1,0 +1,393 @@
+{
+  "verified_date_asia_shanghai": "2026-10-29",
+  "status": "passed_local_stage_records_audit_diagnostic_only",
+  "archive_sha256": "8afe8ff030a6773de366e16ad13d5d20625635fd9cbb420f393b9fadb3487882",
+  "archive_members_match_extraction": 12,
+  "server_archive_sha256_supplied": false,
+  "cases": {
+    "baseline": {
+      "session": "W4-F6-torch-stages-stages-20261029-151302-78d70e8b",
+      "runs": [
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 129.0101310168393,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.00046239927567063465
+        },
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 135.73043682379648,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.00026252981494115997
+        }
+      ],
+      "summary_recomputed_exactly": true,
+      "recorded_runtime_matches_total": true,
+      "stage_table": {
+        "other": {
+          "seconds": 0.3640703661367297,
+          "allocated_mib": 2765.6474609375,
+          "reserved_mib": 18666.0
+        },
+        "prepare_t2v_inputs": {
+          "seconds": 0.42669173516333103,
+          "allocated_mib": 11093.60986328125,
+          "reserved_mib": 11192.0
+        },
+        "load_text_encoder": {
+          "seconds": 10.644571189768612,
+          "allocated_mib": 10845.6015625,
+          "reserved_mib": 10870.0
+        },
+        "load_dit_models": {
+          "seconds": 0.4919329737313092,
+          "allocated_mib": 2732.64697265625,
+          "reserved_mib": 2978.0
+        },
+        "run_sampling": {
+          "seconds": 112.29380817012861,
+          "allocated_mib": 4183.47216796875,
+          "reserved_mib": 5974.0
+        },
+        "save_latent": {
+          "seconds": 0.0036201197654008865,
+          "allocated_mib": 9.125,
+          "reserved_mib": 34.0
+        },
+        "decode_latent": {
+          "seconds": 10.321186875924468,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0
+        },
+        "load_vae": {
+          "seconds": 0.06602853210642934,
+          "allocated_mib": 251.35595703125,
+          "reserved_mib": 306.0
+        },
+        "save_video": {
+          "seconds": 1.1181705282069743,
+          "allocated_mib": 9.125,
+          "reserved_mib": 18666.0
+        }
+      },
+      "formal_seconds_diagnostic": 135.73043682379648,
+      "allocated_peak_mib": 14698.353515625,
+      "reserved_peak_mib": 18666.0,
+      "allocated_peak_stages": [
+        "decode_latent"
+      ],
+      "forward_seconds": {
+        "n": 40,
+        "mean": 2.7986223619314843,
+        "min": 2.6861602910794318,
+        "max": 2.8452674383297563
+      }
+    },
+    "fp8": {
+      "session": "W4-F7-fp8-stages-stages-20261029-152149-75a61563",
+      "runs": [
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 129.49303582822904,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.00041778105200180324
+        },
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 133.5521301459521,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.000271964866738197
+        }
+      ],
+      "summary_recomputed_exactly": true,
+      "recorded_runtime_matches_total": true,
+      "stage_table": {
+        "other": {
+          "seconds": 0.3017892334610224,
+          "allocated_mib": 1464.89404296875,
+          "reserved_mib": 18666.0
+        },
+        "prepare_t2v_inputs": {
+          "seconds": 0.42715400410816073,
+          "allocated_mib": 11093.60986328125,
+          "reserved_mib": 11192.0
+        },
+        "load_text_encoder": {
+          "seconds": 10.374950718134642,
+          "allocated_mib": 10845.6015625,
+          "reserved_mib": 10870.0
+        },
+        "load_dit_models": {
+          "seconds": 0.5772635038010776,
+          "allocated_mib": 4139.41552734375,
+          "reserved_mib": 4434.0
+        },
+        "run_sampling": {
+          "seconds": 110.42883638991043,
+          "allocated_mib": 2882.59375,
+          "reserved_mib": 4510.0
+        },
+        "save_latent": {
+          "seconds": 0.003550998866558075,
+          "allocated_mib": 9.125,
+          "reserved_mib": 34.0
+        },
+        "decode_latent": {
+          "seconds": 10.398927223868668,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0
+        },
+        "load_vae": {
+          "seconds": 0.059220334980636835,
+          "allocated_mib": 251.35595703125,
+          "reserved_mib": 306.0
+        },
+        "save_video": {
+          "seconds": 0.980074523948133,
+          "allocated_mib": 9.125,
+          "reserved_mib": 18666.0
+        }
+      },
+      "formal_seconds_diagnostic": 133.5521301459521,
+      "allocated_peak_mib": 14698.353515625,
+      "reserved_peak_mib": 18666.0,
+      "allocated_peak_stages": [
+        "decode_latent"
+      ],
+      "forward_seconds": {
+        "n": 40,
+        "mean": 2.7529791481327264,
+        "min": 2.65142903663218,
+        "max": 2.81248920224607
+      }
+    },
+    "fp8_scaled": {
+      "session": "W4-F8-fp8-scaled-stages-stages-20261029-152931-00dfa303",
+      "runs": [
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 132.96043383982033,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.0003602625685756705
+        },
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 136.5152322370559,
+          "forward_calls": 40,
+          "timing_gap_percent": 0.00028948177036866514
+        }
+      ],
+      "summary_recomputed_exactly": true,
+      "recorded_runtime_matches_total": true,
+      "stage_table": {
+        "other": {
+          "seconds": 0.33261623978614807,
+          "allocated_mib": 1499.5068359375,
+          "reserved_mib": 18666.0
+        },
+        "prepare_t2v_inputs": {
+          "seconds": 0.42392276832833886,
+          "allocated_mib": 11093.60986328125,
+          "reserved_mib": 11192.0
+        },
+        "load_text_encoder": {
+          "seconds": 10.617930131964386,
+          "allocated_mib": 10845.6015625,
+          "reserved_mib": 10870.0
+        },
+        "load_dit_models": {
+          "seconds": 0.7097326000221074,
+          "allocated_mib": 1553.2158203125,
+          "reserved_mib": 1668.0
+        },
+        "run_sampling": {
+          "seconds": 113.08536423416808,
+          "allocated_mib": 2917.08154296875,
+          "reserved_mib": 4508.0
+        },
+        "save_latent": {
+          "seconds": 0.0034056659787893295,
+          "allocated_mib": 9.125,
+          "reserved_mib": 34.0
+        },
+        "decode_latent": {
+          "seconds": 10.319692630320787,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0
+        },
+        "load_vae": {
+          "seconds": 0.0664115627296269,
+          "allocated_mib": 251.35595703125,
+          "reserved_mib": 306.0
+        },
+        "save_video": {
+          "seconds": 0.955761217046529,
+          "allocated_mib": 9.125,
+          "reserved_mib": 18666.0
+        }
+      },
+      "formal_seconds_diagnostic": 136.5152322370559,
+      "allocated_peak_mib": 14698.353515625,
+      "reserved_peak_mib": 18666.0,
+      "allocated_peak_stages": [
+        "decode_latent"
+      ],
+      "forward_seconds": {
+        "n": 40,
+        "mean": 2.818599785771221,
+        "min": 2.7087265751324594,
+        "max": 2.863689975813031
+      }
+    }
+  },
+  "limits": [
+    "User-operated server run, locally audited saved records only.",
+    "Local archive and extraction match; no server checksum supplied.",
+    "One measured stages run per configuration; warmups excluded from comparisons.",
+    "Stage instrumentation adds synchronization overhead; use total audit for speed thresholds.",
+    "No whole-card sampling or output videos/latents supplied for these stage sessions.",
+    "Runtime fields match; full environment, executable path and absence of concurrent work not independently monitored."
+  ],
+  "stage_comparisons_diagnostic_only": {
+    "fp8": {
+      "other": {
+        "seconds_saved": 0.06228113267570734,
+        "allocated_saved_mib": 1300.75341796875,
+        "allocated_reduction_fraction": 0.47032509976084236,
+        "reserved_saved_mib": 0.0
+      },
+      "prepare_t2v_inputs": {
+        "seconds_saved": -0.0004622689448297024,
+        "allocated_saved_mib": 0.0,
+        "allocated_reduction_fraction": 0.0,
+        "reserved_saved_mib": 0.0
+      },
+      "load_text_encoder": {
+        "seconds_saved": 0.26962047163397074,
+        "allocated_saved_mib": 0.0,
+        "allocated_reduction_fraction": 0.0,
+        "reserved_saved_mib": 0.0
+      },
+      "load_dit_models": {
+        "seconds_saved": -0.08533053006976843,
+        "allocated_saved_mib": -1406.7685546875,
+        "allocated_reduction_fraction": -0.5148006927949645,
+        "reserved_saved_mib": -1456.0
+      },
+      "run_sampling": {
+        "seconds_saved": 1.864971780218184,
+        "allocated_saved_mib": 1300.87841796875,
+        "allocated_reduction_fraction": 0.31095663260988793,
+        "reserved_saved_mib": 1464.0
+      },
+      "save_latent": {
+        "seconds_saved": 6.912089884281158e-05,
+        "allocated_saved_mib": 0.0,
+        "allocated_reduction_fraction": 0.0,
+        "reserved_saved_mib": 0.0
+      },
+      "decode_latent": {
+        "seconds_saved": -0.07774034794420004,
+        "allocated_saved_mib": 0.0,
+        "allocated_reduction_fraction": 0.0,
+        "reserved_saved_mib": 0.0
+      },
+      "load_vae": {
+        "seconds_saved": 0.006808197125792503,
+        "allocated_saved_mib": 0.0,
+        "allocated_reduction_fraction": 0.0,
+        "reserved_saved_mib": 0.0
+      },
+      "save_video": {
+        "seconds_saved": 0.13809600425884128,
+        "allocated_saved_mib": 0.0,
+        "allocated_reduction_fraction": 0.0,
+        "reserved_saved_mib": 0.0
+      }
+    },
+    "fp8_scaled": {
+      "other": {
+        "seconds_saved": 0.031454126350581646,
+        "allocated_saved_mib": 1266.140625,
+        "allocated_reduction_fraction": 0.45780984123363405,
+        "reserved_saved_mib": 0.0
+      },
+      "prepare_t2v_inputs": {
+        "seconds_saved": 0.0027689668349921703,
+        "allocated_saved_mib": 0.0,
+        "allocated_reduction_fraction": 0.0,
+        "reserved_saved_mib": 0.0
+      },
+      "load_text_encoder": {
+        "seconds_saved": 0.026641057804226875,
+        "allocated_saved_mib": 0.0,
+        "allocated_reduction_fraction": 0.0,
+        "reserved_saved_mib": 0.0
+      },
+      "load_dit_models": {
+        "seconds_saved": -0.2177996262907982,
+        "allocated_saved_mib": 1179.43115234375,
+        "allocated_reduction_fraction": 0.4316075820058426,
+        "reserved_saved_mib": 1310.0
+      },
+      "run_sampling": {
+        "seconds_saved": -0.7915560640394688,
+        "allocated_saved_mib": 1266.390625,
+        "allocated_reduction_fraction": 0.30271281226543584,
+        "reserved_saved_mib": 1466.0
+      },
+      "save_latent": {
+        "seconds_saved": 0.000214453786611557,
+        "allocated_saved_mib": 0.0,
+        "allocated_reduction_fraction": 0.0,
+        "reserved_saved_mib": 0.0
+      },
+      "decode_latent": {
+        "seconds_saved": 0.0014942456036806107,
+        "allocated_saved_mib": 0.0,
+        "allocated_reduction_fraction": 0.0,
+        "reserved_saved_mib": 0.0
+      },
+      "load_vae": {
+        "seconds_saved": -0.00038303062319755554,
+        "allocated_saved_mib": 0.0,
+        "allocated_reduction_fraction": 0.0,
+        "reserved_saved_mib": 0.0
+      },
+      "save_video": {
+        "seconds_saved": 0.1624093111604452,
+        "allocated_saved_mib": 0.0,
+        "allocated_reduction_fraction": 0.0,
+        "reserved_saved_mib": 0.0
+      }
+    }
+  },
+  "inputs_sha256": {
+    "notes\\week4\\W4-fp8-stages-records-20261029\\notes\\week2\\W4-F8-fp8-scaled-stages-stages-20261029-152931-00dfa303\\session.json": "d67c84c9c982ed1e54d0bebf3b5dbb3bf9b6107b5495b990d7cb77a01744ac85",
+    "notes\\week4\\W4-fp8-stages-records-20261029\\notes\\week2\\W4-F8-fp8-scaled-stages-stages-20261029-152931-00dfa303\\warmup-01\\result.json": "8fa95fb109692248726aaa0cafceae7e6f01f696a1684c61784ddff8a11db34e",
+    "notes\\week4\\W4-fp8-stages-records-20261029\\notes\\week2\\W4-F7-fp8-stages-stages-20261029-152149-75a61563\\summary.json": "59c1cdff54d524834735bf32235fac2a28d8148154bd4c4f3d74b4c4cef2ba7d",
+    "notes\\week4\\W4-fp8-stages-records-20261029\\notes\\week2\\W4-F6-torch-stages-stages-20261029-151302-78d70e8b\\summary.json": "bd0904438b92d20a998fce763f2308083373b11007c65570d0630f39d27f5889",
+    "notes\\week4\\W4-fp8-stages-records-20261029\\notes\\week2\\W4-F7-fp8-stages-stages-20261029-152149-75a61563\\run-01\\result.json": "0121b177329fcaa3a7115ee9c4f90dfded2a7488a703d16c57ef336b595bbf27",
+    "notes\\week4\\W4-fp8-stages-records-20261029\\notes\\week2\\W4-F8-fp8-scaled-stages-stages-20261029-152931-00dfa303\\summary.json": "a772430b24819438ed6b348e041720b08042c0685ea2035f3e2de350bf1f6169",
+    "notes\\week4\\W4-fp8-stages-records-20261029\\notes\\week2\\W4-F7-fp8-stages-stages-20261029-152149-75a61563\\warmup-01\\result.json": "271002c4511b1d0a6eb97055a006331124742829dea69ed053e966275f15c652",
+    "notes\\week4\\W4-fp8-stages-records-20261029\\notes\\week2\\W4-F8-fp8-scaled-stages-stages-20261029-152931-00dfa303\\run-01\\result.json": "1e99a4eee2fb68bb96336bf8b5fd397897cf165889316ca5543f4fea017e1d53",
+    "notes\\week4\\W4-fp8-stages-records-20261029\\notes\\week2\\W4-F6-torch-stages-stages-20261029-151302-78d70e8b\\warmup-01\\result.json": "5a8a9f0e8f0a7037570048a56b5a9c37be93b3913f34d8a0c068d0f71ebec068",
+    "notes\\week4\\W4-fp8-stages-records-20261029\\notes\\week2\\W4-F6-torch-stages-stages-20261029-151302-78d70e8b\\session.json": "166e974da4aa5ffd838f46f1f9ce3439b901a725f1f6b5732721bf6aadc10ac0",
+    "notes\\week4\\W4-fp8-stages-records-20261029\\notes\\week2\\W4-F7-fp8-stages-stages-20261029-152149-75a61563\\session.json": "d93f966d1384bd96356e7706f5559e6e576bd27734388803eb577e192375d6cf",
+    "notes\\week4\\W4-fp8-stages-records-20261029\\notes\\week2\\W4-F6-torch-stages-stages-20261029-151302-78d70e8b\\run-01\\result.json": "24431c8dc2a56633eb03b3f1e8e42c264caaecd923efcd14e846e2da98dd54dd",
+    "notes\\week4\\W4-fp8-stages-records-20261029.tar.gz": "8afe8ff030a6773de366e16ad13d5d20625635fd9cbb420f393b9fadb3487882",
+    "scripts/bench.py": "ffc9af27120d7fd0f903b1482122a393c39a372aa0be0f4eed67873851ea775c",
+    "notes\\week4\\fp8_total_audit.json": "ac56ef345f5ba12661de71f2e53e026fc916ee197ebe1170978cc49239329ad5",
+    "configs\\eval_baseline.yaml": "25c0ac2d0e431b3f08910be32930099c03e9c12680c23b359d391b2b48626874",
+    "configs\\eval_fp8.yaml": "23fc82eab585987a5d3d09a5f531dbb2f28cda2a4c5b9afb0b7380ab2d08bbca",
+    "configs\\eval_fp8_scaled.yaml": "e950a4e01e3894744aff17403a194193ad77932120fe76592460c372c7ec5ff3"
+  },
+  "inputs_unchanged": true,
+  "audit_script_sha256": "0d02ee4684aeb8941fed16a3dc5286cf813a71b3532580f43cd1d0894de493fb"
+}

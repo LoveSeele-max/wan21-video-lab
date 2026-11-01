@@ -1,0 +1,41 @@
+{
+  "verified_date_asia_shanghai": "2026-10-26",
+  "status": "passed_registered_single_sample_mp4_reproduction",
+  "key": "P01_s42",
+  "namespace": "baseline-envcheck",
+  "receipt_status": "ok",
+  "attempt": 1,
+  "attention_mode": "torch",
+  "actual_steps": 20,
+  "runtime_matches_historical_receipt": true,
+  "dataset_identity_matches_historical_and_current_local_files": true,
+  "fingerprint": "59638afe21c85d091a6d356c2f7fcd2fcf6a49d14f47760aab4c01a2985a66ae",
+  "effective_args_differences": {
+    "save_path": {
+      "old": "/home/user/projects/wan21-video/outputs/eval/baseline/.attempts/P01_s42/attempt-01",
+      "new": "/home/user/projects/wan21-video/outputs/eval/baseline-envcheck/.attempts/P01_s42/attempt-01"
+    }
+  },
+  "negative_prompt_matches_historical_receipt": true,
+  "events": ["running", "ok"],
+  "attempt_count": 1,
+  "receipt_video_sha256": "fa59fbd653bef48711826054cbfc3463da9003b10c429c2273d9cf77eb838217",
+  "user_reported_server_old_and_new_video_hashes_match": true,
+  "local_historical_video_hash_recomputed_and_matches": true,
+  "old_latent_file_sha256": "45b483abe74e4cc29943b15c40931aa11ff265d652abf964132636303f0def16",
+  "new_latent_file_sha256": "7d4a03a4110388c685d0567a9f8b2d3e0b41b2f3e7f45a3e3d71c8a0a0da95a9",
+  "latent_file_hashes_equal": false,
+  "latent_tensor_equality": "not checked; file hash differences do not establish tensor value differences",
+  "local_receipt_files_sha256": {
+    "dataset.json": "687f0e85342cf1c224e82d6cdf8115f4be258129f00284a7ea7d8574c658cf39",
+    "events-0-of-1-a35d671ac4ed4259817d9fbd6ba983ff.jsonl": "815956f1ca71cecab59445da92e7281bc6c5b7f4a4a7f59f3c64896a35c9d372",
+    "attempts\\P01_s42\\attempt-01\\result.json": "b4f8809a2b0db654b746cfa7fcbb712560f9eda9081bb55c0667a6218edde657"
+  },
+  "limits": [
+    "Single P01/42 MP4 reproduction under the registered rule, not full environment equivalence.",
+    "New server MP4 and latent were not transferred; new output hash evidence comes from user-pasted server hashes and the archived receipt.",
+    "No claim that all 36 baseline outputs or latent tensors reproduce identically.",
+    "The two differing latent file hashes are retained without inventing a cause or changing the registered MP4 criterion.",
+    "No formal latency or quality conclusion, no inference rerun locally."
+  ]
+}

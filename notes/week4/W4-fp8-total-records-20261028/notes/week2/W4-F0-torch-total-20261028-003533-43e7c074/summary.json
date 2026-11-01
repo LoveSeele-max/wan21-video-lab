@@ -1,0 +1,29 @@
+{
+  "measured_runs": 3,
+  "elapsed_seconds": {
+    "n": 3,
+    "mean": 134.03493864291036,
+    "min": 133.4579865988344,
+    "max": 135.17331278230995
+  },
+  "peak_allocated_bytes": {
+    "n": 3,
+    "mean": 15412340736,
+    "min": 15412340736,
+    "max": 15412340736
+  },
+  "peak_reserved_bytes": {
+    "n": 3,
+    "mean": 19572719616,
+    "min": 19572719616,
+    "max": 19572719616
+  },
+  "stage_seconds": {},
+  "stage_peak_allocated_bytes": {},
+  "stage_peak_reserved_bytes": {},
+  "excluding_load_intervals_seconds": null,
+  "launch_to_video_saved_seconds": null,
+  "forward_seconds": null,
+  "paired_forward_seconds": null,
+  "paired_forward_note": "Two forwards only; excludes scheduler/loop overhead"
+}

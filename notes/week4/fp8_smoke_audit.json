@@ -1,0 +1,309 @@
+{
+  "verified_date_asia_shanghai": "2026-10-28",
+  "status": "passed_local_smoke_checks_only",
+  "source_root": "E:\\cstudy\\AIGC\\V\\notes\\week4\\W4-fp8-smoke-artifacts-20261027",
+  "archive_sha256": "fc760f908e46102ce12a537ea95d67d164b06fd820c244e27882307d65170372",
+  "archive_members_match_extracted_files": 10,
+  "server_archive_sha256_supplied": false,
+  "cases": {
+    "fp8": {
+      "session": "W4-fp8-smoke-stages-20261027-233635-3ec2be40",
+      "session_status": "ok",
+      "result_status": "ok",
+      "flags": {
+        "attn_mode": "torch",
+        "fp8": true,
+        "fp8_scaled": false,
+        "fp8_fast": false,
+        "fp8_t5": false
+      },
+      "config_and_bench_hashes_verified": true,
+      "summary_recomputed_exactly": true,
+      "stage_checks_recomputed": true,
+      "forward_calls": 4,
+      "elapsed_seconds_smoke_only": 33.126806498039514,
+      "allocated_peak_mib": 14698.353515625,
+      "reserved_peak_mib": 18666.0,
+      "allocated_peak_stage": [
+        "decode_latent"
+      ],
+      "stage_summary": {
+        "other": {
+          "seconds": 0.33497510896995664,
+          "peak_allocated_bytes": 1536052736,
+          "peak_reserved_bytes": 19572719616
+        },
+        "prepare_t2v_inputs": {
+          "seconds": 0.744114397559315,
+          "peak_allocated_bytes": 11631444480,
+          "peak_reserved_bytes": 11689525248
+        },
+        "load_text_encoder": {
+          "seconds": 10.810258502140641,
+          "peak_allocated_bytes": 11362869248,
+          "peak_reserved_bytes": 11364466688
+        },
+        "load_dit_models": {
+          "seconds": 0.5687359496951103,
+          "peak_allocated_bytes": 4339443200,
+          "peak_reserved_bytes": 4647288832
+        },
+        "run_sampling": {
+          "seconds": 9.836989855859429,
+          "peak_allocated_bytes": 3023538176,
+          "peak_reserved_bytes": 4726980608
+        },
+        "save_latent": {
+          "seconds": 0.006815476808696985,
+          "peak_allocated_bytes": 9568256,
+          "peak_reserved_bytes": 35651584
+        },
+        "decode_latent": {
+          "seconds": 9.728466770146042,
+          "peak_allocated_bytes": 15412340736,
+          "peak_reserved_bytes": 19572719616
+        },
+        "load_vae": {
+          "seconds": 0.06688633374869823,
+          "peak_allocated_bytes": 263565824,
+          "peak_reserved_bytes": 320864256
+        },
+        "save_video": {
+          "seconds": 1.028992170933634,
+          "peak_allocated_bytes": 9568256,
+          "peak_reserved_bytes": 19572719616
+        }
+      },
+      "latents": {
+        "latent": {
+          "shape": [
+            16,
+            21,
+            60,
+            104
+          ],
+          "dtype": "torch.float32",
+          "finite": true,
+          "min": -2.3988494873046875,
+          "max": 1.9083036184310913,
+          "mean": -0.19750836491584778,
+          "std": 0.6807003021240234
+        }
+      },
+      "latent_metadata": {
+        "seeds": "42",
+        "prompt": "A person waving one hand, plain background, static camera.",
+        "height": "480",
+        "width": "832",
+        "infer_steps": "2",
+        "video_length": "81",
+        "guidance_scale": "5.0"
+      },
+      "latent_sha256": "b6f493b45eae651789c7b4df7ff332c2b5cb670fbb1c346f23e8c4c9960e8de2",
+      "video_sha256": "2acdc2d54c1cfbd2c1a0e12f92686c27fe1f7a7b682aab86114065d98902ce67",
+      "video": {
+        "decoded_frames": 81,
+        "nonblack_frames": 81,
+        "width": 832,
+        "height": 480,
+        "fps": 16,
+        "codec": "h264",
+        "frame_mean_range": [
+          69.98398938301283,
+          71.30084635416667
+        ],
+        "frame_pixel_std_range": [
+          28.98101070121563,
+          30.445275033370024
+        ],
+        "preview_frame_indices": [
+          0,
+          40,
+          80
+        ]
+      }
+    },
+    "fp8_scaled": {
+      "session": "W4-fp8-scaled-smoke-stages-20261027-234012-aee81310",
+      "session_status": "ok",
+      "result_status": "ok",
+      "flags": {
+        "attn_mode": "torch",
+        "fp8": false,
+        "fp8_scaled": true,
+        "fp8_fast": false,
+        "fp8_t5": false
+      },
+      "config_and_bench_hashes_verified": true,
+      "summary_recomputed_exactly": true,
+      "stage_checks_recomputed": true,
+      "forward_calls": 4,
+      "elapsed_seconds_smoke_only": 33.54078897414729,
+      "allocated_peak_mib": 14698.353515625,
+      "reserved_peak_mib": 18666.0,
+      "allocated_peak_stage": [
+        "decode_latent"
+      ],
+      "stage_summary": {
+        "other": {
+          "seconds": 0.36549052922055125,
+          "peak_allocated_bytes": 1572215808,
+          "peak_reserved_bytes": 19572719616
+        },
+        "prepare_t2v_inputs": {
+          "seconds": 0.7349333134479821,
+          "peak_allocated_bytes": 11631444480,
+          "peak_reserved_bytes": 11689525248
+        },
+        "load_text_encoder": {
+          "seconds": 10.73780255857855,
+          "peak_allocated_bytes": 11362869248,
+          "peak_reserved_bytes": 11364466688
+        },
+        "load_dit_models": {
+          "seconds": 0.7398340739309788,
+          "peak_allocated_bytes": 1627485184,
+          "peak_reserved_bytes": 1746927616
+        },
+        "run_sampling": {
+          "seconds": 9.913477743044496,
+          "peak_allocated_bytes": 3058650624,
+          "peak_reserved_bytes": 4726980608
+        },
+        "save_latent": {
+          "seconds": 0.004340142011642456,
+          "peak_allocated_bytes": 9568256,
+          "peak_reserved_bytes": 35651584
+        },
+        "decode_latent": {
+          "seconds": 9.748877120669931,
+          "peak_allocated_bytes": 15412340736,
+          "peak_reserved_bytes": 19572719616
+        },
+        "load_vae": {
+          "seconds": 0.06279419409111142,
+          "peak_allocated_bytes": 263565824,
+          "peak_reserved_bytes": 320864256
+        },
+        "save_video": {
+          "seconds": 1.2327390159480274,
+          "peak_allocated_bytes": 9568256,
+          "peak_reserved_bytes": 19572719616
+        }
+      },
+      "latents": {
+        "latent": {
+          "shape": [
+            16,
+            21,
+            60,
+            104
+          ],
+          "dtype": "torch.float32",
+          "finite": true,
+          "min": -2.4757790565490723,
+          "max": 2.5457329750061035,
+          "mean": -0.2507726550102234,
+          "std": 0.8858796954154968
+        }
+      },
+      "latent_metadata": {
+        "width": "832",
+        "infer_steps": "2",
+        "seeds": "42",
+        "video_length": "81",
+        "prompt": "A person waving one hand, plain background, static camera.",
+        "height": "480",
+        "guidance_scale": "5.0"
+      },
+      "latent_sha256": "33cd82afe843add578ade2fec9ad358c65863699ec67f8c6c2a0d4c2be0719c3",
+      "video_sha256": "583f54508295e3d752a37c41e2d21a393107a841a3eee29036b41e55956cb331",
+      "video": {
+        "decoded_frames": 81,
+        "nonblack_frames": 81,
+        "width": 832,
+        "height": 480,
+        "fps": 16,
+        "codec": "h264",
+        "frame_mean_range": [
+          90.09193376068376,
+          91.23481904380341
+        ],
+        "frame_pixel_std_range": [
+          26.802210232006175,
+          28.05809122227408
+        ],
+        "preview_frame_indices": [
+          0,
+          40,
+          80
+        ]
+      }
+    }
+  },
+  "limits": [
+    "Server execution is user-operated; this audit reads received artifacts on CPU.",
+    "Local archive/extraction hashes agree; no server checksum was supplied for independent transfer comparison.",
+    "Successful decode, finite latents and non-black frames do not establish video quality or performance benefit.",
+    "No external whole-card GPU memory sampling was requested in these smoke runs.",
+    "Interpreter invocation follows the supplied command; session metadata does not independently record executable path.",
+    "No continuous second-GPU occupancy evidence was supplied."
+  ],
+  "effective_argument_differences": [
+    "fp8",
+    "fp8_scaled",
+    "save_path"
+  ],
+  "matching_recorded_runtime": {
+    "python": "3.11.17 (main, Oct  1 2026, 20:17:42) [GCC 14.3.0]",
+    "torch": "2.9.1+cu128",
+    "cuda_build": "12.8",
+    "gpu": "NVIDIA RTX 5880 Ada Generation",
+    "commit": "f8a1b03794a49239a3539015075f5123d6c07d66"
+  },
+  "fixed_source_comparisons": {
+    "wan_generate_video.py": {
+      "git_revision": "f8a1b03794a49239a3539015075f5123d6c07d66",
+      "git_path": "src/musubi_tuner/wan_generate_video.py",
+      "matches_saved_source_ignoring_crlf": true,
+      "git_blob_sha256": "52776793a899df7ed79160521ac461301804aac38ee34aa6ace091abd93cd5b5"
+    },
+    "wan_model.py": {
+      "git_revision": "f8a1b03794a49239a3539015075f5123d6c07d66",
+      "git_path": "src/musubi_tuner/wan/modules/model.py",
+      "matches_saved_source_ignoring_crlf": true,
+      "git_blob_sha256": "037e1b1d09aa64a81834f4eaa458020a7738d3a632e96666fcd9baebff604ad5"
+    },
+    "fp8_optimization_utils.py": {
+      "git_revision": "f8a1b03794a49239a3539015075f5123d6c07d66",
+      "git_path": "src/musubi_tuner/modules/fp8_optimization_utils.py",
+      "matches_saved_source_ignoring_crlf": true,
+      "git_blob_sha256": "4ce27ed4fba014c5a178455cfb9620612242ada555b26f9cc53de3a81f820173"
+    }
+  },
+  "audit_script_sha256": "20df8e36f157ddd888f98c3af144ef503dc4d7a71e1b6bb4e29c04d7c261812a",
+  "inputs_sha256": {
+    "notes\\week4\\W4-fp8-smoke-artifacts-20261027\\notes\\week2\\W4-fp8-scaled-smoke-stages-20261027-234012-aee81310\\session.json": "b0653b548647a1875c604b319de56672e2525ce1e1c73fc8363d33f0d0834be5",
+    "notes\\week4\\W4-fp8-smoke-artifacts-20261027\\notes\\week2\\W4-fp8-scaled-smoke-stages-20261027-234012-aee81310\\summary.json": "fe32effcc58aa008a91e85bd0cbb78c744671a9d8645e00855e057f0016c1aa5",
+    "notes\\week4\\W4-fp8-smoke-artifacts-20261027\\notes\\week2\\W4-fp8-scaled-smoke-stages-20261027-234012-aee81310\\run-01\\result.json": "5115716140fd246352a180e5173dcc17d7bb982c4a6be21098e67979b9c2780e",
+    "notes\\week4\\W4-fp8-smoke-artifacts-20261027\\notes\\week2\\W4-fp8-smoke-stages-20261027-233635-3ec2be40\\session.json": "f560e081f074add5068b30a5c52ab421dad6ebe4bff500dc4e680b7b7de1a1b2",
+    "notes\\week4\\W4-fp8-smoke-artifacts-20261027\\notes\\week2\\W4-fp8-smoke-stages-20261027-233635-3ec2be40\\summary.json": "52b495ce8c308e21b55d8914cf19af5cdc085fa15a56ba0c54d7f9634d300f1c",
+    "notes\\week4\\W4-fp8-smoke-artifacts-20261027\\notes\\week2\\W4-fp8-smoke-stages-20261027-233635-3ec2be40\\run-01\\result.json": "ab5e5ec4c2881cf8f8fff622e58754c9df63ad624a6e7f33f4ea09a6eb5c75e6",
+    "notes\\week4\\W4-fp8-smoke-artifacts-20261027\\outputs\\week2\\W4-fp8-scaled-smoke-stages-20261027-234012-aee81310\\run-01\\20261027-234036-134_42_latent.safetensors": "33cd82afe843add578ade2fec9ad358c65863699ec67f8c6c2a0d4c2be0719c3",
+    "notes\\week4\\W4-fp8-smoke-artifacts-20261027\\outputs\\week2\\W4-fp8-scaled-smoke-stages-20261027-234012-aee81310\\run-01\\20261027-234045-950_42_.mp4": "583f54508295e3d752a37c41e2d21a393107a841a3eee29036b41e55956cb331",
+    "notes\\week4\\W4-fp8-smoke-artifacts-20261027\\outputs\\week2\\W4-fp8-smoke-stages-20261027-233635-3ec2be40\\run-01\\20261027-233659-278_42_latent.safetensors": "b6f493b45eae651789c7b4df7ff332c2b5cb670fbb1c346f23e8c4c9960e8de2",
+    "notes\\week4\\W4-fp8-smoke-artifacts-20261027\\outputs\\week2\\W4-fp8-smoke-stages-20261027-233635-3ec2be40\\run-01\\20261027-233709-080_42_.mp4": "2acdc2d54c1cfbd2c1a0e12f92686c27fe1f7a7b682aab86114065d98902ce67",
+    "notes\\week4\\W4-fp8-smoke-artifacts-20261027.tar.gz": "fc760f908e46102ce12a537ea95d67d164b06fd820c244e27882307d65170372",
+    "scripts/bench.py": "ffc9af27120d7fd0f903b1482122a393c39a372aa0be0f4eed67873851ea775c",
+    "configs\\eval_fp8.yaml": "23fc82eab585987a5d3d09a5f531dbb2f28cda2a4c5b9afb0b7380ab2d08bbca",
+    "configs\\eval_fp8_scaled.yaml": "e950a4e01e3894744aff17403a194193ad77932120fe76592460c372c7ec5ff3",
+    "notes\\source\\wan_generate_video.py": "52776793a899df7ed79160521ac461301804aac38ee34aa6ace091abd93cd5b5",
+    "notes\\source\\wan_model.py": "037e1b1d09aa64a81834f4eaa458020a7738d3a632e96666fcd9baebff604ad5",
+    "notes\\source\\fp8_optimization_utils.py": "4ce27ed4fba014c5a178455cfb9620612242ada555b26f9cc53de3a81f820173"
+  },
+  "input_files_unchanged_after_audit": true,
+  "preview": {
+    "path": "E:\\cstudy\\AIGC\\V\\notes\\week4\\fp8_smoke_preview.png",
+    "sha256": "6f860d4e4641fcf355ebc2b62eb4bb7f5e99ea681842fba24cc1a6439f001cbf"
+  }
+}

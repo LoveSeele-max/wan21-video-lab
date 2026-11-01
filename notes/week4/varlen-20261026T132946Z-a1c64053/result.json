@@ -1,0 +1,226 @@
+{
+  "started_utc": "2026-10-26T13:29:46.340388+00:00",
+  "status": "completed_operator_check_only",
+  "python": "/home/user/projects/wan21-video/env-sagecheck/bin/python",
+  "script_sha256": "cf3b82fba270893e4f012f3a124794cd392ab0658ef73fa70cff27e71a5d1b85",
+  "requested_physical_gpu_index": 0,
+  "cuda_device_order": "PCI_BUS_ID",
+  "triton_cache_dir": "/home/user/projects/wan21-video/.cache/triton",
+  "cuda_cache_path": "/home/user/projects/wan21-video/.cache/cuda",
+  "seed": 42,
+  "batch": 1,
+  "heads": 12,
+  "head_dim": 128,
+  "dtype": "bfloat16",
+  "input_distribution": "independent standard normal, random activations",
+  "warmup": 3,
+  "measured": 10,
+  "timing": "synchronized wall time; compilation excluded",
+  "reference": "PyTorch SDPA, forced FLASH_ATTENTION, contiguous output",
+  "candidate": "sageattn_varlen, smooth_k=True",
+  "accuracy_scope": "one untimed output per operator per case",
+  "quality_verdict": "not evaluated; no numerical acceptance threshold",
+  "cases": [
+    {
+      "name": "self",
+      "q_length": 32760,
+      "kv_length": 32760,
+      "seed": 42,
+      "status": "completed",
+      "input_sha256": {
+        "q": "2ed4455d1d282e67f7938adc29cb10464a4b618c0eb18f75e0ec5df2448f40b5",
+        "k": "0745050382662fc79c4e43b8366e052ffc442a3ab96d11d346f0dc679ad3d183",
+        "v": "ca2c9fa57805b76a141113ac62269dce81b471bad8f1dbdc75211adda7cc4dbe"
+      },
+      "input_strides": {
+        "q": [
+          1536,
+          128,
+          1
+        ],
+        "k": [
+          1536,
+          128,
+          1
+        ],
+        "v": [
+          1536,
+          128,
+          1
+        ]
+      },
+      "accuracy": {
+        "reference_shape": [
+          32760,
+          12,
+          128
+        ],
+        "candidate_shape": [
+          32760,
+          12,
+          128
+        ],
+        "reference_dtype": "torch.bfloat16",
+        "candidate_dtype": "torch.bfloat16",
+        "reference_finite": true,
+        "candidate_finite": true,
+        "max_absolute_error": 0.00146484375,
+        "mean_absolute_error": 9.717637294670567e-05,
+        "cosine_similarity_flattened": 0.9999088048934937
+      },
+      "sdpa_flash": {
+        "unit": "ms",
+        "values": [
+          41.167630814015865,
+          39.857602678239346,
+          40.78130191192031,
+          39.8336723446846,
+          41.05290770530701,
+          40.364022832363844,
+          41.23207228258252,
+          40.42954510077834,
+          41.394446045160294,
+          40.54401721805334
+        ],
+        "mean": 40.66572189331055,
+        "min": 39.8336723446846,
+        "max": 41.394446045160294
+      },
+      "sageattn_varlen": {
+        "unit": "ms",
+        "values": [
+          34.42852525040507,
+          31.947071198374033,
+          32.90320187807083,
+          32.48073300346732,
+          32.297369092702866,
+          34.16747925803065,
+          32.08168409764767,
+          33.5322548635304,
+          33.598416950553656,
+          35.47416813671589
+        ],
+        "mean": 33.29109037294984,
+        "min": 31.947071198374033,
+        "max": 35.47416813671589
+      },
+      "operator_speedup_sdpa_over_sage": 1.2215196750164978
+    },
+    {
+      "name": "cross",
+      "q_length": 32760,
+      "kv_length": 512,
+      "seed": 42,
+      "status": "completed",
+      "input_sha256": {
+        "q": "2ed4455d1d282e67f7938adc29cb10464a4b618c0eb18f75e0ec5df2448f40b5",
+        "k": "a26d487004db13d6f12f86f8a64534f2d4864e6b11d206dc62af6dd13751abc5",
+        "v": "e9da82ab17780fe80f614ad80f3338d3ab37a453e67d80d64446d10e895c63d0"
+      },
+      "input_strides": {
+        "q": [
+          1536,
+          128,
+          1
+        ],
+        "k": [
+          1536,
+          128,
+          1
+        ],
+        "v": [
+          1536,
+          128,
+          1
+        ]
+      },
+      "accuracy": {
+        "reference_shape": [
+          32760,
+          12,
+          128
+        ],
+        "candidate_shape": [
+          32760,
+          12,
+          128
+        ],
+        "reference_dtype": "torch.bfloat16",
+        "candidate_dtype": "torch.bfloat16",
+        "reference_finite": true,
+        "candidate_finite": true,
+        "max_absolute_error": 0.015625,
+        "mean_absolute_error": 0.0007500409847125411,
+        "cosine_similarity_flattened": 0.9999092817306519
+      },
+      "sdpa_flash": {
+        "unit": "ms",
+        "values": [
+          0.5325418896973133,
+          0.5272007547318935,
+          0.5290820263326168,
+          0.5279909819364548,
+          0.527531374245882,
+          0.5281809717416763,
+          0.5298610776662827,
+          0.657194759696722,
+          0.5239211022853851,
+          0.5289618857204914
+        ],
+        "mean": 0.5412466824054718,
+        "min": 0.5239211022853851,
+        "max": 0.657194759696722
+      },
+      "sageattn_varlen": {
+        "unit": "ms",
+        "values": [
+          0.941750593483448,
+          0.9301695972681046,
+          1.3228286989033222,
+          0.9460798464715481,
+          1.318198163062334,
+          0.9333998896181583,
+          1.2933178804814816,
+          0.9288503788411617,
+          0.932489987462759,
+          0.931259710341692
+        ],
+        "mean": 1.047834474593401,
+        "min": 0.9288503788411617,
+        "max": 1.3228286989033222
+      },
+      "operator_speedup_sdpa_over_sage": 0.5165383421990346
+    }
+  ],
+  "environment": {
+    "torch": "2.9.1+cu128",
+    "torch_path": "/home/user/projects/wan21-video/env-sagecheck/lib/python3.11/site-packages/torch/__init__.py",
+    "torch_cuda_build": "12.8",
+    "triton": "3.5.1",
+    "triton_path": "/home/user/projects/wan21-video/env-sagecheck/lib/python3.11/site-packages/triton/__init__.py",
+    "sageattention": "2.2.0",
+    "sageattention_path": "/home/user/projects/wan21-video/env-sagecheck/lib/python3.11/site-packages/sageattention/__init__.py",
+    "gpu_name": "NVIDIA RTX 5880 Ada Generation",
+    "gpu_uuid": "4161451f-badd-e8ef-8437-efbb085670ae",
+    "gpu_capability": [
+      8,
+      9
+    ],
+    "gpu_total_memory_bytes": 50862161920
+  },
+  "source_sha256": {
+    "core": {
+      "installed_path": "/home/user/projects/wan21-video/env-sagecheck/lib/python3.11/site-packages/sageattention/core.py",
+      "sha256": "eb5ca9e8047583cc3a139f788f4bf48857aa1134d47a36ad5021b153690beaf4"
+    },
+    "quant_per_block_varlen": {
+      "installed_path": "/home/user/projects/wan21-video/env-sagecheck/lib/python3.11/site-packages/sageattention/triton/quant_per_block_varlen.py",
+      "sha256": "8b4934304dcd59b202a67c8b668487f69caa9567c3e0a6dcb539fd0c24424e4f"
+    },
+    "attn_qk_int8_block_varlen": {
+      "installed_path": "/home/user/projects/wan21-video/env-sagecheck/lib/python3.11/site-packages/sageattention/triton/attn_qk_int8_block_varlen.py",
+      "sha256": "d95ef1c80e68cb11e39900ea9b2a41a96c7106544f3f0d0df45cf196dc821543"
+    }
+  },
+  "ended_utc": "2026-10-26T13:29:51.541625+00:00"
+}

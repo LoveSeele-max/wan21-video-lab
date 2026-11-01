@@ -1,0 +1,102 @@
+{
+  "verified_date_asia_shanghai": "2026-10-27",
+  "status": "passed_A3_stage_records_diagnostic_only",
+  "session": "W4-A3-torch-stages-stages-20261027-144838-89be411c",
+  "summary_recomputed_exactly": true,
+  "recorded_environment_matches_A1": true,
+  "runs": [
+    {
+      "run": "warmup-01",
+      "warmup": true,
+      "seconds": 128.61072522820905,
+      "forward_calls": 40,
+      "forward_seconds_mean": 2.6025815723114647,
+      "timing_gap_percent": 0.000455274846253146
+    },
+    {
+      "run": "run-01",
+      "warmup": false,
+      "seconds": 134.51247651409358,
+      "forward_calls": 40,
+      "forward_seconds_mean": 2.7714400857919825,
+      "timing_gap_percent": 0.0002827077293204554
+    }
+  ],
+  "formal_stage_table": {
+    "other": {
+      "seconds": 0.3484940631315112,
+      "allocated_mib": 2765.6474609375,
+      "reserved_mib": 18666.0
+    },
+    "prepare_t2v_inputs": {
+      "seconds": 0.4280967372469604,
+      "allocated_mib": 11093.60986328125,
+      "reserved_mib": 11192.0
+    },
+    "load_text_encoder": {
+      "seconds": 10.60615798085928,
+      "allocated_mib": 10845.6015625,
+      "reserved_mib": 10870.0
+    },
+    "load_dit_models": {
+      "seconds": 0.48192141903564334,
+      "allocated_mib": 2732.64697265625,
+      "reserved_mib": 2978.0
+    },
+    "run_sampling": {
+      "seconds": 111.18730131816119,
+      "allocated_mib": 4183.47216796875,
+      "reserved_mib": 5974.0
+    },
+    "save_latent": {
+      "seconds": 0.0039113606326282024,
+      "allocated_mib": 9.125,
+      "reserved_mib": 34.0
+    },
+    "decode_latent": {
+      "seconds": 10.317400565836579,
+      "allocated_mib": 14698.353515625,
+      "reserved_mib": 18666.0
+    },
+    "load_vae": {
+      "seconds": 0.0575063549913466,
+      "allocated_mib": 251.35595703125,
+      "reserved_mib": 306.0
+    },
+    "save_video": {
+      "seconds": 1.0813064370304346,
+      "allocated_mib": 9.125,
+      "reserved_mib": 18666.0
+    }
+  },
+  "formal_elapsed_seconds": 134.51247651409358,
+  "formal_sampling_percent_of_stage_mode_elapsed": 82.65947085325688,
+  "formal_forward_seconds": {
+    "n": 40,
+    "mean": 2.7714400857919825,
+    "min": 2.656539003830403,
+    "max": 2.8137011379003525
+  },
+  "formal_paired_forward_seconds": {
+    "n": 20,
+    "mean": 5.542880171583965,
+    "min": 5.337486926000565,
+    "max": 5.619314115028828
+  },
+  "formal_allocated_peak_stage": [
+    "decode_latent"
+  ],
+  "files_sha256": {
+    "run-01\\result.json": "c600c3b66b20dd2842117254ee2eae2ce696590e5b486eec2a79348e5f2fded6",
+    "session.json": "eb95fda1e6e8bba66364b348fb073ff9eadd1a0ddbc1fe1cfd00fcb6daeb021d",
+    "summary.json": "85b130a60c3b7f316701e66409f6bf4273b00de4b97bfa54beb03534574aa47d",
+    "warmup-01\\result.json": "81d14b466380db041b7655b4effda4b5c3345050d79330d447d6f32e6bf7d4b0"
+  },
+  "limits": [
+    "One formal stage-mode generation, diagnostic only; not used for speed threshold.",
+    "CPU validation of user-generated server records only, no inference rerun.",
+    "No whole-card sampler in this stage run; use A1/A2 total samples separately.",
+    "A4 stage comparison remains pending.",
+    "Forward timing samples belong to one generation, not 40 independent benchmark runs."
+  ]
+}

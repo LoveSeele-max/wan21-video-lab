@@ -1,0 +1,90 @@
+{
+  "date_asia_shanghai": "2026-10-26",
+  "session": "W4-sage-smoke-stages-20261026-214619-9754d61f",
+  "status": "passed_two_step_smoke_and_finite_nonblack_checks_only",
+  "metadata_and_effective_config_verified": true,
+  "bench_and_config_hashes_match_local": true,
+  "summary_recomputed_exactly": true,
+  "forward_calls": 4,
+  "stage_calls": {
+    "prepare_t2v_inputs": 1,
+    "load_text_encoder": 1,
+    "load_dit_models": 1,
+    "run_sampling": 1,
+    "save_latent": 1,
+    "decode_latent": 1,
+    "load_vae": 1,
+    "save_video": 1
+  },
+  "elapsed_seconds": 34.142102516721934,
+  "stage_sum_seconds": 34.14155129669234,
+  "timing_gap_percent": 0.0016144876529573435,
+  "peak_allocated_mib": 14698.353515625,
+  "peak_reserved_mib": 18666.0,
+  "whole_card_peak": "not sampled in this smoke",
+  "latent": {
+    "latent": {
+      "shape": [
+        16,
+        21,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "all_finite": true,
+      "min": -2.5399763584136963,
+      "max": 2.556401252746582,
+      "mean": -0.24200262129306793,
+      "std": 0.8482686281204224
+    }
+  },
+  "video": {
+    "decoded_frames": 81,
+    "reported_frames": 81.0,
+    "fps": 16.0,
+    "height": 480,
+    "width": 832,
+    "all_zero_black_frame_indices": [],
+    "sampled_frame_statistics": {
+      "0": {
+        "mean_0_255": 90.50057508680555,
+        "variance_0_255": 783.1747642926726,
+        "min": 25,
+        "max": 199
+      },
+      "40": {
+        "mean_0_255": 90.42319628071581,
+        "variance_0_255": 770.6320552485331,
+        "min": 25,
+        "max": 197
+      },
+      "80": {
+        "mean_0_255": 90.86310513488247,
+        "variance_0_255": 775.807547689868,
+        "min": 27,
+        "max": 196
+      }
+    }
+  },
+  "files_sha256": {
+    "notes\\week2\\W4-sage-smoke-stages-20261026-214619-9754d61f\\session.json": "d9f55b0969e294408bf6fcf7616326d31a84b0e0eb808fe4ba7ec9500054955b",
+    "notes\\week2\\W4-sage-smoke-stages-20261026-214619-9754d61f\\summary.json": "bf096cac35a2350ba15646e8ecc5ff2294f3c07e9542b5fee7530100fee73b80",
+    "notes\\week2\\W4-sage-smoke-stages-20261026-214619-9754d61f\\run-01\\result.json": "6d58665eebbd0a9badb52935cd6e88a2c679594b80f2a51dac0a67bf95fc8c9f",
+    "outputs\\week2\\W4-sage-smoke-stages-20261026-214619-9754d61f\\run-01\\20261026-214643-312_42_latent.safetensors": "b66144c365093efca7a833c578cc58329836b4fdfe25c49efc162e29f4867c44",
+    "outputs\\week2\\W4-sage-smoke-stages-20261026-214619-9754d61f\\run-01\\20261026-214654-024_42_.mp4": "739db333a662c598c9139369de912889a08c4326b87fde5b56d1481d95297355"
+  },
+  "contact_sheet": "frames_0_40_80.png",
+  "visual_inspection": "Frames 0, 40 and 80 visually inspected: nonblack, severely blurred, subject not recognizable. No quality acceptance or attribution to SageAttention from this two-step smoke.",
+  "server_artifact_hash_comparison": "Both user-provided server hashes match local files recomputed on 2026-10-26.",
+  "server_hash_evidence": {
+    "source": "User-pasted server sha256sum output; not a remote query performed by this agent.",
+    "20261026-214643-312_42_latent.safetensors": "b66144c365093efca7a833c578cc58329836b4fdfe25c49efc162e29f4867c44",
+    "20261026-214654-024_42_.mp4": "739db333a662c598c9139369de912889a08c4326b87fde5b56d1481d95297355"
+  },
+  "limits": [
+    "CPU artifact inspection only; no inference rerun.",
+    "Two-step smoke is not formal speed or quality evaluation.",
+    "No model trace has yet confirmed the executed attention kernels.",
+    "No registered black-screen threshold; exact all-zero checks, sample statistics and visual inspection are diagnostic."
+  ]
+}

@@ -1,0 +1,627 @@
+{
+  "verified_date_asia_shanghai": "2026-10-28",
+  "status": "passed_local_total_records_and_sampling_audit",
+  "archive_sha256": "89b7b7fdc2c012d87a5379f234a97ed697560e6504b979f211656c27d3c50f97",
+  "archive_members_match_extraction": 60,
+  "server_archive_sha256_supplied": false,
+  "sessions": {
+    "W4-F0-torch-total-20261028-003533-43e7c074": {
+      "config": "baseline",
+      "summary_recomputed_exactly": true,
+      "configuration_and_identity_verified": true,
+      "runs": [
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 127.3437535604462,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1272
+        },
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 133.4579865988344,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1332
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 133.47351654758677,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1332
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 135.17331278230995,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1349
+        }
+      ]
+    },
+    "W4-F1-fp8-total-20261028-133106-bf2ccdec": {
+      "config": "fp8",
+      "summary_recomputed_exactly": true,
+      "configuration_and_identity_verified": true,
+      "runs": [
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 127.01595978112891,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1269
+        },
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 131.07531786011532,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1308
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 133.9174454039894,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1337
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 132.31950838444754,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1321
+        }
+      ]
+    },
+    "W4-F2-fp8-scaled-total-20261028-135518-9da4d16a": {
+      "config": "fp8_scaled",
+      "summary_recomputed_exactly": true,
+      "configuration_and_identity_verified": true,
+      "runs": [
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 129.65769513929263,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1295
+        },
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 134.62809509970248,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1344
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 135.53854936733842,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1353
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 134.57658117823303,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1343
+        }
+      ]
+    },
+    "W4-F3-torch-confirm-total-20261028-142252-ac3ea804": {
+      "config": "baseline",
+      "summary_recomputed_exactly": true,
+      "configuration_and_identity_verified": true,
+      "runs": [
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 128.77814833493903,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1286
+        },
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 134.0878832731396,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1339
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 133.9448650549166,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1337
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 134.04699664190412,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1338
+        }
+      ]
+    },
+    "W4-F4-fp8-confirm-total-20261028-144843-947405db": {
+      "config": "fp8",
+      "summary_recomputed_exactly": true,
+      "configuration_and_identity_verified": true,
+      "runs": [
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 125.69237045617774,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1256
+        },
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 132.10761751327664,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1319
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 132.50717843603343,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1323
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 132.08548581693321,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1319
+        }
+      ]
+    },
+    "W4-F5-fp8-scaled-confirm-total-20261028-153815-14aeaba4": {
+      "config": "fp8_scaled",
+      "summary_recomputed_exactly": true,
+      "configuration_and_identity_verified": true,
+      "runs": [
+        {
+          "run": "warmup-01",
+          "warmup": true,
+          "seconds": 129.7810710319318,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1297
+        },
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 133.48830372607335,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1332
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 134.58802151400596,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1343
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 135.04951727204025,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1348
+        }
+      ]
+    }
+  },
+  "pooled": {
+    "baseline": {
+      "measured_runs": 6,
+      "elapsed_seconds": {
+        "n": 6,
+        "mean": 134.0307601497819,
+        "min": 133.4579865988344,
+        "max": 135.17331278230995
+      },
+      "allocated_peak_mib": {
+        "n": 6,
+        "mean": 14698.353515625,
+        "min": 14698.353515625,
+        "max": 14698.353515625
+      },
+      "reserved_peak_mib": {
+        "n": 6,
+        "mean": 18666.0,
+        "min": 18666.0,
+        "max": 18666.0
+      },
+      "whole_card_sampled_peak_mib": {
+        "n": 6,
+        "mean": 19627.0,
+        "min": 19627.0,
+        "max": 19627.0
+      },
+      "all_six_runs": [
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 133.4579865988344,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1332
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 133.47351654758677,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1332
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 135.17331278230995,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1349
+        },
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 134.0878832731396,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1339
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 133.9448650549166,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1337
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 134.04699664190412,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1338
+        }
+      ]
+    },
+    "fp8": {
+      "measured_runs": 6,
+      "elapsed_seconds": {
+        "n": 6,
+        "mean": 132.33542556913258,
+        "min": 131.07531786011532,
+        "max": 133.9174454039894
+      },
+      "allocated_peak_mib": {
+        "n": 6,
+        "mean": 14698.353515625,
+        "min": 14698.353515625,
+        "max": 14698.353515625
+      },
+      "reserved_peak_mib": {
+        "n": 6,
+        "mean": 18666.0,
+        "min": 18666.0,
+        "max": 18666.0
+      },
+      "whole_card_sampled_peak_mib": {
+        "n": 6,
+        "mean": 19627.0,
+        "min": 19627.0,
+        "max": 19627.0
+      },
+      "all_six_runs": [
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 131.07531786011532,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1308
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 133.9174454039894,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1337
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 132.31950838444754,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1321
+        },
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 132.10761751327664,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1319
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 132.50717843603343,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1323
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 132.08548581693321,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1319
+        }
+      ],
+      "latency_reduction_fraction": 0.012648847016571135,
+      "closed_ranges_overlap": true,
+      "speed_threshold_passed": false,
+      "confirmation_rounds_completed": 1,
+      "further_total_rounds_allowed": false
+    },
+    "fp8_scaled": {
+      "measured_runs": 6,
+      "elapsed_seconds": {
+        "n": 6,
+        "mean": 134.64484469289891,
+        "min": 133.48830372607335,
+        "max": 135.53854936733842
+      },
+      "allocated_peak_mib": {
+        "n": 6,
+        "mean": 14698.353515625,
+        "min": 14698.353515625,
+        "max": 14698.353515625
+      },
+      "reserved_peak_mib": {
+        "n": 6,
+        "mean": 18666.0,
+        "min": 18666.0,
+        "max": 18666.0
+      },
+      "whole_card_sampled_peak_mib": {
+        "n": 6,
+        "mean": 19627.0,
+        "min": 19627.0,
+        "max": 19627.0
+      },
+      "all_six_runs": [
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 134.62809509970248,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1344
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 135.53854936733842,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1353
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 134.57658117823303,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1343
+        },
+        {
+          "run": "run-01",
+          "warmup": false,
+          "seconds": 133.48830372607335,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1332
+        },
+        {
+          "run": "run-02",
+          "warmup": false,
+          "seconds": 134.58802151400596,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1343
+        },
+        {
+          "run": "run-03",
+          "warmup": false,
+          "seconds": 135.04951727204025,
+          "allocated_mib": 14698.353515625,
+          "reserved_mib": 18666.0,
+          "whole_card_sampled_peak_mib": 19627.0,
+          "csv_rows": 1348
+        }
+      ],
+      "latency_reduction_fraction": -0.004581668733585865,
+      "closed_ranges_overlap": true,
+      "speed_threshold_passed": false,
+      "confirmation_rounds_completed": 1,
+      "further_total_rounds_allowed": false
+    }
+  },
+  "limits": [
+    "User-operated server execution; local saved-record audit only.",
+    "Archive and extraction agree locally; no server archive hash supplied.",
+    "Recorded runtime matches, but full system/environment or sys.executable path not independently established.",
+    "No continuous second-card/process occupancy monitoring supplied.",
+    "Whole-card samples at 100 ms may miss transient peaks and include setup/reporting.",
+    "No output videos/latents transferred or quality assessed in this timing audit.",
+    "No additional total rounds after the registered confirmation round."
+  ],
+  "inputs_sha256": {
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F0-torch-total-20261028-003533-43e7c074\\session.json": "2158fad9523cb735f145cb2d1c886d602959ac3ecbab3e9d7929537ec28b0607",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F0-torch-total-20261028-003533-43e7c074\\summary.json": "dcd875962f11db6d80cec2f0e18fe41e52fdaf654e6a6d4ac81817b694e21385",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F0-torch-total-20261028-003533-43e7c074\\run-01\\gpu.csv": "6dcab899409b39a51e825fc7b7f986d7f65a135b2af1955f3284d7110d277075",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F0-torch-total-20261028-003533-43e7c074\\run-01\\result.json": "ed20198da789e4419368a16418807e271ee39998c065ad961dc7a95081a8a45e",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F0-torch-total-20261028-003533-43e7c074\\run-02\\gpu.csv": "bcde090fb04e525fd53f74ede66ef18d70084a49ced0776468e6b97934a37bec",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F0-torch-total-20261028-003533-43e7c074\\run-02\\result.json": "701c934f5ccc886d8ca8528ae0d755a9782ce61dc4d7ea2122284624fa4694b5",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F0-torch-total-20261028-003533-43e7c074\\run-03\\gpu.csv": "55d352ccf6b4db93bbabaa2bb3c7781a108f246c7aa9b410caf852649d5008ea",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F0-torch-total-20261028-003533-43e7c074\\run-03\\result.json": "f2491710b0036e70d982dbd0ec8dfabb8659be005ff6002dac81dada5dec383b",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F0-torch-total-20261028-003533-43e7c074\\warmup-01\\gpu.csv": "08a860e9df08748e5f3cf6f2c1db174c6e096a6200fcd974bc1fea9a25106a81",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F0-torch-total-20261028-003533-43e7c074\\warmup-01\\result.json": "049020930599042d0b9f9c50846ffbd45517cd6c13454ef70ebd371049bae088",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F1-fp8-total-20261028-133106-bf2ccdec\\session.json": "87d64c8a2f328bcd2984577df69840f8b6b5a6b000a9b94163f5ba7fab373ab3",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F1-fp8-total-20261028-133106-bf2ccdec\\summary.json": "2f94b45cb3f1d241798bc1bd7112870e3dac24731ee14b42fcad3a007c669372",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F1-fp8-total-20261028-133106-bf2ccdec\\run-01\\gpu.csv": "4a9eab559f90d3291c94ace6c3764ee3b40ee0ae44283ad1674ee1d293b2fc27",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F1-fp8-total-20261028-133106-bf2ccdec\\run-01\\result.json": "0bb4c5953270115997e121af4e6ad95af00b9d65870304cf7c6eccea98d9ae11",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F1-fp8-total-20261028-133106-bf2ccdec\\run-02\\gpu.csv": "d69e3779bce20e694116979441b3d7ae36b9b4e3d4f2a645fe7ab091a42d3127",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F1-fp8-total-20261028-133106-bf2ccdec\\run-02\\result.json": "a2d16e6f285cdb1a5cee94b0477fa609f2047428d5bb2a810e6c6c55ed54e516",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F1-fp8-total-20261028-133106-bf2ccdec\\run-03\\gpu.csv": "227259ec8e5d39f272840b2e0397bb30d250bba1ecf340875589776f68591628",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F1-fp8-total-20261028-133106-bf2ccdec\\run-03\\result.json": "899d40386ff49fc55d22d68aa1a82118bc17b762e050923825f67d7a838bd1d9",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F1-fp8-total-20261028-133106-bf2ccdec\\warmup-01\\gpu.csv": "2658425691ecca9ded336fae7eec4b4345f93cba51a14293f1bae09b9112487c",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F1-fp8-total-20261028-133106-bf2ccdec\\warmup-01\\result.json": "8e2a9cedad7f311c940a6a178ffe7cbd7b1d7ae726819e21e8b9f86afd1d0e95",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F2-fp8-scaled-total-20261028-135518-9da4d16a\\session.json": "0277a5da3a942e88c0f75f00044f65687dfbce7c8249ce1d81823872fbaf538e",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F2-fp8-scaled-total-20261028-135518-9da4d16a\\summary.json": "7db2e8e83fd9fd502caf2be0e8a101400322ceabaa5c98ed8b2eae5b5f942030",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F2-fp8-scaled-total-20261028-135518-9da4d16a\\run-01\\gpu.csv": "32c19193ffdee5440189ee497d342fb3d2a3ebca3600509070eca55c0373381d",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F2-fp8-scaled-total-20261028-135518-9da4d16a\\run-01\\result.json": "bbe945be8a995fc481196055fbc97154c329f40c40a2d8e2333e9041a468fe31",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F2-fp8-scaled-total-20261028-135518-9da4d16a\\run-02\\gpu.csv": "95892758cb8d48649b6aebcae94c379df7038a1b7e9dbecea09169786a56a46c",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F2-fp8-scaled-total-20261028-135518-9da4d16a\\run-02\\result.json": "bf666649fa50b764b1d6ce1be1564a28b2196da897cd5176a5338717349c0564",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F2-fp8-scaled-total-20261028-135518-9da4d16a\\run-03\\gpu.csv": "f0d510883072c5efc78dafbe67d3d06884238c4d0171f10faf98e828deed0f12",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F2-fp8-scaled-total-20261028-135518-9da4d16a\\run-03\\result.json": "0d9d3a830c0a67c97e5cd0bda144d4da7fe09fba4d39265861c1a6b2d5d27b99",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F2-fp8-scaled-total-20261028-135518-9da4d16a\\warmup-01\\gpu.csv": "c56c74968f3f20b126610dadb17e401f88564afc0533d3f13e71c68085864280",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F2-fp8-scaled-total-20261028-135518-9da4d16a\\warmup-01\\result.json": "edaf0e1ac62741bb716f3c86eec9b9cb27c4f6fb3cf971a844bb14b4aa201b55",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F3-torch-confirm-total-20261028-142252-ac3ea804\\session.json": "835b89af94832396c49f5318cafeefb813e12e86192457c90a9882fd466d81a7",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F3-torch-confirm-total-20261028-142252-ac3ea804\\summary.json": "9592cebf3ddaee8fbe2fc30a65570e04c84e71956ea0f11b444305188dc40efc",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F3-torch-confirm-total-20261028-142252-ac3ea804\\run-01\\gpu.csv": "68cfe257f1703d865c5cfa3f42110a4621bf3724b3f25c31a549a075660e594e",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F3-torch-confirm-total-20261028-142252-ac3ea804\\run-01\\result.json": "76b68f0c49dc45832a8e52271752b879e4d8f8bf263b3b8e3bf18fef35778f0c",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F3-torch-confirm-total-20261028-142252-ac3ea804\\run-02\\gpu.csv": "3f72a56899c797fd656fff846f4a9dc22cd3159e8d667d315870c1478ba91abf",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F3-torch-confirm-total-20261028-142252-ac3ea804\\run-02\\result.json": "d6b4903ebaa4ced53c2d1a6a1b37130b6756f19d9194bd31381988e4bd9919e7",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F3-torch-confirm-total-20261028-142252-ac3ea804\\run-03\\gpu.csv": "719c164a77c3af81b7e87f08a03f373ed3e6f3b054f17aaae6c110a417bcfb1b",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F3-torch-confirm-total-20261028-142252-ac3ea804\\run-03\\result.json": "a65f4fc902cea075b7a8488d9527ba626d516204768000ec6500a3b164ef42b5",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F3-torch-confirm-total-20261028-142252-ac3ea804\\warmup-01\\gpu.csv": "e4489162de922ae2a1c28f57c1236def42890ee0210a5d026e1eeaaf49731403",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F3-torch-confirm-total-20261028-142252-ac3ea804\\warmup-01\\result.json": "24fb6c6e604653fc97d95354e9d9e51e468e0d7f8a34db06a14bef06182ec71f",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F4-fp8-confirm-total-20261028-144843-947405db\\session.json": "d5e4c1bfc721f41db314f936799e13c0851fdab97c55e6650fa74331e1c79ca9",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F4-fp8-confirm-total-20261028-144843-947405db\\summary.json": "c8843a0d2d95a8b4ae036cad4c85302dd450be23ee1080d28143b3f087708084",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F4-fp8-confirm-total-20261028-144843-947405db\\run-01\\gpu.csv": "e3b5e0b664bf3ca0454586a013e4267f006f7069fd5df7230f8cdb2d1add501b",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F4-fp8-confirm-total-20261028-144843-947405db\\run-01\\result.json": "76deeb5e76d57a6a5b6c78156245472343b3a483a42b37aa9114ee9f6d016b13",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F4-fp8-confirm-total-20261028-144843-947405db\\run-02\\gpu.csv": "57e6ac6a5988de483fc4aca78b6d06ecf3f727860530ea1b1562a5ff6fc89711",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F4-fp8-confirm-total-20261028-144843-947405db\\run-02\\result.json": "db26cb40e4dde4912c209f33a6083e9c28f5aeef177ff5cec8a27b96aaa354f8",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F4-fp8-confirm-total-20261028-144843-947405db\\run-03\\gpu.csv": "f9596015f237e28bfed6c8384b30565a72d5f96cfa7468b3d7e9163ce34b4068",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F4-fp8-confirm-total-20261028-144843-947405db\\run-03\\result.json": "521ad0e46cb102ef264f76c212f16e77553c5dfc664c3a4c94d4de6d9f173210",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F4-fp8-confirm-total-20261028-144843-947405db\\warmup-01\\gpu.csv": "b8679f906540605062dfd366454949594fab94314a8c777eb4812c5e27e7d7b8",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F4-fp8-confirm-total-20261028-144843-947405db\\warmup-01\\result.json": "2a37e7a7790afe723c5a8eaf6236af0e9ecb372e5bcaa6329a3b4c0b6ef65176",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F5-fp8-scaled-confirm-total-20261028-153815-14aeaba4\\session.json": "e69ecb6a5baef933c1c924eba0d5a543c0a14f95c631a299bc741ae8635267fe",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F5-fp8-scaled-confirm-total-20261028-153815-14aeaba4\\summary.json": "e0d71c540ae2f266bf8abde102c08c60438dd7909e59fbd291a5efac78123fc2",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F5-fp8-scaled-confirm-total-20261028-153815-14aeaba4\\run-01\\gpu.csv": "f13d6e3dfaf8a6c45dc1c21633401f930e43218ed417469bd833ac279d163afe",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F5-fp8-scaled-confirm-total-20261028-153815-14aeaba4\\run-01\\result.json": "b84bec49c620f758d32bc2b5db44aa3e1369be8bddec98418c78eab2f5bbbbdd",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F5-fp8-scaled-confirm-total-20261028-153815-14aeaba4\\run-02\\gpu.csv": "43d76534f48dd897b90259afc92d7995d9363d67503c601e05ef816df8eec79c",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F5-fp8-scaled-confirm-total-20261028-153815-14aeaba4\\run-02\\result.json": "8de026901785ae52590527901dac1da2011b249626bcbc399c4caec3f4d2a78f",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F5-fp8-scaled-confirm-total-20261028-153815-14aeaba4\\run-03\\gpu.csv": "ebe92cac566c93e36940f8915fe4adb2ac4c3a242f779cd42a007c3afe58fd4e",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F5-fp8-scaled-confirm-total-20261028-153815-14aeaba4\\run-03\\result.json": "9b40be18819abb565c5fa250d7a8c0992d11d6fc874d56b805aeea57f8b9c3a4",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F5-fp8-scaled-confirm-total-20261028-153815-14aeaba4\\warmup-01\\gpu.csv": "ca3936fd9fa8bc9211b7f9a2aa096762e37c5610729e7abcbdf3a9996cf03d24",
+    "notes\\week4\\W4-fp8-total-records-20261028\\notes\\week2\\W4-F5-fp8-scaled-confirm-total-20261028-153815-14aeaba4\\warmup-01\\result.json": "986c392694ac06a2c240a41446019419b45536edbe466a227dd55d7da71ee4d1",
+    "notes\\week4\\W4-fp8-total-records-20261028.tar.gz": "89b7b7fdc2c012d87a5379f234a97ed697560e6504b979f211656c27d3c50f97",
+    "scripts/bench.py": "ffc9af27120d7fd0f903b1482122a393c39a372aa0be0f4eed67873851ea775c",
+    "configs\\optimization_rules.yaml": "c59c9f11207cdd6aedc9dfe04f8f8a330859b5a1e0aa1a4fb6fcee74b7090e87",
+    "configs\\eval_baseline.yaml": "25c0ac2d0e431b3f08910be32930099c03e9c12680c23b359d391b2b48626874",
+    "configs\\eval_fp8.yaml": "23fc82eab585987a5d3d09a5f531dbb2f28cda2a4c5b9afb0b7380ab2d08bbca",
+    "configs\\eval_fp8_scaled.yaml": "e950a4e01e3894744aff17403a194193ad77932120fe76592460c372c7ec5ff3"
+  },
+  "inputs_unchanged": true,
+  "matching_recorded_runtime": {
+    "python": "3.11.17 (main, Oct  1 2026, 20:17:42) [GCC 14.3.0]",
+    "torch": "2.9.1+cu128",
+    "cuda_build": "12.8",
+    "gpu": "NVIDIA RTX 5880 Ada Generation",
+    "commit": "f8a1b03794a49239a3539015075f5123d6c07d66",
+    "environment": {
+      "CUDA_VISIBLE_DEVICES": "0",
+      "HF_HOME": "/home/user/projects/wan21-video/models/.hf-home",
+      "HF_HUB_CACHE": "/home/user/projects/wan21-video/models/.hf-home/hub",
+      "HF_ENDPOINT": "https://hf-mirror.com",
+      "HF_HUB_OFFLINE": "1",
+      "PYTORCH_CUDA_ALLOC_CONF": null,
+      "PYTORCH_ALLOC_CONF": null
+    },
+    "generation_module": "/home/user/projects/wan21-video/musubi-tuner/src/musubi_tuner/wan_generate_video.py",
+    "allocator_backend": "native",
+    "tokenizer_directory": "/home/user/projects/wan21-video/models/.hf-home/hub/models--Wan-AI--Wan2.1-T2V-14B/snapshots/a064a6c71f5be440641209c07bf2a5ce7a2ff5e4/google/umt5-xxl",
+    "tokenizer_revision": "a064a6c71f5be440641209c07bf2a5ce7a2ff5e4"
+  },
+  "audit_script_sha256": "0f757160a26b238790669f9793449465e3eafa5d81b4c6c048e88ddf52dc7e25"
+}

@@ -1,0 +1,287 @@
+{
+  "session": "W4-sage-profile-profile-20261026-222504-af72f220",
+  "status": "passed_profile_kernel_evidence_and_artifact_integrity_only",
+  "analysis_script_sha256": "a42bca5080cb4721723b7d47525fa727107742e499e3d03c6c4a14bdd8f4382c",
+  "raw_note_hashes": {
+    "run-01\\operators.json": "545ba62d269af951c0fcd07830f488c93509d00d799d12e7503fab1b443ed282",
+    "run-01\\operators.txt": "8621cc8174764aaa65a59c8a3f24f5fbbd1f4e2d915e39bfd06280f44fe1dd6f",
+    "run-01\\result.json": "48b436ec5a49e6c3ee8314f8df6c2d99ed3965b3ab2d1e7f296c0d90c7262715",
+    "run-01\\trace.json": "16f236727fc69053aa8ece18eed434d2fe35e8cda179fb9a075f389ca61b10a0",
+    "session.json": "2ddae50db490d3cba7b13b09460f5521027fe6947d9cea9d1a77b4620bcefadb",
+    "summary.json": "957dea017812365402e9cf62350ad55c90cb2fe2073e30c16d4fcbe8d09f542d"
+  },
+  "profile_elapsed_seconds_diagnostic_only": 138.1777401547879,
+  "whole_card_peak": "not sampled",
+  "forward_calls": 40,
+  "candidate": {
+    "trace_sha256": "16f236727fc69053aa8ece18eed434d2fe35e8cda179fb9a075f389ca61b10a0",
+    "cpu_steps": [
+      {
+        "name": "ProfilerStep#18",
+        "ts": 2167735379471.658,
+        "dur": 2437766.797
+      },
+      {
+        "name": "ProfilerStep#19",
+        "ts": 2167737817277.596,
+        "dur": 2417288.284
+      },
+      {
+        "name": "ProfilerStep#20",
+        "ts": 2167740234633.162,
+        "dur": 2453958.122
+      },
+      {
+        "name": "ProfilerStep#21",
+        "ts": 2167742688655.155,
+        "dur": 2465552.012
+      }
+    ],
+    "gpu_steps": [
+      {
+        "name": "ProfilerStep#21",
+        "ts": 2167742710089.703,
+        "dur": 2465669.598
+      },
+      {
+        "name": "ProfilerStep#20",
+        "ts": 2167740255911.766,
+        "dur": 2454171.571
+      },
+      {
+        "name": "ProfilerStep#19",
+        "ts": 2167737838762.004,
+        "dur": 2417144.932
+      },
+      {
+        "name": "ProfilerStep#18",
+        "ts": 2167735398103.201,
+        "dur": 2440651.765
+      }
+    ],
+    "direct_external_id_kernel_count": 21800,
+    "launch_correlation_recovered_kernel_count": 720,
+    "recovered_names": {
+      "quant_per_block_int8_kernel": 480,
+      "_attn_fwd": 240
+    },
+    "excluded_kernel_count": 27,
+    "excluded_all_before_first_gpu_step": true,
+    "selected_kernel_duration_sum_us": 9538780.744000144,
+    "groups": {
+      "other_kernels": {
+        "count": 20572,
+        "duration_us": 3286771.9740001424,
+        "percent_of_selected_kernel_sum": 34.45694017097006
+      },
+      "gemm_gemv": {
+        "count": 1228,
+        "duration_us": 1952186.2370000025,
+        "percent_of_selected_kernel_sum": 20.465783724276502
+      },
+      "sage_quantization": {
+        "count": 480,
+        "duration_us": 63730.46000000003,
+        "percent_of_selected_kernel_sum": 0.6681195606690744
+      },
+      "sage_attention": {
+        "count": 240,
+        "duration_us": 4236092.073000001,
+        "percent_of_selected_kernel_sum": 44.409156544084375
+      }
+    },
+    "per_step_counts": {
+      "ProfilerStep#18": {
+        "other_kernels": 5143,
+        "gemm_gemv": 307,
+        "sage_quantization": 120,
+        "sage_attention": 60
+      },
+      "ProfilerStep#19": {
+        "other_kernels": 5143,
+        "gemm_gemv": 307,
+        "sage_quantization": 120,
+        "sage_attention": 60
+      },
+      "ProfilerStep#20": {
+        "other_kernels": 5143,
+        "gemm_gemv": 307,
+        "sage_quantization": 120,
+        "sage_attention": 60
+      },
+      "ProfilerStep#21": {
+        "other_kernels": 5143,
+        "gemm_gemv": 307,
+        "sage_quantization": 120,
+        "sage_attention": 60
+      }
+    },
+    "all_trace_flash_fwd_kernel_count": 0,
+    "diagnostic_counts": {
+      "Activity Buffer Request": 3,
+      "Buffer Flush": 4
+    }
+  },
+  "historical_baseline": {
+    "trace_sha256": "f47473717c5556de70a78345fe826bb6a4eb2966fd9c592a4cd4f2d19b3c2fbd",
+    "cpu_steps": [
+      {
+        "name": "ProfilerStep#18",
+        "ts": 1216467287748.799,
+        "dur": 2678543.526
+      },
+      {
+        "name": "ProfilerStep#19",
+        "ts": 1216469966335.736,
+        "dur": 2680998.699
+      },
+      {
+        "name": "ProfilerStep#20",
+        "ts": 1216472647417.357,
+        "dur": 2683365.191
+      },
+      {
+        "name": "ProfilerStep#21",
+        "ts": 1216475330870.839,
+        "dur": 2690848.433
+      }
+    ],
+    "gpu_steps": [
+      {
+        "name": "ProfilerStep#20",
+        "ts": 1216473729682.697,
+        "dur": 2693577.514
+      },
+      {
+        "name": "ProfilerStep#19",
+        "ts": 1216471048199.998,
+        "dur": 2681476.557
+      },
+      {
+        "name": "ProfilerStep#21",
+        "ts": 1216476423262.769,
+        "dur": 2693222.6
+      },
+      {
+        "name": "ProfilerStep#18",
+        "ts": 1216468366749.193,
+        "dur": 2681444.663
+      }
+    ],
+    "direct_external_id_kernel_count": 16040,
+    "launch_correlation_recovered_kernel_count": 0,
+    "recovered_names": {},
+    "excluded_kernel_count": 996,
+    "excluded_all_before_first_gpu_step": true,
+    "selected_kernel_duration_sum_us": 10582380.532000035,
+    "groups": {
+      "other_kernels": {
+        "count": 14572,
+        "duration_us": 2773595.3390000323,
+        "percent_of_selected_kernel_sum": 26.20955966016308
+      },
+      "gemm_gemv": {
+        "count": 1228,
+        "duration_us": 2105034.094000003,
+        "percent_of_selected_kernel_sum": 19.891876762837956
+      },
+      "flash_attention": {
+        "count": 240,
+        "duration_us": 5703751.099,
+        "percent_of_selected_kernel_sum": 53.89856357699897
+      }
+    },
+    "per_step_counts": {
+      "ProfilerStep#18": {
+        "other_kernels": 3643,
+        "gemm_gemv": 307,
+        "flash_attention": 60
+      },
+      "ProfilerStep#19": {
+        "other_kernels": 3643,
+        "gemm_gemv": 307,
+        "flash_attention": 60
+      },
+      "ProfilerStep#20": {
+        "other_kernels": 3643,
+        "gemm_gemv": 307,
+        "flash_attention": 60
+      },
+      "ProfilerStep#21": {
+        "other_kernels": 3643,
+        "gemm_gemv": 307,
+        "flash_attention": 60
+      }
+    },
+    "all_trace_flash_fwd_kernel_count": 264,
+    "diagnostic_counts": {
+      "Command Buffer Full": 4283,
+      "Activity Buffer Request": 2,
+      "Buffer Flush": 3
+    }
+  },
+  "artifact_checks": {
+    "latent": {
+      "latent": {
+        "shape": [
+          16,
+          21,
+          60,
+          104
+        ],
+        "dtype": "torch.float32",
+        "all_finite": true,
+        "min": -2.779804229736328,
+        "max": 3.0707859992980957
+      }
+    },
+    "video": {
+      "frames": 81,
+      "fps": 16.0,
+      "height": 480,
+      "width": 832,
+      "all_zero_frame_indices": [],
+      "sampled_frame_statistics": {
+        "0": {
+          "mean": 91.47966663327992,
+          "variance": 2061.629304102275,
+          "min": 0,
+          "max": 226
+        },
+        "40": {
+          "mean": 90.55941005608975,
+          "variance": 2055.8548521893595,
+          "min": 0,
+          "max": 229
+        },
+        "80": {
+          "mean": 92.00601295405983,
+          "variance": 2018.446913964576,
+          "min": 0,
+          "max": 228
+        }
+      }
+    },
+    "artifact_hashes": {
+      "20261026-222711-900_42_latent.safetensors": "72981a9b7e10090cffd1c208cc6e4dc14c7678457503db5841ee0e49995012d5",
+      "20261026-222722-933_42_.mp4": "c52a344e4a33c6bc3fd5eaaa4db5c85ddadfffb1c129d1c318af1a7e4365a6dd"
+    },
+    "visual_inspection": "Frames 0, 40 and 80 visually inspected: person and raised hand recognizable, nonblack. Three frames do not establish motion quality or quality preservation."
+  },
+  "server_hash_comparison": "Three user-provided server hashes match local files independently recomputed on 2026-10-26.",
+  "server_hash_evidence": {
+    "source": "User-pasted server sha256sum output; no remote query performed by this agent.",
+    "trace.json": "16f236727fc69053aa8ece18eed434d2fe35e8cda179fb9a075f389ca61b10a0",
+    "20261026-222711-900_42_latent.safetensors": "72981a9b7e10090cffd1c208cc6e4dc14c7678457503db5841ee0e49995012d5",
+    "20261026-222722-933_42_.mp4": "c52a344e4a33c6bc3fd5eaaa4db5c85ddadfffb1c129d1c318af1a7e4365a6dd"
+  },
+  "limits": [
+    "Historical R5 is a mechanism reference, not a contemporary speed baseline.",
+    "Kernel duration sums and classification shares are not end-to-end latency.",
+    "Sage attention plus quantization excludes smoothing, casts, allocations and host work.",
+    "The original External-id-only rule misses the 720 recovered Triton kernels.",
+    "Capture is limited to four middle forwards; event loss is not independently ruled out.",
+    "No quality verdict from this profile or its three sampled frames.",
+    "No model inference was rerun locally; CPU artifact inspection only."
+  ]
+}

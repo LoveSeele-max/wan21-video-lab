@@ -1,0 +1,42 @@
+{
+  "verified_date_asia_shanghai": "2026-10-26",
+  "status": "passed_operator_artifact_audit_only",
+  "session": "varlen-20261026T132946Z-a1c64053",
+  "checks_count": 49,
+  "script_sha256_matches_local": true,
+  "script_sha256": "cf3b82fba270893e4f012f3a124794cd392ab0658ef73fa70cff27e71a5d1b85",
+  "source_hashes_match_manifest": true,
+  "timing_means_min_max_and_ratios_recomputed": true,
+  "timings_per_operator_per_case": 10,
+  "recorded_environment_matches_expected": true,
+  "recorded_output_shapes_dtypes_and_finite_flags_valid": true,
+  "input_hash_format_and_shared_q_hash_consistency_valid": true,
+  "files_sha256": {
+    "core.py": "eb5ca9e8047583cc3a139f788f4bf48857aa1134d47a36ad5021b153690beaf4",
+    "quant_per_block_varlen.py": "8b4934304dcd59b202a67c8b668487f69caa9567c3e0a6dcb539fd0c24424e4f",
+    "attn_qk_int8_block_varlen.py": "d95ef1c80e68cb11e39900ea9b2a41a96c7106544f3f0d0df45cf196dc821543",
+    "result.json": "91553bd39b668eeaa99fe1c11aa17278779ddb08a14a0c1897d28731da572327",
+    "nvidia-smi.txt": "f252a06724023a10da0dd836437b368689d890813bf3fc75eda00d72240d6c5e"
+  },
+  "summary": [
+    {
+      "case": "self",
+      "sdpa_mean_ms": 40.66572189331055,
+      "sage_mean_ms": 33.29109037294984,
+      "latency_reduction_percent": 18.13476111332435
+    },
+    {
+      "case": "cross",
+      "sdpa_mean_ms": 0.5412466824054718,
+      "sage_mean_ms": 1.047834474593401,
+      "latency_reduction_percent": -93.5964706400587
+    }
+  ],
+  "limits": [
+    "Inputs and outputs were not archived: input hashes, finite flags and accuracy values cannot be independently recomputed.",
+    "GPU inference was not rerun locally.",
+    "GPU index and capability are recorded metadata, not an independent local hardware query.",
+    "The nvidia-smi snapshot does not monitor background work throughout the run.",
+    "This validates operator evidence only, not model compatibility, end-to-end latency or quality."
+  ]
+}

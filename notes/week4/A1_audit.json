@@ -1,0 +1,81 @@
+{
+  "verified_date_asia_shanghai": "2026-10-26",
+  "status": "passed_A1_baseline_measurement_records",
+  "session": "W4-A1-torch-total-20261026-232448-8df71ea1",
+  "config_name": "eval_baseline",
+  "attention_mode": "torch",
+  "mode": "total",
+  "physical_gpu_index": 0,
+  "configuration_and_identity_hashes_verified": true,
+  "recorded_environment_matches_day2_profile": true,
+  "summary_recomputed_exactly": true,
+  "all_csv_rows_parsed_and_verified": true,
+  "runs": [
+    {
+      "run": "warmup-01",
+      "warmup": true,
+      "seconds": 131.06797557882965,
+      "allocated_mib": 14698.353515625,
+      "reserved_mib": 18666.0,
+      "sampled_whole_card_peak_mib": 19627.0,
+      "samples": 1309
+    },
+    {
+      "run": "run-01",
+      "warmup": false,
+      "seconds": 134.4933614092879,
+      "allocated_mib": 14698.353515625,
+      "reserved_mib": 18666.0,
+      "sampled_whole_card_peak_mib": 19627.0,
+      "samples": 1342
+    },
+    {
+      "run": "run-02",
+      "warmup": false,
+      "seconds": 135.82714506983757,
+      "allocated_mib": 14698.353515625,
+      "reserved_mib": 18666.0,
+      "sampled_whole_card_peak_mib": 19627.0,
+      "samples": 1356
+    },
+    {
+      "run": "run-03",
+      "warmup": false,
+      "seconds": 137.39130416186526,
+      "allocated_mib": 14698.353515625,
+      "reserved_mib": 18666.0,
+      "sampled_whole_card_peak_mib": 19627.0,
+      "samples": 1372
+    }
+  ],
+  "formal_seconds": {
+    "n": 3,
+    "mean": 135.90393688033024,
+    "min": 134.4933614092879,
+    "max": 137.39130416186526
+  },
+  "formal_sampled_whole_card_peak_range_mib": [
+    19627.0,
+    19627.0
+  ],
+  "files_sha256": {
+    "run-01\\gpu.csv": "21ec241324885cfefbfea64a838492ab6ca2ae17f23066f80040932541e1d9b6",
+    "run-01\\result.json": "c168006592be1ddcad86a74e79ae8c8090fbb4bb9b8124875b3049a2c73a07e3",
+    "run-02\\gpu.csv": "0b1a1fd19a5adaf49076fb40be81cfadf3e2b2301877a3ec7826da8290174b75",
+    "run-02\\result.json": "9b5472304903a5b67dc92e286d7ef6dcfeb35bd12b83303b8c124bbfdd08592a",
+    "run-03\\gpu.csv": "7971e660196133059ede78e6f68b7d688501650a7cc70aec2b3616dde15a33b9",
+    "run-03\\result.json": "b4b1e8d98e62df8b9713dc04f8dda7ae91ea5d197354cce7c1e3a85f7366044d",
+    "session.json": "2a7402ecdf9b9fc6c10a41892b08ee2aab696532b5bcd805cc4c8a1c6f8629b8",
+    "summary.json": "7ce744a708c280b0780ee2dbf7d5fa67d4cff21dceb6c4a90514c3e188bca357",
+    "warmup-01\\gpu.csv": "a06c19078075ac352c408ede32f99821d0b69fe8750418940d16439de6a419a9",
+    "warmup-01\\result.json": "ef2d793d76f48d14287d773db7040498fe72334a11ac190a928047079e526552"
+  },
+  "limits": [
+    "Server execution by user; local record/CSV validation only, no inference rerun.",
+    "No continuous GPU1/process monitoring supplied; no independent proof of absence of concurrent jobs.",
+    "Output MP4/latent files were not transferred or quality evaluated for this timing audit.",
+    "Allocator allocated/reserved and sampled whole-card peaks remain separate, not additive.",
+    "Whole-card sampling may miss short peaks and includes brief setup/reporting outside timed interval.",
+    "Candidate A2 is not yet measured; no speedup verdict."
+  ]
+}

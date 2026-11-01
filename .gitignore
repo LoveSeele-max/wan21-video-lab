@@ -27,6 +27,10 @@ video/
 *.onnx
 *.whl
 *.zip
+*.tar
+*.tar.gz
+*.tgz
+*.xlsx
 trace.json
 *.pt.trace.json
 

@@ -1,0 +1,89 @@
+{
+  "verified_date_asia_shanghai": "2026-10-27",
+  "status": "passed_A2_measurement_records_and_registered_speed_threshold",
+  "session": "W4-A2-sage-total-20261026-235430-c79c6260",
+  "baseline_session": "W4-A1-torch-total-20261026-232448-8df71ea1",
+  "summary_recomputed_exactly": true,
+  "all_csv_rows_parsed_and_verified": true,
+  "recorded_environment_matches_A1": true,
+  "configuration_behavior_change_only": "attn_mode: torch -> sageattn",
+  "runs": [
+    {
+      "run": "warmup-01",
+      "warmup": true,
+      "seconds": 122.7151336800307,
+      "allocated_mib": 14698.353515625,
+      "reserved_mib": 18666.0,
+      "sampled_whole_card_peak_mib": 19627.0,
+      "samples": 1226
+    },
+    {
+      "run": "run-01",
+      "warmup": false,
+      "seconds": 123.91872290102765,
+      "allocated_mib": 14698.353515625,
+      "reserved_mib": 18666.0,
+      "sampled_whole_card_peak_mib": 19627.0,
+      "samples": 1237
+    },
+    {
+      "run": "run-02",
+      "warmup": false,
+      "seconds": 125.74216801207513,
+      "allocated_mib": 14698.353515625,
+      "reserved_mib": 18666.0,
+      "sampled_whole_card_peak_mib": 19627.0,
+      "samples": 1255
+    },
+    {
+      "run": "run-03",
+      "warmup": false,
+      "seconds": 125.51624799706042,
+      "allocated_mib": 14698.353515625,
+      "reserved_mib": 18666.0,
+      "sampled_whole_card_peak_mib": 19627.0,
+      "samples": 1253
+    }
+  ],
+  "formal_seconds": {
+    "n": 3,
+    "mean": 125.05904630338773,
+    "min": 123.91872290102765,
+    "max": 125.74216801207513
+  },
+  "baseline_formal_seconds": {
+    "n": 3,
+    "mean": 135.90393688033024,
+    "min": 134.4933614092879,
+    "max": 137.39130416186526
+  },
+  "latency_reduction_fraction": 0.07979820765966428,
+  "closed_ranges_overlap": false,
+  "minimum_latency_reduction_fraction": 0.05,
+  "speed_threshold_passed": true,
+  "confirmation_round_triggered": false,
+  "formal_sampled_whole_card_peak_range_mib": [
+    19627.0,
+    19627.0
+  ],
+  "files_sha256": {
+    "run-01\\gpu.csv": "7182d849f7d8912f21314c820e70e7d9739fa717ec667f1895c814ff80df7869",
+    "run-01\\result.json": "6919151fd8c1d0a0c4f03745fe466dcd52380b3395c44ee72aaacb202c4eb065",
+    "run-02\\gpu.csv": "0266a4b17670254d3eeccfa67b110b101600c86bd89225c7ee8efccd50937d59",
+    "run-02\\result.json": "2376bbcc2d586a460afd6cd8a943819fdfd442c97531316017a89a0fd45d32d4",
+    "run-03\\gpu.csv": "0736f7d85de0565827e05f32d52817503ffe0b9e02ffb5b98a41a2e9fc9893f3",
+    "run-03\\result.json": "03bc3e2ba7119d43ff956c1b0a9d7cd725aa863091ae48501a1f7a3c3c6a18bd",
+    "session.json": "02551f484edae920a7f975b1946d998fed841190663cc34b91119feb6624806f",
+    "summary.json": "bda6f0c8b7776889ac61e16b08fd5e35773126b2c65542a95b64386b276c9728",
+    "warmup-01\\gpu.csv": "0d7bcad6a6b440291fc28d9723b847e99c3d8bf6ab6e2a44a873a417dac88d5a",
+    "warmup-01\\result.json": "3f7f71f1e8fc5ef528932908f12456a700bc71dd4edd0c627040dbf2903167a3"
+  },
+  "limits": [
+    "Server execution by user; local records/CSV audit only.",
+    "No continuous GPU1/process monitoring supplied, no independent verification of absence of concurrent jobs.",
+    "Speed conclusion covers P01/42, 480x832,81frames,20steps,single RTX5880 Ada in this comparison.",
+    "No quality or final usable verdict; stages A3/A4 and full quality assessment remain.",
+    "Output video and latent files not transferred for this timing audit.",
+    "Three GPU memory conventions are separate and not additive."
+  ]
+}

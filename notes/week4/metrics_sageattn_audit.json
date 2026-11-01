@@ -1,0 +1,110 @@
+{
+  "verified_date_asia_shanghai": "2026-10-27",
+  "status": "passed_metric_output_and_paired_delta_audit_only",
+  "records": 36,
+  "ssim_pair_values": 2880,
+  "clip_frame_values": 756,
+  "decoded_video_format": "81 frames, 480x832, 16 fps enforced by unchanged reader",
+  "device": "cpu",
+  "dtype": "float32",
+  "metric_summaries": {
+    "ssim_mean": {
+      "mean_delta": -0.0005922908604504994,
+      "min_delta": -0.007925861440274184,
+      "max_delta": 0.008999974470739747,
+      "positive": 15,
+      "negative": 21,
+      "top_absolute_delta": [
+        {
+          "id": "P01_s1001",
+          "delta": 0.008999974470739747
+        },
+        {
+          "id": "P11_s2002",
+          "delta": -0.007925861440274184
+        },
+        {
+          "id": "P02_s1001",
+          "delta": -0.007166634251785431
+        }
+      ]
+    },
+    "ssim_min": {
+      "mean_delta": -0.0013536614887408687,
+      "min_delta": -0.028279591216045397,
+      "max_delta": 0.012700967742301672,
+      "positive": 15,
+      "negative": 21,
+      "top_absolute_delta": [
+        {
+          "id": "P11_s2002",
+          "delta": -0.028279591216045397
+        },
+        {
+          "id": "P06_s42",
+          "delta": 0.012700967742301672
+        },
+        {
+          "id": "P06_s1001",
+          "delta": -0.011714626019368013
+        }
+      ]
+    },
+    "clip_mean": {
+      "mean_delta": 0.00020217580139321302,
+      "min_delta": -0.007104042030516122,
+      "max_delta": 0.01676204800605771,
+      "positive": 14,
+      "negative": 22,
+      "top_absolute_delta": [
+        {
+          "id": "P02_s1001",
+          "delta": 0.01676204800605771
+        },
+        {
+          "id": "P08_s42",
+          "delta": 0.007723057553881696
+        },
+        {
+          "id": "P04_s2002",
+          "delta": 0.00733865300814307
+        }
+      ]
+    },
+    "clip_min": {
+      "mean_delta": 0.002502791169616911,
+      "min_delta": -0.01493161916732788,
+      "max_delta": 0.027601420879364014,
+      "positive": 24,
+      "negative": 12,
+      "top_absolute_delta": [
+        {
+          "id": "P06_s1001",
+          "delta": 0.027601420879364014
+        },
+        {
+          "id": "P01_s1001",
+          "delta": 0.020123302936553955
+        },
+        {
+          "id": "P10_s42",
+          "delta": -0.01493161916732788
+        }
+      ]
+    }
+  },
+  "elapsed_seconds": 150.4143614768982,
+  "output_files_sha256": {
+    "delta_rankings.json": "06971ff135ce45635fa694467612a9fb3d7025d7ad91d8e77e0e46e1a0e77499",
+    "metrics.csv": "0c2b2097ad21a447c7e552364de5a443b21989d32e341b704b69af8e527c592f",
+    "paired_comparison.csv": "fe41cf3c10285839c35dc21acdfa12aacc6f2015089605b73d9f943af8c66282",
+    "per_video.jsonl": "2d630c6a2f71446367161a54a0afa02661585129231063169f32546e2b88ae21",
+    "run.json": "7698f5c45cc774a7b030560bd3c713557892d8e875c82ffb51a71262c3843ef5"
+  },
+  "quality_verdict": "not evaluated; no automatic pass/fail and no rank-based sample exclusions",
+  "limits": [
+    "Recomputed scalar and paired statistics from saved per-frame values; did not run a second CLIP/SSIM inference.",
+    "Rankings are auxiliary anomaly signals, not human quality scores.",
+    "Do not disclose candidate identities, automatic scores or rankings to the reviewer before scoring."
+  ]
+}

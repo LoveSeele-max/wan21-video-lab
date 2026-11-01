@@ -2,9 +2,21 @@
 
 Wan2.1 T2V 1.3B 的推理性能分析、可复现测量与视频质量评测实验。
 
-当前公开内容是截至 Week3 的工程与实验记录，整理于 2026-10-26。项目使用 Musubi Tuner 的已有生成能力；新增工作集中在测量、评测编排、反例探针、结果审计与实验设计。
+当前公开内容覆盖 Week1–Week4，Week4 实验截至 2026-10-29，发布更新于 2026-11-01。项目使用 Musubi Tuner 的已有生成能力；新增工作集中在测量、评测编排、反例探针、结果审计与实验设计。
 
-**当前没有正式优化加速结论，也没有训练 LoRA 或完成本人性能型模型代码改动。** SageAttention 的安装与小张量检查通过，不能替代完整模型、速度与质量验证。
+**SageAttention 在固定任务下端到端耗时下降约 7.98%，质量分类仍为“结论不足”。** 普通/scaled FP8 的去噪阶段 allocated 峰值分别下降约 31.10%/30.27%，但未达到冻结的速度门槛，质量尚未评估。没有训练 LoRA，也没有自行修改模型架构或编写 CUDA/Triton 内核。
+
+## Week4 结果
+
+| 候选 | 正式性能证据 | 质量与限制 |
+|---|---|---|
+| SageAttention 2.2.0 | 同一独立环境 BF16 torch 135.904 秒 → Sage 125.059 秒；下降 7.98%，三次正式测量区间不重叠；profile 确认实际 varlen 路径 | 36/36 生成成功；结构和提示词符合度评分证据不完整，最终分类“结论不足” |
+| 普通 FP8 | 主环境各六次正式测量：BF16 134.031 秒，FP8 132.335 秒；耗时下降 1.26%，未达 5% 门槛；去噪 allocated 峰值下降 31.10% | 36/36 生成成功；质量尚未评估 |
+| scaled FP8 | 均值 134.645 秒，较同一主环境 BF16 增加 0.46%；去噪 allocated 峰值下降 30.27% | 36/36 生成成功；`fp8_fast=false`，不能声称使用专用 FP8 矩阵乘；质量尚未评估 |
+
+三种候选整次运行 allocated 峰值均约 14698.35 MiB，最高峰仍在 VAE 解码。阶段显存收益不能直接解释为整次峰值下降。Sage 与 FP8 使用不同环境下各自的基线，不跨环境直接排名；固定任务速度测量也不代表所有提示词的速度收益。
+
+详见 [Week4 复盘](notes/REVIEW/WEEK4_REVIEW.md)、[Sage 结论卡](notes/week4_result_attention.md)和 [FP8 报告](notes/week4_fp8.md)。本次发布没有启动 Week5。
 
 ## 已完成的工作
 
@@ -17,6 +29,8 @@ Wan2.1 T2V 1.3B 的推理性能分析、可复现测量与视频质量评测实�
 | 自动指标与探针 | 49 条 SSIM/CLIP 记录；3920 个 SSIM 帧对值、1029 个 CLIP 帧值 |
 | 人工试评 | 16 段匿名单视频和四对比较；原答保留，执行偏差与解盲后澄清单列 |
 | 环境检查 | SageAttention 2.2.0 在独立副本编译安装，GPU 0 BF16 小张量检查通过 |
+| Week4 实际路径 | Sage varlen 算子、完整模型冒烟、profile、同环境性能对照及 FP8 源码路径核对 |
+| Week4 生成与审计 | Sage、普通 FP8、scaled FP8 各 36 段，共 108 段候选；公开清单与精简审计，媒体保留本地 |
 
 Windows RTX 5060 Ti 16G 的固定配置也完成了运行和性能测量，L2 均值 637.611 秒。2026-10-26 的补充实验显示该解释器仍能分配超出物理显存的 CUDA 内存，因此不能将“跑通”解释为严格在 16GB 独立显存内运行，也不能据此声称 Linux 16G 可用。详见 [本机记录](notes/REVIEW/week2_local_16g.md)。
 
@@ -73,6 +87,8 @@ python -m unittest discover -s scripts -p 'test_metrics.py'
 ## 阅读入口
 
 - [Week3 复盘](notes/REVIEW/WEEK3_REVIEW.md)：目标、实现、结果与局限。
+- [Week4 复盘](notes/REVIEW/WEEK4_REVIEW.md)、[Week4 计划](plan/WEEK4_PLAN.md)与 [执行日志](logs/week4.md)。
+- [Sage 性能](notes/week4_perf_attention.md)、[质量证据](notes/week4_quality_attention.md)与 [FP8 性能和生成审计](notes/week4_fp8.md)。
 - [服务器性能基线](notes/week2_baseline.md)与 [profiler 分析](notes/week2_profile.md)。
 - [反例探针结果](notes/week3_probe.md)：静止 SSIM 可为 1；自动指标不替代质量判断。
 - [评分标准](notes/week3_rubric.md)与 [试评解盲报告](notes/week3_trial_review.md)。

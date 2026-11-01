@@ -366,3 +366,94 @@ L1 会话 `L1-stages-20261018-144206-60e8ffc4`，L2 会话 `L2-total-20261018-15
 | 候选与判定规则 | `configs/optimization_rules.yaml`、`notes/week4_prereg.md` | 最多三个新增单项配置；当前无优化收益结论 |
 
 本次答卷独立性与部分会话信息未记录，静止误扣时序分及模糊配对冲突按用户澄清单列。原始工作簿和分数不改，不将试评替代正式优化质量对照。P02 文本替换候选未单独验明动作，保留为未验证事项。干净环境复现、GPU 1 SageAttention 运算、完整模型及性能质量对照留后续，不要求重新生成本周基线。
+
+### Week4 attention 对照及36段指标（2026-10-27）
+
+上述Week3状态为历史记录。Week4已在副本env-sagecheck完成varlen算子检查、完整模型冒烟、profile、P01/s42 torch基线MP4复现及当期同环境A1–A4性能测量；GPU1随后也完成18段Sage评测生成。性能结果和范围见 `notes/week4_perf_attention.md`，原始bench结果沿用 `notes/week2/W4-*`、产物沿用 `outputs/week2/W4-*`，不因目录命名修改已验收bench.py。
+
+评测生成复用gen_eval.py，eval_sageattn配置，GPU0分片0/2、GPU1分片1/2；GPU1首条以limit 1确认后继续同分片，成功收据核验后跳过。两卡结束后同配置--summarize得到36个ok。本机已验收36段MP4哈希、完整收据/events，未记录失败或重试；latent按计划未传回，服务器汇总有哈希核对，本机不声称独立重算。审计为 `notes/week4/generation_audit.json`。
+
+新增 `scripts/check_sage_varlen.py`、`scripts/analyze_week4_profile.py` 和 `scripts/metrics_candidate.py`；前两项细节见 `notes/week4_sage.md`。候选指标入口复用未修改的metrics.py函数，CPU FP32及固定CLIP revision，与第三周版本/协议一致；旧脚本及指标结果保留。
+
+本机已执行：
+
+```powershell
+& 'E:\cstudy\AIGC\V\local\env\python.exe' `
+  'E:\cstudy\AIGC\V\scripts\metrics_candidate.py' `
+  --candidate sageattn `
+  --output 'E:\cstudy\AIGC\V\notes\week4_metrics_sageattn'
+```
+
+输出目录禁止覆盖；需要独立复算时另取新output目录。36条全部成功，含2880个SSIM帧对值和756个CLIP帧值，36对差值已核验。说明见 `notes/week4_metrics_sageattn.md`；机器可读运行记录为 `notes/week4_metrics_sageattn/run.json`。指标不替代人工质量门槛。
+
+### Week4 SageAttention质量评估（2026-10-27）
+
+48项答卷原件与哈希归档完成，两次补充说明单独保存。新增 `scripts/audit_candidate_ratings.py` 作解盲前只读检查，`scripts/analyze_candidate_ratings.py` 固定解释快照后解盲统计；旧第三周入口及原表均不改。
+后者用bundled Python/openpyxl读取XLSX，因bundled运行时缺少PyYAML，仅用现有 `local/env/python.exe` 解析冻结YAML；未安装依赖。
+
+本机首次执行命令如下，输出已存在时拒绝覆盖，不应直接重跑来覆盖本轮：
+
+```powershell
+& '<USER_HOME>\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' `
+  'E:\cstudy\AIGC\V\scripts\analyze_candidate_ratings.py' `
+  --name week4-R01-20261027
+```
+
+机器结果和CSV位于私人原件归档目录，输入哈希和解盲前解释快照保留。源表哈希仍为 `bf3a3a2dd254b00f21b880edf27a757e77e42673bd0384549a7653f3e4ed1a40`。
+结构/时序/符合度完整相对答案分别34/36/30，未解决2/0/6；时序轻微改善和轻微退化各1项，不相互抵消。
+当前质量分类为结论不足，非质量保持或确认明显退化。报告见 `notes/week4_quality_attention.md`，综合结论卡为 `notes/week4_result_attention.md`。后续补充必须另存版本，保留本轮缺口及助手已解盲的时序。
+
+### Week4 FP8冒烟本机验收（2026-10-28）
+
+服务器主环境先分别执行eval_fp8和eval_fp8_scaled，两步stages、warmup0/repeat1、GPU0，原始会话目录和产物仍沿用bench.py的week2路径。
+两次完整10份原件位于 `notes/week4/W4-fp8-smoke-artifacts-20261027/`；本机tar与解压成员一致，服务器tar哈希未提供。
+
+本机首次验收命令：
+
+```powershell
+& 'E:\cstudy\AIGC\V\local\env\python.exe' `
+  'E:\cstudy\AIGC\V\scripts\audit_fp8_smoke.py'
+```
+
+使用已有CPU依赖，不启动生成；输出已存在时拒绝覆盖。审计为 `notes/week4/fp8_smoke_audit.json`，预览为 `notes/week4/fp8_smoke_preview.png`。
+参数、阶段、summary、finite及完整解码/非黑屏检查通过，抽帧仍明显模糊，不是质量通过。
+固定源码路径及前向精度边界见 `notes/week4_fp8.md`。正式20步baseline/FP8/scaled性能尚待主环境独立测量。
+
+### Week4 FP8 total两轮验收（2026-10-28）
+
+F0–F5六个服务器会话已完成：三配置各初始1+3及唯一确认1+3，正式各六次全部保留。
+原件位于 `notes/week4/W4-fp8-total-records-20261028/`，60份文件。
+本机首次执行 `local/env/python.exe scripts/audit_fp8_total.py` 复核参数/哈希/runtime、
+逐轮状态、24份CSV共31,692行及六份summary；未修改bench.py或输入，输出已存在时拒绝覆盖。
+结果为 `notes/week4/fp8_total_audit.json`，本机tar成员与解压哈希一致，服务器tar哈希未提供。
+普通FP8耗时少1.2649%、scaled多0.4582%，两者速度门槛未达，三种整次峰值均无下降。
+具体六次值、范围及局限见 `notes/week4_fp8.md`。F6/F7/F8阶段测量待执行，不将total验收写成质量通过。
+
+### Week4 FP8阶段验收（2026-10-29）
+
+F6/F7/F8三种20步stages各预热1+正式1已完成。新增 `scripts/audit_fp8_stages.py`，
+验证 `notes/week4/W4-fp8-stages-records-20261029.tar.gz` 成员集合与安全路径后，
+解压到独立同名目录，不覆盖不同内容文件；已有审计拒绝覆盖。
+本机使用 `local/env/python.exe scripts/audit_fp8_stages.py` 核对12份JSON，
+各轮40次前向、固定参数/记录runtime、阶段聚合/峰值及summary精确一致。
+输出 `notes/week4/fp8_stages_audit.json`，服务器tar哈希未提供。
+两配置去噪阶段allocated下降约31.10%/30.27%，普通FP8的DiT加载峰值反升；
+整次峰值由VAE解码决定，仍未下降。完整表及条件见 `notes/week4_fp8.md`。
+性能阶段完成，72段评测生成和质量验收未完成，不据此给最终可用分类。
+
+### Week4 FP8生成72段验收（2026-10-29）
+
+主环境env/bin/python，固定gen_eval.py和配置，每个配置先物理GPU0分片0/2，
+再物理GPU1分片1/2，各18段。普通FP8汇总后再进行scaled；无诊断tag或steps覆盖。
+各配置命令形如 `scripts/gen_eval.py --config configs/eval_fp8.yaml --gpu-index 0 --shard 0/2`，
+另一卡为gpu-index1/shard1/2；scaled替换配置为eval_fp8_scaled.yaml，
+两边完成后同配置加 `--summarize`。项目内tmux会话和logs/week4-generation保存运行状态，
+并行生成耗时不计性能基准。
+
+归档 `notes/week4/W4-fp8-eval-72-20261029.tar.gz`，
+服务器/本机SHA256均为4412ce239e719935db16148916d33d21b6914ae671ad930a4231d61aa7722869。
+新增 `scripts/audit_fp8_generation.py`，用已有项目Python只读核验内容并安全解压到原项目路径，
+已有不同内容拒绝覆盖，已有审计拒绝覆盖。输出 `notes/week4/fp8_generation_audit.json`。
+72段视频哈希/完整解码通过，两配置各36份首次成功，无失败/重试记录，GPU各18。
+仅传最终MP4和notes记录，未传latent；服务器summarize检查其哈希，本机未独立核验latent。
+自动指标、人工盲评与最终质量分类仍待Week5，不由生成验收推断质量保持。
