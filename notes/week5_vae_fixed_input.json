@@ -1,0 +1,24 @@
+{
+  "registered_date_asia_shanghai": "2026-11-06",
+  "provenance": "User-returned server sha256sum and CPU safe_open output; no independent local latent read",
+  "task": "t2v-1.3B",
+  "upstream_commit": "f8a1b03794a49239a3539015075f5123d6c07d66",
+  "latent_path": "/home/user/projects/wan21-video/outputs/eval/baseline/P01_s42_latent.safetensors",
+  "latent_sha256": "45b483abe74e4cc29943b15c40931aa11ff265d652abf964132636303f0def16",
+  "dtype": "torch.float32",
+  "shape": [16, 21, 60, 104],
+  "finite": true,
+  "min": -2.86393404006958,
+  "max": 3.138010263442993,
+  "metadata": {
+    "seeds": "42",
+    "prompt": "A person waving one hand, plain background, static camera.",
+    "guidance_scale": "5.0",
+    "height": "480",
+    "video_length": "81",
+    "infer_steps": "20",
+    "width": "832"
+  },
+  "decode_measurement_status": "not_run",
+  "note": "Stored latent FP32 and VAE BF16 are separate settings; preserve upstream decode behavior."
+}

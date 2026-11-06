@@ -33,6 +33,11 @@ video/
 *.xlsx
 trace.json
 *.pt.trace.json
+*.pickle
+*.pkl
+memory_viz.html
+memory_viz-user-*.png
+allocator_timeline.csv
 
 # Reviewer identities and local-only work
 notes/blind_private/

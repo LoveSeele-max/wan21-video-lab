@@ -1,0 +1,36 @@
+{
+  "recorded_date_asia_shanghai": "2026-11-06",
+  "provenance": "User-pasted server stdout; not the downloaded original result.json",
+  "server_result_path": "/home/user/projects/wan21-video/outputs/week5-vae/decode-baseline-01/result.json",
+  "original_result_downloaded": false,
+  "local_mp4_hash_and_full_decode_verified": false,
+  "reported_summary": {
+    "status": "ok",
+    "decode_records": [
+      {
+        "seconds": 10.99382509899442,
+        "peak_allocated_bytes": 15412987904,
+        "peak_reserved_bytes": 19581108224,
+        "peak_allocated_mib": 14698.970703125,
+        "peak_reserved_mib": 18674.0,
+        "before_bytes": {"allocated": 0, "reserved": 0},
+        "after_bytes": {"allocated": 8519680, "reserved": 19581108224},
+        "input_dtype": "torch.float32",
+        "input_shape": [1, 16, 21, 60, 104],
+        "output_dtype": "torch.float32",
+        "output_device": "cpu",
+        "output_shape": [3, 81, 480, 832]
+      }
+    ],
+    "video_path": "/home/user/projects/wan21-video/outputs/week5-vae/decode-baseline-01/20261106-113527-240_42__P01_s42_latent.mp4"
+  },
+  "locally_recomputed_comparison": {
+    "reference": "notes/week4/fp8_stages_audit.json cases.baseline.stage_table.decode_latent",
+    "reference_allocated_mib": 14698.353515625,
+    "reference_reserved_mib": 18666.0,
+    "allocated_difference_mib": 0.6171875,
+    "allocated_difference_percent": 0.004199024736650792,
+    "reserved_difference_mib": 8.0,
+    "note": "Peak proximity supports continuing latent-only diagnostics; one run does not establish exact equivalence or the internal allocation cause."
+  }
+}

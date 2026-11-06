@@ -1,0 +1,78 @@
+{
+  "verified_at_utc": "2026-11-06T03:47:29.986433+00:00",
+  "status": "passed_local_record_identity_hashes_and_full_mp4_decode",
+  "audit_script_sha256": "dd233888798d7802b14da60ce3967a0148588462b00729537a92957a52012c90",
+  "files_sha256": {
+    "outputs\\week5-vae\\decode-baseline-01\\input.json": "b6587d22b41f41ba040bc527122d932b91dd5ab593a1c929e908aea30cbee90f",
+    "outputs\\week5-vae\\decode-baseline-01\\result.json": "09174057010665882ea71f082cff0aa0b6afcf58746c10830fbf8e1f4157b7c8",
+    "outputs\\week5-vae\\decode-baseline-01\\20261106-113527-240_42__P01_s42_latent.mp4": "fa59fbd653bef48711826054cbfc3463da9003b10c429c2273d9cf77eb838217",
+    "scripts\\vae_decode_measure.py": "656c0224eea84b460fe3c04243e2a8f72e6f86c4f0dc9e126bd24133402e0a24"
+  },
+  "recorded_source_hashes_match_fixed_git_blobs": true,
+  "source_checks": {
+    "src/musubi_tuner/wan_generate_video.py": {
+      "server_sha256": "52776793a899df7ed79160521ac461301804aac38ee34aa6ace091abd93cd5b5",
+      "fixed_git_blob_sha256": "52776793a899df7ed79160521ac461301804aac38ee34aa6ace091abd93cd5b5",
+      "local_worktree_raw_sha256": "57af24bb04f7a0cdbac88a53824891188c55d27893fce5be85f57a0c9bbc9e6f",
+      "local_matches_fixed_blob_after_crlf_to_lf": true,
+      "raw_local_bytes_equal_server": false
+    },
+    "src/musubi_tuner/wan/modules/vae.py": {
+      "server_sha256": "968e38da423dfd726fdab775277f3bf659a5aeaef3652326bb9c246e4b58cd5f",
+      "fixed_git_blob_sha256": "968e38da423dfd726fdab775277f3bf659a5aeaef3652326bb9c246e4b58cd5f",
+      "local_worktree_raw_sha256": "7ff5f90f684c3774eae7c7f2a93d51d5983410607271257e4b82414566cb7855",
+      "local_matches_fixed_blob_after_crlf_to_lf": true,
+      "raw_local_bytes_equal_server": false
+    }
+  },
+  "server_latent_identity_matches_registration": true,
+  "video_bytes_identical_to_frozen_P01_s42_baseline": true,
+  "decoded_video": {
+    "frames": 81,
+    "fps": 16,
+    "width": 832,
+    "height": 480,
+    "all_black_frames": 0,
+    "rgb_frames_sha256": "da2563fa1f9f5ce76a025429e54315f65ceb0757c60fff8854d27217ad1f4a6d"
+  },
+  "decode_record": {
+    "seconds": 10.99382509899442,
+    "peak_allocated_bytes": 15412987904,
+    "peak_reserved_bytes": 19581108224,
+    "peak_allocated_mib": 14698.970703125,
+    "peak_reserved_mib": 18674.0,
+    "before_bytes": {
+      "allocated": 0,
+      "reserved": 0
+    },
+    "after_bytes": {
+      "allocated": 8519680,
+      "reserved": 19581108224
+    },
+    "input_dtype": "torch.float32",
+    "input_shape": [
+      1,
+      16,
+      21,
+      60,
+      104
+    ],
+    "output_dtype": "torch.float32",
+    "output_device": "cpu",
+    "output_shape": [
+      3,
+      81,
+      480,
+      832
+    ]
+  },
+  "allocated_difference_from_week4_mib": 0.6171875,
+  "reserved_difference_from_week4_mib": 8.0,
+  "vae_weight_hash_as_recorded_by_server": "2fc39d31359a4b0a64f55876d8ff7fa8d780956ae2cb13463b0223e15148976b",
+  "limits": [
+    "No independent local read of the latent or server VAE weight.",
+    "One fixed sample diagnostic; no GPU rerun or quality acceptance.",
+    "Matching output bytes do not locate the peak allocation source.",
+    "No independent server-side digest was supplied for the two JSON files."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "recorded_date_asia_shanghai": "2026-11-06",
+  "provenance": "User-pasted partial server stdout from the requested CPU-cache run; original input/result/video not yet returned",
+  "original_files_locally_verified": false,
+  "status_in_pasted_excerpt": null,
+  "reported_summary": {
+    "decode_records": [
+      {
+        "seconds": 50.383249560996774,
+        "peak_allocated_bytes": 11683311616,
+        "peak_reserved_bytes": 16859004928,
+        "peak_allocated_mib": 11142.07421875,
+        "peak_reserved_mib": 16078.0,
+        "before_bytes": {"allocated": 0, "reserved": 0},
+        "after_bytes": {"allocated": 8519680, "reserved": 16859004928},
+        "input_dtype": "torch.float32",
+        "input_shape": [1, 16, 21, 60, 104],
+        "output_dtype": "torch.float32",
+        "output_device": "cpu",
+        "output_shape": [3, 81, 480, 832]
+      }
+    ],
+    "video_path": "/home/user/projects/wan21-video/outputs/week5-vae/decode-cache-cpu-01/20261106-151236-650_42__P01_s42_latent.mp4"
+  },
+  "locally_recomputed_comparison": {
+    "reference": "outputs/week5-vae/decode-baseline-01/result.json decode_records[0]",
+    "reference_memory_history": false,
+    "reference_seconds": 10.99382509899442,
+    "reference_allocated_mib": 14698.970703125,
+    "reference_reserved_mib": 18674.0,
+    "allocated_reduction_bytes": 3729676288,
+    "allocated_reduction_mib": 3556.896484375,
+    "allocated_reduction_percent": 24.198269091173874,
+    "reserved_reduction_mib": 2596.0,
+    "seconds_increase": 39.38942446200235,
+    "elapsed_time_ratio": 4.582868028854235,
+    "history_reconstructed_assigned_cache_mib": 3556.083984375,
+    "allocated_reduction_minus_reconstructed_cache_mib": 0.8125
+  },
+  "pending": [
+    "Original input/result status, cache flag, script, environment and fixed-input identity",
+    "Video hash comparison and full 81-frame MP4 decode",
+    "Final diagnostic interpretation; no formal speed or full-generation memory claim"
+  ]
+}

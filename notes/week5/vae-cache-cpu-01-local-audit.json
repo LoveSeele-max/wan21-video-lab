@@ -1,0 +1,120 @@
+{
+  "verified_at_utc": "2026-11-06T07:22:37.644913+00:00",
+  "verification_status": "ANALYZED",
+  "status": "passed_local_record_identity_hashes_and_full_mp4_decode",
+  "audit_script_sha256": "751df8e18abccb209659523b9413edb18ef025687fe64c8636f8f4acd32a4311",
+  "files_sha256": {
+    "outputs\\week5-vae\\decode-cache-cpu-01\\input.json": "5fb3760328c4976acd7327a9dd9e979af08f699b8060e630030cd36914d9039c",
+    "outputs\\week5-vae\\decode-cache-cpu-01\\result.json": "9a1cb3794c3fa6774f8198e6a63da3899589782ca6afddca0dae337c60c603fa",
+    "outputs\\week5-vae\\decode-cache-cpu-01\\20261106-151236-650_42__P01_s42_latent.mp4": "fa59fbd653bef48711826054cbfc3463da9003b10c429c2273d9cf77eb838217",
+    "outputs\\week5-vae\\decode-baseline-01\\result.json": "09174057010665882ea71f082cff0aa0b6afcf58746c10830fbf8e1f4157b7c8",
+    "notes\\week5\\vae-baseline-01-local-audit.json": "04bf21bdc0b32f13494e50edd9b3c60d7e2fe0c4810716bc172b48aad32cb98c",
+    "notes\\week5\\vae-cache-cpu-01-user-summary.json": "b0784210ba9f2a7ae2eb7b0d32461dba21987a396010e5ee383ad400e292fae4",
+    "notes\\week5\\vae-history-01-analysis-v2\\attribution.json": "49c39236f923329ebf4dc17bf09d1f6ee2b9ab8bdfd089abe59628323feec66a",
+    "scripts\\vae_decode_measure.py": "656c0224eea84b460fe3c04243e2a8f72e6f86c4f0dc9e126bd24133402e0a24"
+  },
+  "source_checks": {
+    "src/musubi_tuner/wan_generate_video.py": {
+      "server_and_fixed_git_blob_sha256": "52776793a899df7ed79160521ac461301804aac38ee34aa6ace091abd93cd5b5",
+      "local_worktree_sha256": "57af24bb04f7a0cdbac88a53824891188c55d27893fce5be85f57a0c9bbc9e6f",
+      "local_equals_fixed_blob_after_crlf_to_lf": true
+    },
+    "src/musubi_tuner/wan/modules/vae.py": {
+      "server_and_fixed_git_blob_sha256": "968e38da423dfd726fdab775277f3bf659a5aeaef3652326bb9c246e4b58cd5f",
+      "local_worktree_sha256": "7ff5f90f684c3774eae7c7f2a93d51d5983410607271257e4b82414566cb7855",
+      "local_equals_fixed_blob_after_crlf_to_lf": true
+    }
+  },
+  "only_intended_upstream_argument_change_except_output_directory": "--vae_cache_cpu",
+  "cache_cpu_enabled_in_original_record": true,
+  "baseline_record": {
+    "seconds": 10.99382509899442,
+    "peak_allocated_bytes": 15412987904,
+    "peak_reserved_bytes": 19581108224,
+    "peak_allocated_mib": 14698.970703125,
+    "peak_reserved_mib": 18674.0,
+    "before_bytes": {
+      "allocated": 0,
+      "reserved": 0
+    },
+    "after_bytes": {
+      "allocated": 8519680,
+      "reserved": 19581108224
+    },
+    "input_dtype": "torch.float32",
+    "input_shape": [
+      1,
+      16,
+      21,
+      60,
+      104
+    ],
+    "output_dtype": "torch.float32",
+    "output_device": "cpu",
+    "output_shape": [
+      3,
+      81,
+      480,
+      832
+    ]
+  },
+  "cache_cpu_record": {
+    "seconds": 50.383249560996774,
+    "peak_allocated_bytes": 11683311616,
+    "peak_reserved_bytes": 16859004928,
+    "peak_allocated_mib": 11142.07421875,
+    "peak_reserved_mib": 16078.0,
+    "before_bytes": {
+      "allocated": 0,
+      "reserved": 0
+    },
+    "after_bytes": {
+      "allocated": 8519680,
+      "reserved": 16859004928
+    },
+    "input_dtype": "torch.float32",
+    "input_shape": [
+      1,
+      16,
+      21,
+      60,
+      104
+    ],
+    "output_dtype": "torch.float32",
+    "output_device": "cpu",
+    "output_shape": [
+      3,
+      81,
+      480,
+      832
+    ]
+  },
+  "comparison": {
+    "allocated_reduction_bytes": 3729676288,
+    "allocated_reduction_mib": 3556.896484375,
+    "allocated_reduction_percent": 24.198269091173874,
+    "reserved_reduction_mib": 2596.0,
+    "seconds_increase": 39.38942446200235,
+    "elapsed_time_ratio": 4.582868028854235,
+    "history_reconstructed_assigned_cache_mib": 3556.083984375,
+    "allocated_reduction_minus_reconstructed_cache_mib": 0.8125
+  },
+  "decoded_video": {
+    "frames": 81,
+    "fps": 16,
+    "width": 832,
+    "height": 480,
+    "all_black_frames": 0,
+    "rgb_frames_sha256": "da2563fa1f9f5ce76a025429e54315f65ceb0757c60fff8854d27217ad1f4a6d",
+    "mp4_sha256": "fa59fbd653bef48711826054cbfc3463da9003b10c429c2273d9cf77eb838217",
+    "bytes_identical_to_uninstrumented_and_frozen_baselines": true
+  },
+  "limits": [
+    "Server GPU run performed by user; no independent local GPU reproduction",
+    "Latent and VAE weight identities are server records, not locally read bodies",
+    "No separately supplied server hashes for input/result JSON",
+    "Exact MP4/RGB identity for this sample does not prove raw decoded-tensor equality",
+    "Single fresh-process diagnostic, not a formal speed or full-generation benchmark",
+    "No CPU-cache allocation history; remaining peak location/backend not measured"
+  ]
+}

@@ -1,0 +1,2071 @@
+{
+  "verification_status": "ANALYZED",
+  "local_record_and_video_audit": "passed",
+  "analyzer_sha256": "a0505b8fda09e7e787b2ab5f03e744f311d3cac72a4624efa49d00433ca313e2",
+  "files_sha256": {
+    "20261106-131235-895_42__P01_s42_latent.mp4": "fa59fbd653bef48711826054cbfc3463da9003b10c429c2273d9cf77eb838217",
+    "input.json": "da053f460d4a5259a3eb3a147ce3a87348a0ebc2f2e9e42acbe68a35de0bb235",
+    "probe.json": "665df4b018836bffaa2961b437b56f0125c1235748da0b4ab83562812598ccfe",
+    "result.json": "6de225b4c9e364716ee27a20d8b5c0f9b8225b06b6e3da954a2434cbd1b845ae",
+    "vae_snapshot.pickle": "c8682923be50a74c6884acc3e5bc1bdf5443ae33c364763092a9ceecbdd62b63"
+  },
+  "fixed_source_git_blob_hashes": {
+    "src/musubi_tuner/wan_generate_video.py": "52776793a899df7ed79160521ac461301804aac38ee34aa6ace091abd93cd5b5",
+    "src/musubi_tuner/wan/modules/vae.py": "968e38da423dfd726fdab775277f3bf659a5aeaef3652326bb9c246e4b58cd5f"
+  },
+  "decode_record": {
+    "seconds": 10.147731060991646,
+    "peak_allocated_bytes": 15412987904,
+    "peak_reserved_bytes": 19581108224,
+    "peak_allocated_mib": 14698.970703125,
+    "peak_reserved_mib": 18674.0,
+    "before_bytes": {
+      "allocated": 0,
+      "reserved": 0
+    },
+    "after_bytes": {
+      "allocated": 8519680,
+      "reserved": 19581108224
+    },
+    "input_dtype": "torch.float32",
+    "input_shape": [
+      1,
+      16,
+      21,
+      60,
+      104
+    ],
+    "output_dtype": "torch.float32",
+    "output_device": "cpu",
+    "output_shape": [
+      3,
+      81,
+      480,
+      832
+    ]
+  },
+  "baseline_decode_record": {
+    "seconds": 10.99382509899442,
+    "peak_allocated_bytes": 15412987904,
+    "peak_reserved_bytes": 19581108224,
+    "peak_allocated_mib": 14698.970703125,
+    "peak_reserved_mib": 18674.0,
+    "before_bytes": {
+      "allocated": 0,
+      "reserved": 0
+    },
+    "after_bytes": {
+      "allocated": 8519680,
+      "reserved": 19581108224
+    },
+    "input_dtype": "torch.float32",
+    "input_shape": [
+      1,
+      16,
+      21,
+      60,
+      104
+    ],
+    "output_dtype": "torch.float32",
+    "output_device": "cpu",
+    "output_shape": [
+      3,
+      81,
+      480,
+      832
+    ]
+  },
+  "snapshot_actions": [
+    {
+      "segment_alloc": 37,
+      "alloc": 9764,
+      "free_requested": 9763,
+      "free_completed": 9763
+    }
+  ],
+  "snapshot_size_bytes": 7781984,
+  "decoded_video": {
+    "frames": 81,
+    "fps": 16,
+    "width": 832,
+    "height": 480,
+    "all_black_frames": 0,
+    "rgb_frames_sha256": "da2563fa1f9f5ce76a025429e54315f65ceb0757c60fff8854d27217ad1f4a6d",
+    "identical_bytes_to_original_and_uninstrumented_baselines": true
+  },
+  "peak": {
+    "event": 28595,
+    "seconds_since_first_event": 9.56526,
+    "action": "alloc",
+    "allocated_bytes": 15412987904,
+    "requested_bytes": 15410126406,
+    "active_bytes": 15412987904,
+    "reserved_bytes": 19581108224,
+    "max_allocated_so_far_bytes": 15412987904,
+    "live_allocations": 242,
+    "allocator_slack_bytes": 2861498,
+    "largest_live_allocations": [
+      {
+        "allocation_event": 28595,
+        "address": "0x7981ca000000",
+        "requested_bytes": 8281128960,
+        "block_bytes": 8281653248,
+        "requested_mib": 7897.5,
+        "block_mib": 7898.0,
+        "free_requested_event": 28596,
+        "vae_stack": "forward:38 > forward:209 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": true
+      },
+      {
+        "allocation_event": 28590,
+        "address": "0x7983eed80000",
+        "requested_bytes": 926180352,
+        "block_bytes": 926180352,
+        "requested_mib": 883.2744140625,
+        "block_mib": 883.2744140625,
+        "free_requested_event": 28600,
+        "vae_stack": "forward:36 > forward:209 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28585,
+        "address": "0x7984c4480000",
+        "requested_bytes": 613416960,
+        "block_bytes": 613416960,
+        "requested_mib": 585.0,
+        "block_mib": 585.0,
+        "free_requested_event": 28602,
+        "vae_stack": "forward:213 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28593,
+        "address": "0x79857dfb0000",
+        "requested_bytes": 463090176,
+        "block_bytes": 463090176,
+        "requested_mib": 441.63720703125,
+        "block_mib": 441.63720703125,
+        "free_requested_event": 28598,
+        "vae_stack": "forward:38 > forward:209 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 27214,
+        "address": "0x7985168c0000",
+        "requested_bytes": 306708480,
+        "block_bytes": 306708480,
+        "requested_mib": 292.5,
+        "block_mib": 292.5,
+        "free_requested_event": 28604,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 27253,
+        "address": "0x79860c920000",
+        "requested_bytes": 306708480,
+        "block_bytes": 306708480,
+        "requested_mib": 292.5,
+        "block_mib": 292.5,
+        "free_requested_event": 28643,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 27295,
+        "address": "0x7985e8000000",
+        "requested_bytes": 306708480,
+        "block_bytes": 306708480,
+        "requested_mib": 292.5,
+        "block_mib": 292.5,
+        "free_requested_event": 28685,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 27334,
+        "address": "0x7984b2000000",
+        "requested_bytes": 306708480,
+        "block_bytes": 306708480,
+        "requested_mib": 292.5,
+        "block_mib": 292.5,
+        "free_requested_event": 28724,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 27376,
+        "address": "0x7984e8d80000",
+        "requested_bytes": 306708480,
+        "block_bytes": 306708480,
+        "requested_mib": 292.5,
+        "block_mib": 292.5,
+        "free_requested_event": 28766,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 27415,
+        "address": "0x79856bb30000",
+        "requested_bytes": 306708480,
+        "block_bytes": 306708480,
+        "requested_mib": 292.5,
+        "block_mib": 292.5,
+        "free_requested_event": 28805,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 27459,
+        "address": "0x798554d90000",
+        "requested_bytes": 306708480,
+        "block_bytes": 306708480,
+        "requested_mib": 292.5,
+        "block_mib": 292.5,
+        "free_requested_event": 28849,
+        "vae_stack": "forward:461 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28561,
+        "address": "0x79852e000000",
+        "requested_bytes": 306708480,
+        "block_bytes": 306708480,
+        "requested_mib": 292.5,
+        "block_mib": 292.5,
+        "free_requested_event": 28648,
+        "vae_stack": "forward:129 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28588,
+        "address": "0x798540480000",
+        "requested_bytes": 306708480,
+        "block_bytes": 306708480,
+        "requested_mib": 292.5,
+        "block_mib": 292.5,
+        "free_requested_event": 28868,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28594,
+        "address": "0x7983b8000000",
+        "requested_bytes": 306708480,
+        "block_bytes": 306708480,
+        "requested_mib": 292.5,
+        "block_mib": 292.5,
+        "free_requested_event": 28622,
+        "vae_stack": "forward:38 > forward:209 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": true
+      },
+      {
+        "allocation_event": 27479,
+        "address": "0x7985aa000000",
+        "requested_bytes": 184504320,
+        "block_bytes": 184504320,
+        "requested_mib": 175.95703125,
+        "block_mib": 175.95703125,
+        "free_requested_event": 28854,
+        "vae_stack": "decode:587 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28327,
+        "address": "0x7985c56c0000",
+        "requested_bytes": 153354240,
+        "block_bytes": 153354240,
+        "requested_mib": 146.25,
+        "block_mib": 146.25,
+        "free_requested_event": 28880,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28366,
+        "address": "0x7985b86cd000",
+        "requested_bytes": 153354240,
+        "block_bytes": 153354240,
+        "requested_mib": 146.25,
+        "block_mib": 146.25,
+        "free_requested_event": 28878,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28408,
+        "address": "0x798628000000",
+        "requested_bytes": 153354240,
+        "block_bytes": 153354240,
+        "requested_mib": 146.25,
+        "block_mib": 146.25,
+        "free_requested_event": 28876,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28447,
+        "address": "0x79850d680000",
+        "requested_bytes": 153354240,
+        "block_bytes": 153354240,
+        "requested_mib": 146.25,
+        "block_mib": 146.25,
+        "free_requested_event": 28874,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28489,
+        "address": "0x798504440000",
+        "requested_bytes": 153354240,
+        "block_bytes": 153354240,
+        "requested_mib": 146.25,
+        "block_mib": 146.25,
+        "free_requested_event": 28872,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28528,
+        "address": "0x7985ce900000",
+        "requested_bytes": 153354240,
+        "block_bytes": 153354240,
+        "requested_mib": 146.25,
+        "block_mib": 146.25,
+        "free_requested_event": 28870,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28085,
+        "address": "0x7984ffb20000",
+        "requested_bytes": 76677120,
+        "block_bytes": 76677120,
+        "requested_mib": 73.125,
+        "block_mib": 73.125,
+        "free_requested_event": 28892,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28129,
+        "address": "0x79861eda0000",
+        "requested_bytes": 76677120,
+        "block_bytes": 76677120,
+        "requested_mib": 73.125,
+        "block_mib": 73.125,
+        "free_requested_event": 28890,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28168,
+        "address": "0x798528d40000",
+        "requested_bytes": 76677120,
+        "block_bytes": 76677120,
+        "requested_mib": 73.125,
+        "block_mib": 73.125,
+        "free_requested_event": 28888,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      },
+      {
+        "allocation_event": 28210,
+        "address": "0x798638000000",
+        "requested_bytes": 76677120,
+        "block_bytes": 76677120,
+        "requested_mib": 73.125,
+        "block_mib": 73.125,
+        "free_requested_event": 28886,
+        "vae_stack": "forward:205 > forward:453 > decode:586 > <listcomp>:760 > decode:760",
+        "native_slow_conv": false
+      }
+    ],
+    "trigger_event_full_stack": [
+      {
+        "name": "torch::unwind::unwind()",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "torch::CapturedTraceback::gather(bool, bool, bool)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "torch::cuda::(anonymous namespace)::gather_with_cpp()",
+        "filename": "memory_snapshot.cpp",
+        "line": 0
+      },
+      {
+        "name": "c10::cuda::CUDACachingAllocator::Native::DeviceCachingAllocator::malloc(signed char, unsigned long, CUstream_st*)",
+        "filename": "CUDACachingAllocator.cpp",
+        "line": 0
+      },
+      {
+        "name": "c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::malloc(void**, signed char, unsigned long, CUstream_st*)",
+        "filename": "",
+        "line": 0
+      },
+      {
+        "name": "c10::cuda::CUDACachingAllocator::Native::NativeCachingAllocator::allocate(unsigned long)",
+        "filename": "",
+        "line": 0
+      },
+      {
+        "name": "at::native::resize_bytes_cuda(c10::StorageImpl*, unsigned long)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "at::native::resize_cuda_(at::Tensor const&, c10::ArrayRef<long>, std::optional<c10::MemoryFormat>)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "at::_ops::resize_::call(at::Tensor const&, c10::ArrayRef<c10::SymInt>, std::optional<c10::MemoryFormat>)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "void at::native::(anonymous namespace)::slow_conv_dilated_all_cuda_template<3l>(at::Tensor&, at::Tensor const&, at::Tensor const&, at::Tensor const&, at::Tensor const&, at::Tensor&, at::Tensor&, at::Tensor&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>)",
+        "filename": "",
+        "line": 0
+      },
+      {
+        "name": "at::native::slow_conv_dilated3d_cuda(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long>, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "at::(anonymous namespace)::(anonymous namespace)::wrapper_CUDA__slow_conv_dilated3d(at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>)",
+        "filename": "RegisterCUDA_0.cpp",
+        "line": 0
+      },
+      {
+        "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CUDA__slow_conv_dilated3d>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt> > >, at::Tensor (at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>)",
+        "filename": "RegisterCUDA_0.cpp",
+        "line": 0
+      },
+      {
+        "name": "at::_ops::slow_conv_dilated3d::call(at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "at::native::_convolution_nogroup_backend(at::Tensor const&, at::Tensor const&, at::Tensor const&, at::native::ConvBackend, at::native::ConvParams<long> const&)",
+        "filename": "Convolution.cpp",
+        "line": 0
+      },
+      {
+        "name": "at::native::_convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long, bool, bool, bool, bool)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd___convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)",
+        "filename": "RegisterCompositeExplicitAutograd_0.cpp",
+        "line": 0
+      },
+      {
+        "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd___convolution>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool> >, at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)",
+        "filename": "RegisterCompositeExplicitAutograd_0.cpp",
+        "line": 0
+      },
+      {
+        "name": "at::_ops::_convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<long>, c10::ArrayRef<long>, c10::ArrayRef<long>, bool, c10::ArrayRef<long>, long)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd__convolution(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "filename": "RegisterCompositeExplicitAutograd_0.cpp",
+        "line": 0
+      },
+      {
+        "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd__convolution>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "filename": "RegisterCompositeExplicitAutograd_0.cpp",
+        "line": 0
+      },
+      {
+        "name": "at::_ops::convolution::redispatch(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "torch::autograd::VariableType::(anonymous namespace)::convolution(c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "filename": "VariableType_0.cpp",
+        "line": 0
+      },
+      {
+        "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt), &torch::autograd::VariableType::(anonymous namespace)::convolution>, at::Tensor, c10::guts::typelist::typelist<c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, at::Tensor (c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "filename": "VariableType_0.cpp",
+        "line": 0
+      },
+      {
+        "name": "at::_ops::convolution::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "at::native::conv3d_symint(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__conv3d>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "filename": "RegisterCompositeImplicitAutograd_0.cpp",
+        "line": 0
+      },
+      {
+        "name": "at::_ops::conv3d::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "at::autocast::WrapFunction_<(at::autocast::CastPolicy)0, (c10::DeviceType)1, at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::_ops::conv3d::call, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt> >::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "filename": "",
+        "line": 0
+      },
+      {
+        "name": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoRuntimeFunctor_<at::Tensor (*)(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt), at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt> >, at::Tensor (at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "filename": "",
+        "line": 0
+      },
+      {
+        "name": "at::_ops::conv3d::call(at::Tensor const&, at::Tensor const&, std::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "torch::autograd::THPVariable_conv3d(_object*, _object*, _object*)",
+        "filename": "python_torch_functions_2.cpp",
+        "line": 0
+      },
+      {
+        "name": "cfunction_call",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/methodobject.c",
+        "line": 542
+      },
+      {
+        "name": "_PyObject_MakeTpCall",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/call.c",
+        "line": 214
+      },
+      {
+        "name": "_conv_forward",
+        "filename": "/home/user/projects/wan21-video/env/lib/python3.11/site-packages/torch/nn/modules/conv.py",
+        "line": 712
+      },
+      {
+        "name": "_PyEval_EvalFrameDefault",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 4769
+      },
+      {
+        "name": "forward",
+        "filename": "/home/user/projects/wan21-video/env/lib/python3.11/site-packages/torch/nn/modules/conv.py",
+        "line": 717
+      },
+      {
+        "name": "_PyEval_EvalFrame",
+        "filename": "/usr/local/src/conda/python-3.11.17/Include/internal/pycore_ceval.h",
+        "line": 73
+      },
+      {
+        "name": "do_call_core",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 7349
+      },
+      {
+        "name": "forward",
+        "filename": "/home/user/projects/wan21-video/musubi-tuner/src/musubi_tuner/wan/modules/vae.py",
+        "line": 38
+      },
+      {
+        "name": "_PyEval_EvalFrame",
+        "filename": "/usr/local/src/conda/python-3.11.17/Include/internal/pycore_ceval.h",
+        "line": 73
+      },
+      {
+        "name": "do_call_core",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 7349
+      },
+      {
+        "name": "_call_impl",
+        "filename": "/home/user/projects/wan21-video/env/lib/python3.11/site-packages/torch/nn/modules/module.py",
+        "line": 1786
+      },
+      {
+        "name": "_PyEval_EvalFrame",
+        "filename": "/usr/local/src/conda/python-3.11.17/Include/internal/pycore_ceval.h",
+        "line": 73
+      },
+      {
+        "name": "_PyObject_FastCallDictTstate",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/call.c",
+        "line": 141
+      },
+      {
+        "name": "_PyObject_Call_Prepend",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/call.c",
+        "line": 482
+      },
+      {
+        "name": "slot_tp_call",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/typeobject.c",
+        "line": 7624
+      },
+      {
+        "name": "_PyObject_MakeTpCall",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/call.c",
+        "line": 214
+      },
+      {
+        "name": "_wrapped_call_impl",
+        "filename": "/home/user/projects/wan21-video/env/lib/python3.11/site-packages/torch/nn/modules/module.py",
+        "line": 1775
+      },
+      {
+        "name": "_PyEval_EvalFrameDefault",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 4769
+      },
+      {
+        "name": "forward",
+        "filename": "/home/user/projects/wan21-video/musubi-tuner/src/musubi_tuner/wan/modules/vae.py",
+        "line": 209
+      },
+      {
+        "name": "_PyEval_EvalFrame",
+        "filename": "/usr/local/src/conda/python-3.11.17/Include/internal/pycore_ceval.h",
+        "line": 73
+      },
+      {
+        "name": "do_call_core",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 7349
+      },
+      {
+        "name": "_call_impl",
+        "filename": "/home/user/projects/wan21-video/env/lib/python3.11/site-packages/torch/nn/modules/module.py",
+        "line": 1786
+      },
+      {
+        "name": "_PyEval_EvalFrame",
+        "filename": "/usr/local/src/conda/python-3.11.17/Include/internal/pycore_ceval.h",
+        "line": 73
+      },
+      {
+        "name": "do_call_core",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 7349
+      },
+      {
+        "name": "_wrapped_call_impl",
+        "filename": "/home/user/projects/wan21-video/env/lib/python3.11/site-packages/torch/nn/modules/module.py",
+        "line": 1775
+      },
+      {
+        "name": "_PyEval_EvalFrame",
+        "filename": "/usr/local/src/conda/python-3.11.17/Include/internal/pycore_ceval.h",
+        "line": 73
+      },
+      {
+        "name": "_PyObject_FastCallDictTstate",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/call.c",
+        "line": 141
+      },
+      {
+        "name": "_PyObject_Call_Prepend",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/call.c",
+        "line": 482
+      },
+      {
+        "name": "slot_tp_call",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/typeobject.c",
+        "line": 7624
+      },
+      {
+        "name": "_PyObject_MakeTpCall",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/call.c",
+        "line": 214
+      },
+      {
+        "name": "forward",
+        "filename": "/home/user/projects/wan21-video/musubi-tuner/src/musubi_tuner/wan/modules/vae.py",
+        "line": 453
+      },
+      {
+        "name": "_PyEval_EvalFrameDefault",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 4769
+      },
+      {
+        "name": "inner",
+        "filename": "/home/user/projects/wan21-video/env/lib/python3.11/site-packages/torch/nn/modules/module.py",
+        "line": 1829
+      },
+      {
+        "name": "_PyEval_EvalFrame",
+        "filename": "/usr/local/src/conda/python-3.11.17/Include/internal/pycore_ceval.h",
+        "line": 73
+      },
+      {
+        "name": "method_vectorcall",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/classobject.c",
+        "line": 59
+      },
+      {
+        "name": "_PyVectorcall_Call",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/call.c",
+        "line": 257
+      },
+      {
+        "name": "do_call_core",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 7349
+      },
+      {
+        "name": "_call_impl",
+        "filename": "/home/user/projects/wan21-video/env/lib/python3.11/site-packages/torch/nn/modules/module.py",
+        "line": 1881
+      },
+      {
+        "name": "_PyEval_EvalFrame",
+        "filename": "/usr/local/src/conda/python-3.11.17/Include/internal/pycore_ceval.h",
+        "line": 73
+      },
+      {
+        "name": "method_vectorcall",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/classobject.c",
+        "line": 59
+      },
+      {
+        "name": "_PyVectorcall_Call",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/call.c",
+        "line": 257
+      },
+      {
+        "name": "do_call_core",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 7349
+      },
+      {
+        "name": "_wrapped_call_impl",
+        "filename": "/home/user/projects/wan21-video/env/lib/python3.11/site-packages/torch/nn/modules/module.py",
+        "line": 1775
+      },
+      {
+        "name": "_PyEval_EvalFrame",
+        "filename": "/usr/local/src/conda/python-3.11.17/Include/internal/pycore_ceval.h",
+        "line": 73
+      },
+      {
+        "name": "_PyObject_FastCallDictTstate",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/call.c",
+        "line": 152
+      },
+      {
+        "name": "_PyObject_Call_Prepend",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/call.c",
+        "line": 482
+      },
+      {
+        "name": "slot_tp_call",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/typeobject.c",
+        "line": 7624
+      },
+      {
+        "name": "_PyObject_MakeTpCall",
+        "filename": "/usr/local/src/conda/python-3.11.17/Objects/call.c",
+        "line": 214
+      },
+      {
+        "name": "decode",
+        "filename": "/home/user/projects/wan21-video/musubi-tuner/src/musubi_tuner/wan/modules/vae.py",
+        "line": 586
+      },
+      {
+        "name": "_PyEval_EvalFrameDefault",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 4769
+      },
+      {
+        "name": "wrapped",
+        "filename": "/home/user/projects/wan21-video/scripts/vae_memory_probe.py",
+        "line": 80
+      },
+      {
+        "name": "_PyEval_EvalFrame",
+        "filename": "/usr/local/src/conda/python-3.11.17/Include/internal/pycore_ceval.h",
+        "line": 73
+      },
+      {
+        "name": "do_call_core",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 7349
+      },
+      {
+        "name": "<listcomp>",
+        "filename": "/home/user/projects/wan21-video/musubi-tuner/src/musubi_tuner/wan/modules/vae.py",
+        "line": 760
+      },
+      {
+        "name": "_PyEval_EvalFrame",
+        "filename": "/usr/local/src/conda/python-3.11.17/Include/internal/pycore_ceval.h",
+        "line": 73
+      },
+      {
+        "name": "do_call_core",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 7349
+      },
+      {
+        "name": "decode",
+        "filename": "/home/user/projects/wan21-video/musubi-tuner/src/musubi_tuner/wan/modules/vae.py",
+        "line": 760
+      },
+      {
+        "name": "_PyEval_EvalFrame",
+        "filename": "/usr/local/src/conda/python-3.11.17/Include/internal/pycore_ceval.h",
+        "line": 73
+      },
+      {
+        "name": "PyEval_EvalCode",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/ceval.c",
+        "line": 1148
+      },
+      {
+        "name": "run_eval_code_obj",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/pythonrun.c",
+        "line": 1741
+      },
+      {
+        "name": "run_mod",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/pythonrun.c",
+        "line": 1762
+      },
+      {
+        "name": "pyrun_file",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/pythonrun.c",
+        "line": 1657
+      },
+      {
+        "name": "_PyRun_SimpleFileObject",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/pythonrun.c",
+        "line": 440
+      },
+      {
+        "name": "_PyRun_AnyFileObject",
+        "filename": "/usr/local/src/conda/python-3.11.17/Python/pythonrun.c",
+        "line": 79
+      },
+      {
+        "name": "pymain_run_file_obj",
+        "filename": "/usr/local/src/conda/python-3.11.17/Modules/main.c",
+        "line": 360
+      },
+      {
+        "name": "Py_BytesMain",
+        "filename": "/usr/local/src/conda/python-3.11.17/Modules/main.c",
+        "line": 738
+      },
+      {
+        "name": "__libc_start_call_main",
+        "filename": "./csu/../sysdeps/x86/libc-start.c",
+        "line": 58
+      },
+      {
+        "name": "__libc_start_main_impl",
+        "filename": "./csu/../csu/libc-start.c",
+        "line": 360
+      },
+      {
+        "name": "_start",
+        "filename": "??",
+        "line": 0
+      },
+      {
+        "name": "decode_latent",
+        "filename": "/home/user/projects/wan21-video/musubi-tuner/src/musubi_tuner/wan_generate_video.py",
+        "line": 1641
+      },
+      {
+        "name": "wrapped",
+        "filename": "/home/user/projects/wan21-video/scripts/vae_decode_measure.py",
+        "line": 72
+      },
+      {
+        "name": "wrapped",
+        "filename": "/home/user/projects/wan21-video/scripts/vae_memory_probe.py",
+        "line": 97
+      },
+      {
+        "name": "run",
+        "filename": "/home/user/projects/wan21-video/scripts/vae_memory_probe.py",
+        "line": 177
+      },
+      {
+        "name": "save_output",
+        "filename": "/home/user/projects/wan21-video/musubi-tuner/src/musubi_tuner/wan_generate_video.py",
+        "line": 1768
+      },
+      {
+        "name": "main",
+        "filename": "/home/user/projects/wan21-video/musubi-tuner/src/musubi_tuner/wan_generate_video.py",
+        "line": 2280
+      },
+      {
+        "name": "main",
+        "filename": "/home/user/projects/wan21-video/scripts/vae_decode_measure.py",
+        "line": 190
+      },
+      {
+        "name": "main",
+        "filename": "/home/user/projects/wan21-video/scripts/vae_memory_probe.py",
+        "line": 201
+      },
+      {
+        "name": "<module>",
+        "filename": "/home/user/projects/wan21-video/scripts/vae_memory_probe.py",
+        "line": 212
+      }
+    ],
+    "before_checkpoint": {
+      "sequence": 42,
+      "label": "decoder_before",
+      "decoder_call": 21,
+      "first_matching_event": 27475,
+      "last_matching_event": 27481,
+      "allocated_mib": 4013.15283203125,
+      "max_allocated_mib": 14689.423828125,
+      "cache_storage_mib": 3556.083984375
+    },
+    "after_checkpoint": {
+      "sequence": 43,
+      "label": "decoder_after",
+      "decoder_call": 21,
+      "first_matching_event": 28849,
+      "last_matching_event": 28855,
+      "allocated_mib": 4022.69970703125,
+      "max_allocated_mib": 14698.970703125,
+      "cache_storage_mib": 3556.083984375
+    }
+  },
+  "cache_epoch_evidence": [
+    {
+      "observation": "decoder_before",
+      "cache_index": 0,
+      "allocation_event": 26109,
+      "address": "0x79867bc00000",
+      "shape": [
+        1,
+        16,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16",
+      "storage_bytes": 399360,
+      "alive_at_peak": false,
+      "free_requested_event": 27496
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 1,
+      "allocation_event": 26144,
+      "address": "0x79864c000000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": false,
+      "free_requested_event": 27536
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 2,
+      "allocation_event": 26186,
+      "address": "0x798644920000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": false,
+      "free_requested_event": 27578
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 3,
+      "allocation_event": 26279,
+      "address": "0x798645b68000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": false,
+      "free_requested_event": 27671
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 4,
+      "allocation_event": 26321,
+      "address": "0x7986036c0000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": false,
+      "free_requested_event": 27713
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 5,
+      "allocation_event": 26366,
+      "address": "0x798604908000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": false,
+      "free_requested_event": 27758
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 6,
+      "allocation_event": 26408,
+      "address": "0x798605b50000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": false,
+      "free_requested_event": 27800
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 7,
+      "allocation_event": 26453,
+      "address": "0x798631240000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": false,
+      "free_requested_event": 27845
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 8,
+      "allocation_event": 26495,
+      "address": "0x798632488000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": false,
+      "free_requested_event": 27887
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 9,
+      "allocation_event": 26540,
+      "address": "0x798552900000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": false,
+      "free_requested_event": 27932
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 10,
+      "allocation_event": 26582,
+      "address": "0x798553b48000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": false,
+      "free_requested_event": 27974
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 11,
+      "allocation_event": 26608,
+      "address": "0x798650820000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16",
+      "storage_bytes": 9584640,
+      "alive_at_peak": false,
+      "free_requested_event": 27995
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 12,
+      "allocation_event": 26672,
+      "address": "0x7985696a0000",
+      "shape": [
+        1,
+        192,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 38338560,
+      "alive_at_peak": false,
+      "free_requested_event": 28062
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 13,
+      "allocation_event": 26711,
+      "address": "0x79861eda0000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": false,
+      "free_requested_event": 28101
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 14,
+      "allocation_event": 26755,
+      "address": "0x79852e000000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": false,
+      "free_requested_event": 28145
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 15,
+      "allocation_event": 26794,
+      "address": "0x798640000000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": false,
+      "free_requested_event": 28184
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 16,
+      "allocation_event": 26836,
+      "address": "0x798608000000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": false,
+      "free_requested_event": 28226
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 17,
+      "allocation_event": 26875,
+      "address": "0x798628000000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": false,
+      "free_requested_event": 28265
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 18,
+      "allocation_event": 26898,
+      "address": "0x798567210000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.bfloat16",
+      "storage_bytes": 38338560,
+      "alive_at_peak": false,
+      "free_requested_event": 28283
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 19,
+      "allocation_event": 26953,
+      "address": "0x7985bc480000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": false,
+      "free_requested_event": 28343
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 20,
+      "allocation_event": 26992,
+      "address": "0x798504440000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": false,
+      "free_requested_event": 28382
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 21,
+      "allocation_event": 27034,
+      "address": "0x79850d680000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": false,
+      "free_requested_event": 28424
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 22,
+      "allocation_event": 27073,
+      "address": "0x7985fa480000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": false,
+      "free_requested_event": 28463
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 23,
+      "allocation_event": 27115,
+      "address": "0x7985d521e000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": false,
+      "free_requested_event": 28505
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 24,
+      "allocation_event": 27154,
+      "address": "0x7985de45e000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": false,
+      "free_requested_event": 28544
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 25,
+      "allocation_event": 27214,
+      "address": "0x7985168c0000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28604
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 26,
+      "allocation_event": 27253,
+      "address": "0x79860c920000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28643
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 27,
+      "allocation_event": 27295,
+      "address": "0x7985e8000000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28685
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 28,
+      "allocation_event": 27334,
+      "address": "0x7984b2000000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28724
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 29,
+      "allocation_event": 27376,
+      "address": "0x7984e8d80000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28766
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 30,
+      "allocation_event": 27415,
+      "address": "0x79856bb30000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28805
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 31,
+      "allocation_event": 27459,
+      "address": "0x798554d90000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28849
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 0,
+      "allocation_event": 27483,
+      "address": "0x79867bc61800",
+      "shape": [
+        1,
+        16,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16",
+      "storage_bytes": 399360,
+      "alive_at_peak": true,
+      "free_requested_event": 28918
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 1,
+      "allocation_event": 27518,
+      "address": "0x79864a924000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28916
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 2,
+      "allocation_event": 27560,
+      "address": "0x79864c000000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28914
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 3,
+      "allocation_event": 27653,
+      "address": "0x798644920000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28912
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 4,
+      "allocation_event": 27695,
+      "address": "0x798645b68000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28910
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 5,
+      "allocation_event": 27740,
+      "address": "0x7986036c0000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28908
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 6,
+      "allocation_event": 27782,
+      "address": "0x798604908000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28906
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 7,
+      "allocation_event": 27827,
+      "address": "0x798605b50000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28904
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 8,
+      "allocation_event": 27869,
+      "address": "0x7986236c0000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28902
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 9,
+      "allocation_event": 27914,
+      "address": "0x798624908000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28900
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 10,
+      "allocation_event": 27956,
+      "address": "0x798625b50000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28898
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 11,
+      "allocation_event": 27982,
+      "address": "0x79864a000000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16",
+      "storage_bytes": 9584640,
+      "alive_at_peak": true,
+      "free_requested_event": 28896
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 12,
+      "allocation_event": 28046,
+      "address": "0x7985b623d000",
+      "shape": [
+        1,
+        192,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 38338560,
+      "alive_at_peak": true,
+      "free_requested_event": 28894
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 13,
+      "allocation_event": 28085,
+      "address": "0x7984ffb20000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": true,
+      "free_requested_event": 28892
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 14,
+      "allocation_event": 28129,
+      "address": "0x79861eda0000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": true,
+      "free_requested_event": 28890
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 15,
+      "allocation_event": 28168,
+      "address": "0x798528d40000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": true,
+      "free_requested_event": 28888
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 16,
+      "allocation_event": 28210,
+      "address": "0x798638000000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": true,
+      "free_requested_event": 28886
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 17,
+      "allocation_event": 28249,
+      "address": "0x798640000000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": true,
+      "free_requested_event": 28884
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 18,
+      "allocation_event": 28272,
+      "address": "0x79863c920000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.bfloat16",
+      "storage_bytes": 38338560,
+      "alive_at_peak": true,
+      "free_requested_event": 28882
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 19,
+      "allocation_event": 28327,
+      "address": "0x7985c56c0000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": true,
+      "free_requested_event": 28880
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 20,
+      "allocation_event": 28366,
+      "address": "0x7985b86cd000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": true,
+      "free_requested_event": 28878
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 21,
+      "allocation_event": 28408,
+      "address": "0x798628000000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": true,
+      "free_requested_event": 28876
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 22,
+      "allocation_event": 28447,
+      "address": "0x79850d680000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": true,
+      "free_requested_event": 28874
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 23,
+      "allocation_event": 28489,
+      "address": "0x798504440000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": true,
+      "free_requested_event": 28872
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 24,
+      "allocation_event": 28528,
+      "address": "0x7985ce900000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": true,
+      "free_requested_event": 28870
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 25,
+      "allocation_event": 28588,
+      "address": "0x798540480000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28868
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 26,
+      "allocation_event": 28627,
+      "address": "0x7985168c0000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": false,
+      "free_requested_event": 28866
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 27,
+      "allocation_event": 28669,
+      "address": "0x79852e000000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": false,
+      "free_requested_event": 28864
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 28,
+      "allocation_event": 28708,
+      "address": "0x7985e8000000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": false,
+      "free_requested_event": 28862
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 29,
+      "allocation_event": 28750,
+      "address": "0x7984d6900000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": false,
+      "free_requested_event": 28860
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 30,
+      "allocation_event": 28789,
+      "address": "0x7984e8d80000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": false,
+      "free_requested_event": 28858
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 31,
+      "allocation_event": 28833,
+      "address": "0x798608000000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": false,
+      "free_requested_event": 28856
+    }
+  ],
+  "cache_observed_before_or_after_storages_alive_at_peak_bytes": 4035532800,
+  "cache_interpretation": "Live observed storages include the pending new cache clone; exact _feat_map membership requires source assignment order.",
+  "checks": [
+    "Trusted snapshot hash/size checked before unpickling",
+    "Input/result/probe/script/fixed-source/baseline identity checked",
+    "All allocation/free epochs matched without truncation",
+    "Default native block split/coalescing replay matches every final snapshot block",
+    "Replayed absolute allocated and reserved peaks match recorded peaks exactly",
+    "Checkpoint allocated/reserved/max and all observed storage epochs matched in order",
+    "Video fully decoded and byte-identical to both baselines"
+  ],
+  "limits": [
+    "No local GPU rerun and no independent local read of latent or VAE weights",
+    "Native allocator replay supports only this default single-stream capture",
+    "History includes allocator requests, not complete tensor shapes",
+    "Cache boundary shapes do not directly measure transient convolution shapes",
+    "One fixed input; no speed or overall quality conclusion",
+    "Memory-viz HTML uses an external PyTorch JavaScript module; not offline standalone"
+  ]
+}

@@ -457,3 +457,88 @@ F6/F7/F8三种20步stages各预热1+正式1已完成。新增 `scripts/audit_fp8
 72段视频哈希/完整解码通过，两配置各36份首次成功，无失败/重试记录，GPU各18。
 仅传最终MP4和notes记录，未传latent；服务器summarize检查其哈希，本机未独立核验latent。
 自动指标、人工盲评与最终质量分类仍待Week5，不由生成验收推断质量保持。
+
+### Week5 指标、评分和结果卡（2026-11-06）
+
+上述待办是 Week4 当时状态。Week5 已完成普通/scaled FP8 各 36 条指标、三个匿名包、评分回收补空、一次澄清、解盲统计及三张新卡；原 Week4 冻结文件、原答卷和原卡保留。
+
+指标使用项目 Python，固定 CPU FP32/CLIP revision；原输出拒绝覆盖。最初命令：
+
+```powershell
+& 'E:\cstudy\AIGC\V\local\env\python.exe' 'E:\cstudy\AIGC\V\scripts\metrics_candidate.py' --candidate fp8 --output 'E:\cstudy\AIGC\V\notes\week5_metrics_fp8'
+& 'E:\cstudy\AIGC\V\local\env\python.exe' 'E:\cstudy\AIGC\V\scripts\metrics_candidate.py' --candidate fp8_scaled --output 'E:\cstudy\AIGC\V\notes\week5_metrics_fp8_scaled'
+```
+
+评分原件/逐格补空依据为 `notes/blind_private/week5-rating-intake-20261105/intake.json` 和各私人 returned 目录；最终副本在 `outputs/week5-ratings-completed-20261105/`。共补 319 格，既有值和原件哈希保留。详见 [回收核对](notes/week5_rating_review.md)。
+
+用户 11 月 6 日确认按已填方向、两包相隔两天。解盲前固定 T022 无法判断、其他六项程度未定；不代填轻微/明显、不再追问。具体评分日期、播放器和观看方式不推造。`analyze_week5_ratings.py` 适配实际十六列回收表；旧通用分析器未直接套用。
+
+本轮已执行的分析顺序（已有输出不可覆盖，不应直接重跑本轮）：
+
+```powershell
+& '<USER_HOME>\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -X utf8 'E:\cstudy\AIGC\V\scripts\analyze_week5_ratings.py' prepare
+& '<USER_HOME>\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -X utf8 'E:\cstudy\AIGC\V\scripts\analyze_week5_ratings.py' analyze
+& '<USER_HOME>\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' -X utf8 -c 'import sys,runpy; sys.path.insert(0,r"<USER_HOME>\.cache\week5-report-plotting"); runpy.run_path(r"E:\cstudy\AIGC\V\scripts\report_week5_results.py",run_name="__main__")'
+```
+
+绘图依赖独立安装在上述 cache 目录：matplotlib 3.11.2、contourpy 1.4.0、cycler 0.12.1、fonttools 4.68.0、kiwisolver 1.5.1、pyparsing 3.3.3，使用 bundled Python 自带 numpy 2.3.5。未改推理环境。报告脚本首先因缺 matplotlib 导入失败，未生成部分输出；加独立依赖后完整运行一次成功。
+
+私人 `notes/blind_private/week5-analysis-20261106/` 保留澄清、pre-unblind manifest、三份有效答案快照、解盲起点、分析 JSON/CSV、`analysis_audit.json` 及 `report_verification.json`。首次分析修复 Sage 哈希来源对象：对应旧 CSV 而非 JSON，并逐项核对两者 108 个答案；原脚本归档、原快照不变，审计保留时序。源视频 118 个去重路径、评分代理 106 个已重核哈希；报告阶段再次核对身份方向、输入及计数。没有重新执行 GPU 性能或生成实验。
+
+| 结果 | 文件 | 边界 |
+|---|---|---|
+| Sage v2 | [结果卡](notes/week5_result_attention_v2.md) | 八项补评并入，其余一百项保持原样；数值质量达标，关键记录缺失，综合结论不足 |
+| 普通 FP8 | [结果卡](notes/week5_result_fp8.md) | 当前任务不推荐，保留原表明确填写的明显退化及程度缺失 |
+| scaled FP8 | [结果卡](notes/week5_result_fp8_scaled.md) | 当前任务不推荐；单视频最高分不抵消配对负面记录 |
+| 权衡与图 | [权衡表](notes/tradeoff_v1.md) | 同环境变化率；去噪阶段省显存，整次峰值未降；图的 CSV 可复核 |
+| 描述性核验 | [验证报告](notes/week5_analysis_validation.md) | ANALYZED；不是 GPU 实验独立复现或统计等价性检验 |
+| 后续测量 | [VAE 输入预检](notes/week5_vae_preflight.md) | 当前服务器状态及 latent 内容尚未现场核实 |
+| 未来规则 | [性能规则 v2](notes/performance_rules_v2.md) | 仅供新实验事前引用；不重判已完成结果 |
+
+Day7 的 VAE 峰值内部归属、缓存对照及固定输入登记尚未完成；没有 VAE 性能代码改动或组合配置验证。
+
+2026-11-06 Day7 预检追加：用户服务器输出已确认上游 commit 与历史 latent SHA256 一致，文件存在；GPU0 当时仅见桌面进程，600 MiB、0% 利用率。此为用户回传证据，非助手远程执行或本机独立读取；dtype/shape/finite 尚待检查。具体命令与后续只读步骤见 [VAE 预检](notes/week5_vae_preflight.md)，不据此勾选峰值定位完成。
+
+随后 latent 内容已回传：FP32，`[16,21,60,104]`，finite=true，metadata 匹配 P01/s42/480×832/81 帧/20 步。[固定输入登记](notes/week5_vae_fixed_input.json)已完成。新建基本测量入口 `scripts/vae_decode_measure.py`，固定上游 `--latent_path` 分支，VAE BF16，cache_cpu=false，GPU0，单次无预热；不改变 FP32 latent 或 VAE 算法。
+
+区间为 decode_latent 全函数（包含 VAE 加载、GPU 传输及 FP32/CPU 输出转换），前后同步，开始重置峰值，MP4 编码排除；不打开 memory history。本机 dry-run 和模拟计数器检查通过，尚未执行真实 GPU 测量。上传、tmux 和服务器运行命令见 [预检第三步](notes/week5_vae_preflight.md)。结果使用新输出目录的 input.json/result.json，不覆盖旧记录；视频完整解码和质量验证不由文件非空/哈希推定。
+
+2026-11-06 仅解码运行摘要追加：用户已在服务器完成上述命令，status=ok，10.993825 秒、allocated 14698.970703125 MiB、reserved 18674 MiB，输出 CPU FP32 `[3,81,480,832]`。本机对照旧基线 VAE 峰值，仅差 +0.6171875 MiB（+0.004199%）；支持继续仅解码诊断，不证明相同内部分配成因或时间收益。原始 JSON/MP4 尚未取回；用户终端摘要独立保存于 `notes/week5/vae-baseline-01-user-return.json`。本机 BatchMode scp 因 SSH 无交互认证失败，下一步用户传回目录后再验身份/哈希/完整解码。尚无 memory-history 或内部峰值定位结果。
+
+随后原件已传回，`audit_vae_decode.py` 的本机审计通过：固定字段、脚本与源码身份及视频哈希一致，81 帧完整解码，无全黑帧。MP4 与原 P01/s42 基线逐字节相同。源码采用固定 Git blob 与服务器哈希对照，本机 CRLF 归一后等于 blob；原始 CRLF/LF 字节差异单列，未修改源码。审计为 `notes/week5/vae-baseline-01-local-audit.json`；没有独立重跑 GPU 或读取 latent/VAE 本体。
+
+新建 `scripts/vae_memory_probe.py`，固定基本脚本哈希及输入，使用实际核对过的 torch 2.9.1+cu128 `_record_memory_history(enabled="all", context="all", stacks="all", max_entries=200000, clear_history=True)` 和 `_snapshot()`，按官方 `_dump_snapshot` 的同一格式保存 pickle。另采集 conv2/decoder 入口出口 metadata 及缓存 storage 字节，不改数值代码；边界样本不能冒充峰值瞬间。
+
+本机 dry-run、语法和缓存/异常/边界模拟检查通过，尚未执行 GPU 探针。计划命令为 `env/bin/python scripts/vae_memory_probe.py --output outputs/week5-vae/history-baseline-01`，必须在 `tmux new-session -A -s w5-vae` 中用 GPU0 执行。上传与执行步骤见 [预检第四步](notes/week5_vae_preflight.md)；快照、probe.json 和 result.json 用新目录保留。阶段报告为 [VAE 定位记录](notes/week5_vae_peak.md)，内部分配与 cache_cpu 对照仍待执行。
+
+随后用户已执行并回传 PROBE_SUMMARY：快照 7781984 字节、SHA256 `c8682923be50a74c6884acc3e5bc1bdf5443ae33c364763092a9ceecbdd62b63`，29327 条事件、无触及上限，21 次 decoder / 44 个边界。摘要另存 `notes/week5/vae-history-01-user-summary.json`；原目录待传回，尚未本机核验快照或获得带探针耗时/峰值。下一步核对原始结果、快照哈希/事件、视频身份并重建峰值存活分配，内部定位和缓存对照继续待办。
+
+2026-11-06 history 原件回收追加：`outputs/week5-vae/history-baseline-01/` 已传回。本机核验快照原 SHA256/7781984 字节/29327 个事件、脚本/输入/固定源 blob/基线身份和关闭 history 状态；status=ok。MP4 完整解码 81 帧，且与无探针和原 P01/s42 基线字节相同。
+
+`analyze_vae_history.py` 的 native allocator 逐事件回放匹配所有最终块、44 个观测及峰值记录。allocated 峰值 15412987904 字节，requested 15410126406 字节，差额为块内余量。事件 28595、第 21 次 decoder 的最大块为 native slow 3D 卷积 columns 缓冲区，requested 7897.5 MiB、block 7898 MiB。`attribute_vae_peak.py` 进一步用生命周期/源码顺序重建已赋值缓存 3556.083984375 MiB，另有 pending clone 292.5 MiB；临时形状为明确标注的重建，后端选择原因未知。
+
+最终审计/CSV/图/源码副本位于 `notes/week5/vae-history-01-analysis-v2/`。首次目录在绘图解释器不匹配后保留，不作最终入口；拆分后的成功分析和归属核验命令如下（输出已存在，复查直接读产物，不覆盖重跑）：
+
+```powershell
+& E:/cstudy/AIGC/V/local/env/python.exe E:/cstudy/AIGC/V/scripts/analyze_vae_history.py --directory E:/cstudy/AIGC/V/outputs/week5-vae/history-baseline-01 --output E:/cstudy/AIGC/V/notes/week5/vae-history-01-analysis-v2
+& E:/cstudy/AIGC/V/local/env/python.exe E:/cstudy/AIGC/V/scripts/attribute_vae_peak.py --analysis E:/cstudy/AIGC/V/notes/week5/vae-history-01-analysis-v2
+& '<USER_HOME>\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' E:/cstudy/AIGC/V/scripts/plot_vae_history.py --analysis E:/cstudy/AIGC/V/notes/week5/vae-history-01-analysis-v2 --output E:/cstudy/AIGC/V/notes/week5/vae-history-01-analysis-v2/allocator_timeline.png --dependencies <USER_HOME>/.cache/week5-report-plotting
+```
+
+静态曲线已查看；生成的 PyTorch memory viz HTML 需要外部 CDN 模块，工具浏览器因 file: 协议限制拒绝打开，没有交互截图。缓存 CPU 对照、截图及最终收尾仍待完成，不称已独立重跑 GPU 或已完成 Week5。下一步先在 `tmux new-session -A -s w5-vae` 中检查当前 `nvidia-smi`，再按 [预检第五步](notes/week5_vae_preflight.md)运行原脚本的 `--vae-cache-cpu --output outputs/week5-vae/decode-cache-cpu-01`；该对照仅完成本机参数 dry-run，尚未服务器执行。
+
+随后用户确认无占用并完成该命令，回传部分 stdout：50.383249560996774 秒、allocated 11142.07421875 MiB、reserved 16078 MiB。与无探针 baseline 相比，allocated 减少 3556.896484375 MiB（24.198269%），耗时为 4.582868 倍；仅单次 VAE 区间诊断，不是完整生成或正式速度结论。用户摘要保存于 `notes/week5/vae-cache-cpu-01-user-summary.json`，片段没有 status 字段。原 input/result/video 待传回核对最终状态、开关/身份和视频哈希/完整解码，不重跑已有测量，Week5 尚未收尾。
+
+CPU 缓存原目录随后已传回。本机 `audit_vae_cache_cpu.py` 核实最终 status=ok、cache_cpu=true、memory_history=false，除输出目录外上游仅增加缓存 CPU 参数，固定输入/模型/环境/源码记录与基线一致，旧基线原件哈希仍匹配。视频完整解码 81 帧，MP4 与 RGB 帧摘要均等于无探针及冻结 P01/s42 基线；不声称原始浮点输出张量已逐元素比较。
+
+首次验收命令如下（产物已存在，不覆盖）：
+
+```powershell
+& E:/cstudy/AIGC/V/local/env/python.exe E:/cstudy/AIGC/V/scripts/audit_vae_cache_cpu.py --directory E:/cstudy/AIGC/V/outputs/week5-vae/decode-cache-cpu-01 --output E:/cstudy/AIGC/V/notes/week5/vae-cache-cpu-01-local-audit.json
+```
+
+审计通过，CPU 缓存对照项已完成。报告保留单次区间、用户 GPU 执行及未采 CPU-cache history 的边界；不外推正式端到端收益。无需重跑实验，Week5 当前仅余已有 memory viz HTML 的交互查看/截图和最后收尾记录，具体见 [预检第六步](notes/week5_vae_preflight.md)。
+
+2026-11-06 收尾追加：用户已在本机浏览器打开 HTML 并回传截图，显示 GPU0 Active Memory Timeline、9764/9764 条分配及选中分配调用栈。原图另存 memory_viz-user-timeline.png（本地附件未随公开快照发布），305377 字节、SHA256 `4d4ac320b02198decd7131266ab1111e0aad921c162e23cc42814d0477d8e15c`，复制前后相同；来源记录（本地附件未随公开快照发布）明确截图所选为 292.5 MiB，非最大块，精确归属以独立审计为准。
+
+Week5 本周出口标准完成，见 [复盘](notes/REVIEW/WEEK5_REVIEW.md)和 [计划](plan/WEEK5_PLAN.md)。没有增加 GPU 运行或修改数值算法；后端选择原因、未来改法/完整生成收益、原始浮点误差和干净环境复现仍未验证。下一阶段先独立预登记第 6–7 周选题，不能把本周完成外推成全部候选通过或新性能改动已经交付。

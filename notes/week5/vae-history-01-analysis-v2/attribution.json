@@ -1,0 +1,609 @@
+{
+  "verification_status": "ANALYZED",
+  "script_sha256": "9725ae1aacf1d6226eb10a1afad0aabbb81c0374c99f305213a41389bc1bc2b6",
+  "input_audit_sha256": "366232ac1c798e4082ba4d9055861b6884b42da29145bc824136ffb3edb3c44a",
+  "peak_event": 28595,
+  "decoder_call": 21,
+  "assigned_cache_storage_bytes_reconstructed": 3728824320,
+  "assigned_cache_storage_mib_reconstructed": 3556.083984375,
+  "assigned_cache_epochs": [
+    {
+      "observation": "decoder_after",
+      "cache_index": 0,
+      "allocation_event": 27483,
+      "address": "0x79867bc61800",
+      "shape": [
+        1,
+        16,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16",
+      "storage_bytes": 399360,
+      "alive_at_peak": true,
+      "free_requested_event": 28918
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 1,
+      "allocation_event": 27518,
+      "address": "0x79864a924000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28916
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 2,
+      "allocation_event": 27560,
+      "address": "0x79864c000000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28914
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 3,
+      "allocation_event": 27653,
+      "address": "0x798644920000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28912
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 4,
+      "allocation_event": 27695,
+      "address": "0x798645b68000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28910
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 5,
+      "allocation_event": 27740,
+      "address": "0x7986036c0000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28908
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 6,
+      "allocation_event": 27782,
+      "address": "0x798604908000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28906
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 7,
+      "allocation_event": 27827,
+      "address": "0x798605b50000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28904
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 8,
+      "allocation_event": 27869,
+      "address": "0x7986236c0000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28902
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 9,
+      "allocation_event": 27914,
+      "address": "0x798624908000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28900
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 10,
+      "allocation_event": 27956,
+      "address": "0x798625b50000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 19169280,
+      "alive_at_peak": true,
+      "free_requested_event": 28898
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 11,
+      "allocation_event": 27982,
+      "address": "0x79864a000000",
+      "shape": [
+        1,
+        384,
+        2,
+        60,
+        104
+      ],
+      "dtype": "torch.bfloat16",
+      "storage_bytes": 9584640,
+      "alive_at_peak": true,
+      "free_requested_event": 28896
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 12,
+      "allocation_event": 28046,
+      "address": "0x7985b623d000",
+      "shape": [
+        1,
+        192,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 38338560,
+      "alive_at_peak": true,
+      "free_requested_event": 28894
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 13,
+      "allocation_event": 28085,
+      "address": "0x7984ffb20000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": true,
+      "free_requested_event": 28892
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 14,
+      "allocation_event": 28129,
+      "address": "0x79861eda0000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": true,
+      "free_requested_event": 28890
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 15,
+      "allocation_event": 28168,
+      "address": "0x798528d40000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": true,
+      "free_requested_event": 28888
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 16,
+      "allocation_event": 28210,
+      "address": "0x798638000000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": true,
+      "free_requested_event": 28886
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 17,
+      "allocation_event": 28249,
+      "address": "0x798640000000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 76677120,
+      "alive_at_peak": true,
+      "free_requested_event": 28884
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 18,
+      "allocation_event": 28272,
+      "address": "0x79863c920000",
+      "shape": [
+        1,
+        384,
+        2,
+        120,
+        208
+      ],
+      "dtype": "torch.bfloat16",
+      "storage_bytes": 38338560,
+      "alive_at_peak": true,
+      "free_requested_event": 28882
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 19,
+      "allocation_event": 28327,
+      "address": "0x7985c56c0000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": true,
+      "free_requested_event": 28880
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 20,
+      "allocation_event": 28366,
+      "address": "0x7985b86cd000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": true,
+      "free_requested_event": 28878
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 21,
+      "allocation_event": 28408,
+      "address": "0x798628000000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": true,
+      "free_requested_event": 28876
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 22,
+      "allocation_event": 28447,
+      "address": "0x79850d680000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": true,
+      "free_requested_event": 28874
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 23,
+      "allocation_event": 28489,
+      "address": "0x798504440000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": true,
+      "free_requested_event": 28872
+    },
+    {
+      "observation": "decoder_after",
+      "cache_index": 24,
+      "allocation_event": 28528,
+      "address": "0x7985ce900000",
+      "shape": [
+        1,
+        192,
+        2,
+        240,
+        416
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 153354240,
+      "alive_at_peak": true,
+      "free_requested_event": 28870
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 25,
+      "allocation_event": 27214,
+      "address": "0x7985168c0000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28604
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 26,
+      "allocation_event": 27253,
+      "address": "0x79860c920000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28643
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 27,
+      "allocation_event": 27295,
+      "address": "0x7985e8000000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28685
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 28,
+      "allocation_event": 27334,
+      "address": "0x7984b2000000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28724
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 29,
+      "allocation_event": 27376,
+      "address": "0x7984e8d80000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28766
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 30,
+      "allocation_event": 27415,
+      "address": "0x79856bb30000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28805
+    },
+    {
+      "observation": "decoder_before",
+      "cache_index": 31,
+      "allocation_event": 27459,
+      "address": "0x798554d90000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28849
+    }
+  ],
+  "pending_cache_clone_bytes": 306708480,
+  "pending_cache_clone_mib": 292.5,
+  "pending_cache_clone": [
+    {
+      "observation": "decoder_after",
+      "cache_index": 25,
+      "allocation_event": 28588,
+      "address": "0x798540480000",
+      "shape": [
+        1,
+        96,
+        2,
+        480,
+        832
+      ],
+      "dtype": "torch.float32",
+      "storage_bytes": 306708480,
+      "alive_at_peak": true,
+      "free_requested_event": 28868
+    }
+  ],
+  "assignment_evidence": "vae.py:205 clones the new cache; line 209 executes convolution using old feat_cache[idx]; line 210 replaces the entry only after return. At event 28595 the old index 25 and the new clone are both alive; indices 0..24 have already been replaced, indices 25..31 retain their old allocations. Membership is reconstructed, not an interior hook.",
+  "largest_allocation": {
+    "kind": "native slow_conv_dilated3d columns temporary buffer",
+    "requested_bytes": 8281128960,
+    "allocator_block_bytes": 8281653248,
+    "percent_of_total_allocated_peak_requested_basis": 53.72825185862159,
+    "native_source": "pytorch v2.9.1 aten/src/ATen/native/cuda/NaiveDilatedConvolution.cu:195-209",
+    "shape_reconstruction": {
+      "shape": [
+        2592,
+        1597440
+      ],
+      "dtype": "bfloat16",
+      "formula": "[96*3*3*3, 4*480*832], 2 bytes per element",
+      "evidence_level": "source/shape/byte-consistent reconstruction, not directly shape-hooked"
+    }
+  },
+  "source_files": {
+    "pytorch-v2.9.1-NaiveDilatedConvolution.cu": {
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.9.1/aten/src/ATen/native/cuda/NaiveDilatedConvolution.cu",
+      "sha256": "4017e8584f75cb2c40e983f355a425edd10eb33818b00ae4f45a9ffbf6ce16eb"
+    },
+    "pytorch-v2.9.1-CUDACachingAllocator.cpp": {
+      "url": "https://raw.githubusercontent.com/pytorch/pytorch/v2.9.1/c10/cuda/CUDACachingAllocator.cpp",
+      "sha256": "3d43b5834f6143f0465832cb15a906c3098ffbbf6048e75361d38901269d7599"
+    }
+  },
+  "limits": [
+    "Backend dispatch reason for selecting slow_conv_dilated3d is not measured",
+    "Transient shapes are reconstructed, not directly observed at an interior hook",
+    "Cache offload may change temporary overlaps, transfers and backend behavior; do not subtract cache bytes to predict a measured peak",
+    "No optimization performed and no speed benefit inferred"
+  ]
+}

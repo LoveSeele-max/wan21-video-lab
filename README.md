@@ -2,21 +2,25 @@
 
 Wan2.1 T2V 1.3B 的推理性能分析、可复现测量与视频质量评测实验。
 
-当前公开内容覆盖 Week1–Week4，Week4 实验截至 2026-10-29，发布更新于 2026-11-01。项目使用 Musubi Tuner 的已有生成能力；新增工作集中在测量、评测编排、反例探针、结果审计与实验设计。
+当前公开内容覆盖 Week1–Week5，发布更新于 2026-11-06。项目使用 Musubi Tuner 的已有生成能力；新增工作集中在测量、评测编排、反例探针、结果审计与实验设计。
 
-**SageAttention 在固定任务下端到端耗时下降约 7.98%，质量分类仍为“结论不足”。** 普通/scaled FP8 的去噪阶段 allocated 峰值分别下降约 31.10%/30.27%，但未达到冻结的速度门槛，质量尚未评估。没有训练 LoRA，也没有自行修改模型架构或编写 CUDA/Triton 内核。
+**SageAttention 在固定任务下端到端耗时下降约 7.98%，质量分类仍为“结论不足”。** 普通/scaled FP8 的去噪阶段 allocated 峰值分别下降约 31.10%/30.27%，整次峰值未下降，且未达到速度和质量门槛，当前任务均不推荐。Week5 已将 VAE 峰值最大分配定位到 native slow 3D 卷积的 columns 临时缓冲区。没有实施 VAE 性能改动、训练 LoRA 或编写 CUDA/Triton 内核。
 
-## Week4 结果
+## Week5 归档结果
 
 | 候选 | 正式性能证据 | 质量与限制 |
 |---|---|---|
-| SageAttention 2.2.0 | 同一独立环境 BF16 torch 135.904 秒 → Sage 125.059 秒；下降 7.98%，三次正式测量区间不重叠；profile 确认实际 varlen 路径 | 36/36 生成成功；结构和提示词符合度评分证据不完整，最终分类“结论不足” |
-| 普通 FP8 | 主环境各六次正式测量：BF16 134.031 秒，FP8 132.335 秒；耗时下降 1.26%，未达 5% 门槛；去噪 allocated 峰值下降 31.10% | 36/36 生成成功；质量尚未评估 |
-| scaled FP8 | 均值 134.645 秒，较同一主环境 BF16 增加 0.46%；去噪 allocated 峰值下降 30.27% | 36/36 生成成功；`fp8_fast=false`，不能声称使用专用 FP8 矩阵乘；质量尚未评估 |
+| SageAttention 2.2.0 | 同一独立环境 BF16 torch 135.904 秒 → Sage 125.059 秒；下降 7.98%，三次正式测量区间不重叠；profile 确认实际 varlen 路径 | 36/36 生成成功；补评后质量数值门槛达到，关键观看/会话记录仍不完整，最终分类“结论不足” |
+| 普通 FP8 | 主环境各六次正式测量：BF16 134.031 秒，FP8 132.335 秒；耗时下降 1.26%，未达 5% 门槛；去噪 allocated 峰值下降 31.10% | 36/36 生成成功；三维均有评分者明确填写的明显退化，当前任务不推荐 |
+| scaled FP8 | 均值 134.645 秒，较同一主环境 BF16 增加 0.46%；去噪 allocated 峰值下降 30.27% | 36/36 生成成功；时序/符合度有明确填写的明显退化，当前任务不推荐；`fp8_fast=false`，不能声称使用专用 FP8 矩阵乘 |
 
 三种候选整次运行 allocated 峰值均约 14698.35 MiB，最高峰仍在 VAE 解码。阶段显存收益不能直接解释为整次峰值下降。Sage 与 FP8 使用不同环境下各自的基线，不跨环境直接排名；固定任务速度测量也不代表所有提示词的速度收益。
 
-详见 [Week4 复盘](notes/REVIEW/WEEK4_REVIEW.md)、[Sage 结论卡](notes/week4_result_attention.md)和 [FP8 报告](notes/week4_fp8.md)。本次发布没有启动 Week5。
+详见 [Week5 归档入口](notes/WEEK5_ARCHIVE.md)、[权衡表 v1](notes/tradeoff_v1.md)和 [Week5 复盘](notes/REVIEW/WEEK5_REVIEW.md)。Week4 原规则和旧结论卡保留，Week5 的评分并入与局限单独记录。
+
+固定 P01/s42 latent-only 诊断中，VAE allocated 峰值为 14698.97 MiB，最大 columns 申请为 7897.5 MiB；缓存成员按生命周期和源码顺序重建为 3556.08 MiB。现有 CPU 缓存开关使该次峰值下降 24.20%，同时区间耗时由 10.99 秒升至 50.38 秒。两次 MP4/RGB 摘要相同，但没有原始浮点输出误差审计。这些是单输入、单次诊断，不是完整生成优化收益。
+
+![阶段 allocated 峰值](notes/week5_figures/stage_allocated_peaks.png)
 
 ## 已完成的工作
 
@@ -31,6 +35,10 @@ Wan2.1 T2V 1.3B 的推理性能分析、可复现测量与视频质量评测实�
 | 环境检查 | SageAttention 2.2.0 在独立副本编译安装，GPU 0 BF16 小张量检查通过 |
 | Week4 实际路径 | Sage varlen 算子、完整模型冒烟、profile、同环境性能对照及 FP8 源码路径核对 |
 | Week4 生成与审计 | Sage、普通 FP8、scaled FP8 各 36 段，共 108 段候选；公开清单与精简审计，媒体保留本地 |
+| Week5 质量收尾 | 两种 FP8 各 36 条自动指标、Sage 补评、三张新结论卡与权衡表；原答卷和私人映射保留本地 |
+| Week5 VAE 定位 | 29327 个分配历史事件重放、44 个边界核对、峰值分配与缓存生命周期分析、CPU 缓存单次对照 |
+
+[本机 Conv3d 布局探针](notes/week5_conv3d_layout_probe.md)另列为探索记录：输入和权重预先转换布局，单次算子测量不包含转换成本；服务器和整段 VAE 尚未验证。Week6–7 实施未开始。
 
 Windows RTX 5060 Ti 16G 的固定配置也完成了运行和性能测量，L2 均值 637.611 秒。2026-10-26 的补充实验显示该解释器仍能分配超出物理显存的 CUDA 内存，因此不能将“跑通”解释为严格在 16GB 独立显存内运行，也不能据此声称 Linux 16G 可用。详见 [本机记录](notes/REVIEW/week2_local_16g.md)。
 
@@ -55,6 +63,7 @@ logs/                     历史执行日志
 notes/                    报告、指标明细、清单及服务器测量记录
 notes/REVIEW/             周复盘与本机实验报告
 evidence/local/           本机运行的精简 JSON/CSV 证据及配置
+evidence/week5-vae/       三次 VAE 诊断的原始 input/result JSON，不含媒体或完整快照
 REPRO.md                  环境、权重来源与复现记录
 PUBLICATION.md            公开范围、路径约定和复现限制
 PUBLIC_SNAPSHOT.json      导入文件及本地原件/公开副本的 SHA256
@@ -88,6 +97,8 @@ python -m unittest discover -s scripts -p 'test_metrics.py'
 
 - [Week3 复盘](notes/REVIEW/WEEK3_REVIEW.md)：目标、实现、结果与局限。
 - [Week4 复盘](notes/REVIEW/WEEK4_REVIEW.md)、[Week4 计划](plan/WEEK4_PLAN.md)与 [执行日志](logs/week4.md)。
+- [Week5 归档](notes/WEEK5_ARCHIVE.md)、[复盘](notes/REVIEW/WEEK5_REVIEW.md)、[计划](plan/WEEK5_PLAN.md)与 [执行日志](logs/week5.md)。
+- [质量汇总](notes/week5_quality_summary.md)、[VAE 峰值报告](notes/week5_vae_peak.md)与 [未来性能规则 v2](notes/performance_rules_v2.md)。
 - [Sage 性能](notes/week4_perf_attention.md)、[质量证据](notes/week4_quality_attention.md)与 [FP8 性能和生成审计](notes/week4_fp8.md)。
 - [服务器性能基线](notes/week2_baseline.md)与 [profiler 分析](notes/week2_profile.md)。
 - [反例探针结果](notes/week3_probe.md)：静止 SSIM 可为 1；自动指标不替代质量判断。

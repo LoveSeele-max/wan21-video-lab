@@ -1,0 +1,33 @@
+{
+  "recorded_date_asia_shanghai": "2026-11-06",
+  "provenance": "User-pasted PROBE_SUMMARY; original probe/result/snapshot files not yet returned",
+  "original_files_locally_verified": false,
+  "reported_summary": {
+    "snapshot": {
+      "path": "/home/user/projects/wan21-video/outputs/week5-vae/history-baseline-01/vae_snapshot.pickle",
+      "bytes": 7781984,
+      "sha256": "c8682923be50a74c6884acc3e5bc1bdf5443ae33c364763092a9ceecbdd62b63",
+      "device_trace_lengths": [29327],
+      "device_trace_actions": [
+        {
+          "segment_alloc": 37,
+          "alloc": 9764,
+          "free_requested": 9763,
+          "free_completed": 9763
+        }
+      ],
+      "history_may_be_truncated": false,
+      "segments_at_snapshot": 37
+    },
+    "decoder_calls": 21,
+    "checkpoint_count": 44,
+    "result_json": "/home/user/projects/wan21-video/outputs/week5-vae/history-baseline-01/result.json",
+    "probe_json": "/home/user/projects/wan21-video/outputs/week5-vae/history-baseline-01/probe.json"
+  },
+  "pending": [
+    "Original result status, decode timing/peaks and input/script provenance verification",
+    "Snapshot size/hash and actual event counts",
+    "Instrumented output video identity and full decode verification",
+    "Peak-live allocation reconstruction, stack attribution and cache boundary correlation"
+  ]
+}
